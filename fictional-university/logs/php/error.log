@@ -10,3 +10,10 @@ Stack trace:
 #2 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
 #3 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 22
+[05-Feb-2025 08:08:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function have_post() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php:33
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#3 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 33

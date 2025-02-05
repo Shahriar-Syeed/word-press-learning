@@ -26,5 +26,17 @@ while($count < count($names)){
 }
 echo "</ol>"
 ?>
-<?php ?>
 <p>Hi my name is <?php echo $names[3]; ?>.</p>
+<?php 
+
+
+while (have_posts()) {
+  the_post();
+  ?>
+  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  <p><?php the_content();?></p>
+  <hr>
+  <?php
+}
+
+?>
