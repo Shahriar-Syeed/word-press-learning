@@ -1,11 +1,11 @@
 This is our completely amazing custom theme.
 <?php 
-// function myFirstFunction (){
-//   echo 2+2;
-//   echo "<h3>This is my first function.</h3>";
-// }
-// myFirstFunction();
-// myFirstFunction();
+function myFirstFunction (){
+  echo 2+2;
+  echo "<h3>This is my first function.</h3>";
+}
+myFirstFunction();
+myFirstFunction();
 function greet($name, $color){
   echo 
  " <p>Hi, my name is $name and my favorite color is $color.</p>";
