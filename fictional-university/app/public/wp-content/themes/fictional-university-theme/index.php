@@ -1,4 +1,4 @@
-This is our completely amazing custom theme.
+<?php get_header()?>
 <?php 
 function myFirstFunction (){
   echo 2+2;
@@ -39,4 +39,5 @@ while (have_posts()) {
   <?php
 }
 
+get_footer();
 ?>
