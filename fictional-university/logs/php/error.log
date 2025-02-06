@@ -28,3 +28,41 @@ Stack trace:
 [06-Feb-2025 08:15:12 UTC] PHP Parse error:  syntax error, unexpected identifier "wp_enqueue_style" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 7
 [06-Feb-2025 08:17:13 UTC] PHP Parse error:  syntax error, unexpected identifier "wp_enqueue_style" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 7
 [06-Feb-2025 08:19:14 UTC] PHP Parse error:  syntax error, unexpected identifier "wp_enqueue_style" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 7
+[06-Feb-2025 09:14:24 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:14:25 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:16:25 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:16:26 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:18:26 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:18:27 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:20:27 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:20:28 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:22:28 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:22:29 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 16
+[06-Feb-2025 09:24:29 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "university_features" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(682): do_action('after_setup_the...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#6 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Feb-2025 09:24:30 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "university_features" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(682): do_action('after_setup_the...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#6 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Feb-2025 09:26:30 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:26:31 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:28:31 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:28:31 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:28:31 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:28:32 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:29:26 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
+[06-Feb-2025 09:29:26 UTC] PHP Fatal error:  Cannot redeclare university_files() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:6) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17
