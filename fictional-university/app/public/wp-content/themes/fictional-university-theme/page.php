@@ -1,18 +1,18 @@
 <?php get_header();
 while (have_posts()) {
   the_post();
-  ?>
+?>
   <!-- <h1>This is a page, not a post.</h1>
   <h2> -->
-    <?php 
-    // the_title(); 
-    ?>
-    <!-- </h2>
+  <?php
+  // the_title(); 
+  ?>
+  <!-- </h2>
   <p> -->
-    <?php 
-    // the_content();
-    ?>
-    <!-- </p> -->
+  <?php
+  // the_content();
+  ?>
+  <!-- </p> -->
   <div class="page-banner">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg'); ?>)"></div>
     <div class="page-banner__content container container--narrow">
@@ -40,13 +40,13 @@ while (have_posts()) {
     </div> -->
 
     <div class="generic-content">
- 
-         <?php 
-    the_content();
-    ?>
+
+      <?php
+      the_content();
+      ?>
     </div>
   </div>
-  <?php
+<?php
 }
 get_footer();
 ?>
