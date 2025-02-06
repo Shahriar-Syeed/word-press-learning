@@ -14,6 +14,14 @@
 // }
 // greet('John', 'orange');
 // greet('Jane', 'red');
+// associate array
+// $animalSound = array(
+//   'cat' => 'meow',
+//   'dog' => 'bark',
+//   'pig' => 'oink',
+//   'bird' => 'chip',
+// );
+// echo $animalSound['pig'];
 ?>
 <!-- <h1> -->
 <?php
@@ -43,11 +51,11 @@
 <!-- .</p> -->
 <?php
 
-function doubleMe($numb){
+// function doubleMe($numb){
 //  echo $numb * 5;
- return $numb;
-}
-echo doubleMe(8);
+//  return $numb;
+// }
+// echo doubleMe(8);
 // while (have_posts()) {
 //   the_post();
 ?>

@@ -76,3 +76,4 @@ Stack trace:
 #3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
 #4 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 46
+[06-Feb-2025 13:05:49 UTC] PHP Warning:  Undefined array key 0 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 24
