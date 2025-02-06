@@ -43,7 +43,11 @@
 <!-- .</p> -->
 <?php
 
-
+function doubleMe($numb){
+//  echo $numb * 5;
+ return $numb;
+}
+echo doubleMe(8);
 // while (have_posts()) {
 //   the_post();
 ?>
