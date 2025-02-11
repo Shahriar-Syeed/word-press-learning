@@ -77,3 +77,15 @@ Stack trace:
 #4 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 46
 [06-Feb-2025 13:05:49 UTC] PHP Warning:  Undefined array key 0 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php on line 24
+[11-Feb-2025 05:30:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 17 and exactly 2 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\nav-menu.php:136
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php(17): register_nav_menu('headerMenuLocat...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): university_features('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(682): do_action('after_setup_the...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\nav-menu.php on line 136
