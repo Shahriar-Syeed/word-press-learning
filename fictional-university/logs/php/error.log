@@ -90,3 +90,8 @@ Stack trace:
 #8 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\nav-menu.php on line 136
 [11-Feb-2025 06:31:39 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-customize-widgets.php on line 923
+[12-Feb-2025 04:55:18 UTC] PHP Warning:  Undefined variable $theParent in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single.php on line 22
+[12-Feb-2025 04:55:18 UTC] PHP Warning:  Undefined variable $theParent in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single.php on line 22
+[12-Feb-2025 04:56:47 UTC] PHP Warning:  Undefined variable $theParent in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single.php on line 22
+[12-Feb-2025 04:56:47 UTC] PHP Warning:  Undefined variable $theParent in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single.php on line 22
+[12-Feb-2025 04:59:43 UTC] PHP Warning:  Undefined variable $theParent in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single.php on line 22
