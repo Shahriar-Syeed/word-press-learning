@@ -3,6 +3,7 @@ function university_post_type()
 {
   register_post_type('event', array(
     'public' => true,
+    'show_in_reset' => true,
     'labels' => array(
       'name' => 'Events',
       'add_new_item' => 'Add New Event',
