@@ -106,3 +106,4 @@ Stack trace:
 [13-Feb-2025 10:22:13 UTC] PHP Parse error:  syntax error, unexpected token ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 39
 [13-Feb-2025 10:22:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [13-Feb-2025 10:22:13 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[13-Feb-2025 13:34:02 UTC] PHP Parse error:  syntax error, unexpected token "echo", expecting "," or ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single-event.php on line 31
