@@ -33,7 +33,7 @@ get_header();
       echo '<ul class="link-list min-list">';
       foreach ($relatedPrograms as $program) {
     ?>
-        <li class><a href="<?php the_permalink(); ?>"><?php echo get_the_title($program); ?></a></li>
+        <li class><a href="<?php the_permalink($program); ?>"><?php echo get_the_title($program); ?></a></li>
 
     <?php
 
