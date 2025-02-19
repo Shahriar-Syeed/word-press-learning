@@ -27,6 +27,40 @@ get_header();
 
     <?php
     $today = date('Ymd');
+
+    $relatedProfessors = new WP_Query(array(
+      'posts_per_page' => -1,
+      'post_type' => 'professor',
+      // 'orderby' => 'title',
+      // 'orderby' => 'rand',
+      // 'meta_key' => 'professor_date',
+      'orderby' => 'title',
+      // 'order' => 'DESC',
+      'order' => 'ASC',
+      'meta_query' => array(
+        array(
+          'key' => 'related_programs',
+          'compare' => 'LIKE',
+          'value' => '"' .  get_the_ID() . '"',
+        ),
+      ),
+    ));
+
+    if ($relatedProfessors->have_posts()) {
+      echo '<hr class="section-break">';
+      echo '<h2 class="headline headline--medium"> ' . get_the_title() . ' Professor(s)</h2>';
+      echo '<ul>';
+      while ($relatedProfessors->have_posts()) {
+        $relatedProfessors->the_post();
+    ?>
+        <li><a href=""><?php the_title() ?></a></li>
+
+      <?php
+      }
+      echo '</ul>';
+      wp_reset_postdata();
+    }
+
     $homepageEvents = new WP_Query(array(
       'posts_per_page' => 2,
       'post_type' => 'event',
@@ -56,7 +90,7 @@ get_header();
       echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Event(s)</h2>';
       while ($homepageEvents->have_posts()) {
         $homepageEvents->the_post();
-    ?>
+      ?>
         <div class="event-summary">
           <a class="event-summary__date t-center" href="<?php the_permalink() ?>">
             <span class="event-summary__month"><?php

@@ -46,5 +46,27 @@ function university_post_type()
     ),
     'menu_icon' => 'dashicons-awards',
   ));
+  //Professor post type
+  register_post_type('professor', array(
+    'show_in_rest' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      // 'excerpt',
+      // 'custom-fields'
+    ),
+    // 'rewrite' => array('slug' => 'professors'),
+    // 'has_archive' => true,
+    'public' => true,
+    // 'show_in_reset' => true,
+    'labels' => array(
+      'name' => 'Professors',
+      'add_new_item' => 'Add New Professor',
+      'edit_item' => 'Edit Professor',
+      'all_items' => 'All Professors',
+      'singular_name' => 'Professor',
+    ),
+    'menu_icon' => 'dashicons-welcome-learn-more',
+  ));
 }
 add_action('init', 'university_post_type');
