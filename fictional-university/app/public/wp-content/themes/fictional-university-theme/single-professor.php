@@ -7,7 +7,7 @@ get_header();
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title"><?php the_title(); ?></h1>
     <div class="page-banner__intro">
-      <p>Keep up the latest news</p>
+      <p>Professor's review</p>
     </div>
   </div>
 </div>
@@ -25,7 +25,7 @@ get_header();
     <div class="genetic-content">
       <div class="row group">
         <div class="one-third">
-          <?php the_post_thumbnail(); ?>
+          <?php the_post_thumbnail('professorPortrait'); ?>
         </div>
         <div class="two-third">
           <?php the_content(); ?>
