@@ -113,3 +113,8 @@ Stack trace:
 [19-Feb-2025 06:27:05 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
 [19-Feb-2025 06:27:17 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 21
 [19-Feb-2025 06:27:27 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 21
+[19-Feb-2025 12:08:42 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[19-Feb-2025 12:12:30 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[19-Feb-2025 12:14:51 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[19-Feb-2025 12:21:07 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[19-Feb-2025 12:21:39 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
