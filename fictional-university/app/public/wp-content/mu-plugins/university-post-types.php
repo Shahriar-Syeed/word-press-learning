@@ -52,6 +52,7 @@ function university_post_type()
     'supports' => array(
       'title',
       'editor',
+      'thumbnail',
       // 'excerpt',
       // 'custom-fields'
     ),
