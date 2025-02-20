@@ -1,24 +1,33 @@
 <?php
 
-function pageBanner()
+function pageBanner($args = NULL)
 {
   //phplogicwill live here
+  if (!$args['title']) {
+    $args['title'] = get_the_title();
+  }
+  if (!$args['subtitle']) {
+    $args['subtitle'] = get_field('page_banner_subtitle');
+  }
+  if (!$args['photo']) {
+    if (get_field('page_banner_background_image')) {
+      $args['photo'] = get_field('page_banner_background_image')['size']['pageBanner'];
+    } else {
+      $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
+    }
+  }
+
 ?>
   <div class="page-banner">
-    <div class="page-banner__bg-image" style="background-image: url(<?php $pageBannerImage = get_field('page_banner_background_image');
-                                                                    if ($pageBannerImage) {
-                                                                      // echo $pageBannerImage['url'];
-                                                                      echo $pageBannerImage['sizes']['pageBanner'];
-                                                                    } else {
-                                                                      echo get_theme_file_uri('images/ocean.jpg');
-                                                                    } ?>)"></div>
+    <div class="page-banner__bg-image" style="background-image: url(<?php echo  $args['photo']; ?>)"></div>
 
     <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title"><?php the_title(); ?></h1>
+      <h1 class="page-banner__title"><?php echo $args['title'] ?></h1>
       <div class="page-banner__intro">
-        <p><?php if (the_field('page_banner_subtitle')) {
-              the_field('page_banner_subtitle');
-            } ?></p>
+        <p><?php
+            echo $args['subtitle'];
+            // the_field('page_banner_subtitle');
+            ?></p>
       </div>
     </div>
   </div>
