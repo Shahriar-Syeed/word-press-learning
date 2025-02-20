@@ -13,7 +13,11 @@ get_header();
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title"><?php the_title(); ?></h1>
     <div class="page-banner__intro">
-      <p><?php the_field('page_banner_subtitle'); ?></p>
+      <p><?php if (the_field('page_banner_subtitle')) {
+            the_field('page_banner_subtitle');
+          } else {
+            echo 'Review of professor.';
+          } ?></p>
     </div>
   </div>
 </div>
