@@ -1,8 +1,8 @@
 <?php
 get_header();
-
+pageBanner();
 ?>
-<div class="page-banner">
+<!-- <div class="page-banner">
   <div class="page-banner__bg-image" style="background-image: url(<?php $pageBannerImage = get_field('page_banner_background_image');
                                                                   if ($pageBannerImage) {
                                                                     // echo $pageBannerImage['url'];
@@ -19,7 +19,7 @@ get_header();
           } ?></p>
     </div>
   </div>
-</div>
+</div> -->
 <div class="container container--narrow page-section">
   <?php print_r($pageBannerImage); ?>
   <?php

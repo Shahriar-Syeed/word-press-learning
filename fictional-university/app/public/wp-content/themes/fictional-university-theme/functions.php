@@ -1,5 +1,30 @@
 <?php
 
+function pageBanner()
+{
+  //phplogicwill live here
+?>
+  <div class="page-banner">
+    <div class="page-banner__bg-image" style="background-image: url(<?php $pageBannerImage = get_field('page_banner_background_image');
+                                                                    if ($pageBannerImage) {
+                                                                      // echo $pageBannerImage['url'];
+                                                                      echo $pageBannerImage['sizes']['pageBanner'];
+                                                                    } else {
+                                                                      echo get_theme_file_uri('images/ocean.jpg');
+                                                                    } ?>)"></div>
+
+    <div class="page-banner__content container container--narrow">
+      <h1 class="page-banner__title"><?php the_title(); ?></h1>
+      <div class="page-banner__intro">
+        <p><?php if (the_field('page_banner_subtitle')) {
+              the_field('page_banner_subtitle');
+            } ?></p>
+      </div>
+    </div>
+  </div>
+<?php
+}
+
 function university_files(): void
 {
   // wp_enqueue_style('university_main_style', get_stylesheet_uri()); for style css
