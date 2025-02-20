@@ -120,3 +120,8 @@ Stack trace:
 [19-Feb-2025 12:21:39 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
 [20-Feb-2025 06:45:08 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting "," or ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single-professor.php on line 9
 [20-Feb-2025 06:45:38 UTC] PHP Parse error:  Unclosed '{' on line 9 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single-professor.php on line 63
+[20-Feb-2025 07:44:57 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single-professor.php on line 9
+[20-Feb-2025 07:44:57 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\single-professor.php on line 9
+[20-Feb-2025 07:47:36 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[20-Feb-2025 07:48:40 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[20-Feb-2025 07:49:06 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39

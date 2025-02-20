@@ -5,7 +5,8 @@ get_header();
 <div class="page-banner">
   <div class="page-banner__bg-image" style="background-image: url(<?php $pageBannerImage = get_field('page_banner_background_image');
                                                                   if ($pageBannerImage) {
-                                                                    echo $pageBannerImage['url'];
+                                                                    // echo $pageBannerImage['url'];
+                                                                    echo $pageBannerImage['sizes']['pageBanner'];
                                                                   } else {
                                                                     echo get_theme_file_uri('images/ocean.jpg');
                                                                   } ?>)"></div>
@@ -15,13 +16,12 @@ get_header();
     <div class="page-banner__intro">
       <p><?php if (the_field('page_banner_subtitle')) {
             the_field('page_banner_subtitle');
-          } else {
-            echo 'Review of professor.';
           } ?></p>
     </div>
   </div>
 </div>
 <div class="container container--narrow page-section">
+  <?php print_r($pageBannerImage); ?>
   <?php
   while (have_posts()) {
     the_post();
