@@ -160,3 +160,12 @@ Stack trace:
 [20-Feb-2025 13:23:17 UTC] PHP Warning:  Undefined array key "photo" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 12
 [20-Feb-2025 13:23:17 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
 [20-Feb-2025 13:23:17 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[20-Feb-2025 13:26:28 UTC] PHP Warning:  Undefined array key "title" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 6
+[20-Feb-2025 13:26:28 UTC] PHP Warning:  Undefined array key "subtitle" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 9
+[20-Feb-2025 13:26:28 UTC] PHP Warning:  Undefined array key "photo" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 12
+[20-Feb-2025 13:26:28 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[20-Feb-2025 13:26:28 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[21-Feb-2025 07:04:27 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[21-Feb-2025 07:04:27 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[21-Feb-2025 07:16:08 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[21-Feb-2025 07:16:08 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14

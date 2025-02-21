@@ -21,7 +21,7 @@ pageBanner();
   </div>
 </div> -->
 <div class="container container--narrow page-section">
-  <?php print_r($pageBannerImage); ?>
+  <!-- <?php print_r($pageBannerImage); ?> -->
   <?php
   while (have_posts()) {
     the_post();
