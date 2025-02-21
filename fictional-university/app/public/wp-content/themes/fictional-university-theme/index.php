@@ -1,7 +1,8 @@
 <?php
 get_header();
+pageBanner(array('title' => 'Welcome to our blog!', 'subtitle' => 'Keep up with the latest news.'));
 ?>
-<div class="page-banner">
+<!-- <div class="page-banner">
   <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg'); ?>)"></div>
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title">Welcome to our blog!</h1>
@@ -9,7 +10,7 @@ get_header();
       <p>Keep up with the latest news.</p>
     </div>
   </div>
-</div>
+</div> -->
 <div class="container container--narrow page-section">
   <?php
   while (have_posts()) {

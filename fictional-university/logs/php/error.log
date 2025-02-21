@@ -169,3 +169,7 @@ Stack trace:
 [21-Feb-2025 07:04:27 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
 [21-Feb-2025 07:16:08 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
 [21-Feb-2025 07:16:08 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 14
+[21-Feb-2025 09:23:57 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[21-Feb-2025 09:25:06 UTC] PHP Warning:  Undefined array key "size" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropEditorWindow.php on line 39
+[21-Feb-2025 12:01:12 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[21-Feb-2025 13:03:40 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
