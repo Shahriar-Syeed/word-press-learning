@@ -17,6 +17,7 @@ pageBanner(array('title' => 'All Events', 'subtitle' => 'See what is going on in
   <?php
   while (have_posts()) {
     the_post();
+    get_template_part('template-parts/content-event');
   ?>
     <!-- <div class="post-item">
       <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>">
@@ -34,7 +35,7 @@ pageBanner(array('title' => 'All Events', 'subtitle' => 'See what is going on in
         <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
       </div>
     </div> -->
-    <div class="event-summary">
+    <!-- <div class="event-summary">
       <a class="event-summary__date t-center" href="<?php the_permalink() ?>">
         <span class="event-summary__month"><?php
                                             // the_field('event_date');
@@ -49,7 +50,7 @@ pageBanner(array('title' => 'All Events', 'subtitle' => 'See what is going on in
         <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
         <p><?php echo wp_trim_words(get_the_content(), 12) ?> <a href="<?php the_permalink() ?>" class="nu gray">Learn more</a></p>
       </div>
-    </div>
+    </div> -->
   <?php
   }
   echo paginate_links();

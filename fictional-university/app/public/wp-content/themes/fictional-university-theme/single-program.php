@@ -95,8 +95,9 @@ pageBanner();
       echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Event(s)</h2>';
       while ($homepageEvents->have_posts()) {
         $homepageEvents->the_post();
+        get_template_part('template-parts\content-event');
       ?>
-        <div class=" event-summary">
+        <!-- <div class=" event-summary">
           <a class="event-summary__date t-center" href="<?php the_permalink() ?>">
             <span class="event-summary__month"><?php
                                                 // the_field('event_date');
@@ -117,7 +118,7 @@ pageBanner();
                 }
                 ?><a href="<?php the_permalink() ?>" class="nu gray">Learn more</a></p>
           </div>
-        </div>
+        </div> -->
 
     <?php
       }
