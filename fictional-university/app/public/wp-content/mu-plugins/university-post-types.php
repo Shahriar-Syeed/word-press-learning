@@ -7,12 +7,12 @@ function university_post_type()
     'supports' => array(
       'title',
       'editor',
-      'thumbnail',
-      // 'excerpt',
+      // 'thumbnail',
+      'excerpt',
       // 'custom-fields'
     ),
     'rewrite' => array('slug' => 'campuses'),
-    // 'has_archive' => true,
+    'has_archive' => true,
     'public' => true,
     // 'show_in_reset' => true,
     'labels' => array(
