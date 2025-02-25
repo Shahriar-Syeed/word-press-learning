@@ -1,6 +1,29 @@
 <?php
 function university_post_type()
 {
+  // camus post type
+  register_post_type('campus', array(
+    'show_in_rest' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'thumbnail',
+      // 'excerpt',
+      // 'custom-fields'
+    ),
+    'rewrite' => array('slug' => 'campuses'),
+    // 'has_archive' => true,
+    'public' => true,
+    // 'show_in_reset' => true,
+    'labels' => array(
+      'name' => 'campuses',
+      'add_new_item' => 'Add New campus',
+      'edit_item' => 'Edit campus',
+      'all_items' => 'All campuses',
+      'singular_name' => 'campus',
+    ),
+    'menu_icon' => 'dashicons-location-alt',
+  ));
   // event post type
   register_post_type('event', array(
     'show_in_rest' => true,
