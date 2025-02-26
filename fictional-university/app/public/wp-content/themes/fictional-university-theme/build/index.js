@@ -4040,8 +4040,10 @@ class Search {
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-search-trigger");
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
     this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay");
+    this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#search-term');
     this.events();
     this.isOverlayOpen = false;
+    this.typingTimer;
   }
   // 2. events
   // on this.head feels cold, wearsHat
@@ -4050,6 +4052,7 @@ class Search {
     this.openButton.on('click', this.openOverlay.bind(this));
     this.closeButton.on('click', this.closeOverlay.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
+    this.searchField.on("keydown", this.typingLogic.bind(this));
   }
 
   // 3.methods (function, action ...)
@@ -4077,6 +4080,12 @@ class Search {
       console.log('close');
     }
   }
+  typingLogic() {
+    clearTimeout(this.typingTimer);
+    this.typingTimer = setTimeout(() => {
+      console.log("lsdjflsdjfljlsjlsd");
+    }, 2000);
+  }
 }
 
 // class Search {
@@ -4090,6 +4099,7 @@ class Search {
 //     this.closeButton= document.querySelector(".search-overlay__close");
 //     this.searchOverlay = document.querySelector(".search-overlay");
 //     this.events();
+//     this.isOverlayOpen = false;
 
 //   }
 //   // 2. events
@@ -4098,6 +4108,7 @@ class Search {
 //   events(){
 //     this.openButton.addEventListener('click', ()=>this.openOverlay());
 //     this.closeButton.addEventListener('click', ()=>this.closeOverlay());
+//     document.addEventListener('keydown', ()=>this.keyPressDispatcher());
 //   }
 
 //   // 3.methods (function, action ...)
@@ -4106,10 +4117,25 @@ class Search {
 //   openOverlay(){
 //     this.searchOverlay.classList.add("search-overlay--active");
 //     document.querySelector("body").classList.add("search-overlay--active");
+// this.isOverlayOpen = true;
 //   }
 //   closeOverlay(){
 //     this.searchOverlay.classList.remove("search-overlay--active");
 //     document.querySelector("body").classList.remove("search-overlay--active");
+// this.isOverlayOpen = false;
+
+//   }
+//   keyPressDispatcher(){
+// console.log(e);
+// console.log(e.keyCode);
+// if(e.keyCode === 83 && !this.isOverlayOpen ){
+//   this.openOverlay();
+//   console.log('open');
+// }
+// if(e.keyCode === 27 && this.isOverlayOpen ){
+//   this.closeOverlay();
+//   console.log('close');
+// }
 
 //   }
 // }

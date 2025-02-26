@@ -9,8 +9,11 @@ class Search {
     this.openButton= $(".js-search-trigger");
     this.closeButton= $(".search-overlay__close");
     this.searchOverlay = $(".search-overlay");
+    this.searchField = $('#search-term');
     this.events();
     this.isOverlayOpen = false;
+    this.typingTimer; 
+
 
   }
   // 2. events
@@ -20,6 +23,7 @@ class Search {
     this.openButton.on('click', this.openOverlay.bind(this));
     this.closeButton.on('click', this.closeOverlay.bind(this));
     $(document).on("keydown", this.keyPressDispatcher.bind(this));
+    this.searchField.on("keydown", this.typingLogic.bind(this));
   }
 
   // 3.methods (function, action ...)
@@ -47,6 +51,12 @@ class Search {
       console.log('close');
     }
   }
+  typingLogic(){
+    clearTimeout(this.typingTimer);
+   this.typingTimer= setTimeout(() => {
+ console.log("lsdjflsdjfljlsjlsd")
+    }, 2000);
+  }
 }
 
 // class Search {
@@ -60,6 +70,7 @@ class Search {
 //     this.closeButton= document.querySelector(".search-overlay__close");
 //     this.searchOverlay = document.querySelector(".search-overlay");
 //     this.events();
+//     this.isOverlayOpen = false;
 
 //   }
 //   // 2. events
@@ -68,18 +79,34 @@ class Search {
 //   events(){
 //     this.openButton.addEventListener('click', ()=>this.openOverlay());
 //     this.closeButton.addEventListener('click', ()=>this.closeOverlay());
+//     document.addEventListener('keydown', ()=>this.keyPressDispatcher());
 //   }
 
 //   // 3.methods (function, action ...)
 //   // goingSwimming(){}
 //   // wearsHat(){}
 //   openOverlay(){
-//     this.searchOverlay.classList.add("search-overlay--active");
-//     document.querySelector("body").classList.add("search-overlay--active");
+  //     this.searchOverlay.classList.add("search-overlay--active");
+  //     document.querySelector("body").classList.add("search-overlay--active");
+  // this.isOverlayOpen = true;
+  //   }
+  //   closeOverlay(){
+    //     this.searchOverlay.classList.remove("search-overlay--active");
+    //     document.querySelector("body").classList.remove("search-overlay--active");
+    // this.isOverlayOpen = false;
+
 //   }
-//   closeOverlay(){
-  //     this.searchOverlay.classList.remove("search-overlay--active");
-  //     document.querySelector("body").classList.remove("search-overlay--active");
+//   keyPressDispatcher(){
+// console.log(e);
+    // console.log(e.keyCode);
+    // if(e.keyCode === 83 && !this.isOverlayOpen ){
+    //   this.openOverlay();
+    //   console.log('open');
+    // }
+    // if(e.keyCode === 27 && this.isOverlayOpen ){
+    //   this.closeOverlay();
+    //   console.log('close');
+    // }
 
 //   }
 // }
