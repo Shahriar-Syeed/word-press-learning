@@ -4092,7 +4092,7 @@ class Search {
           this.resultDiv.html('<div class="spinner-loader"></div>');
           this.isSpinnerVisible = true;
         }
-        this.typingTimer = setTimeout(this.getResult.bind(this), 1500);
+        this.typingTimer = setTimeout(this.getResult.bind(this), 750);
       } else {
         this.resultDiv.html('');
         this.isSpinnerVisible = false;
