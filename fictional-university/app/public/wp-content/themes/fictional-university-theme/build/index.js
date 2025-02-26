@@ -4037,6 +4037,7 @@ class Search {
     // this.eyeColor = "green";
     // this.head = {};
     // this.brain = {};
+    this.addSearchHTML();
     this.resultDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__result");
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-search-trigger");
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
@@ -4112,6 +4113,21 @@ class Search {
       // alert(posts[0].title.rendered);
     });
     this.isSpinnerVisible = false;
+  }
+  addSearchHTML() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").append(`
+      <div class="search-overlay">
+  <div class="search-overlay__top">
+    <div class="container">
+      <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
+      <input type="text" class="search-term" placeholder="What are you looking for?" id="search-term" autocomplete="off">
+      <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="container">
+    <div id="search-overlay__result"></div>
+  </div>
+</div>`);
   }
 }
 
