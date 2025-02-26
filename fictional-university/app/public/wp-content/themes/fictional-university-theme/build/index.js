@@ -4100,8 +4100,11 @@ class Search {
     this.previousValue = this.searchField.val();
   }
   getResult() {
-    this.resultDiv.html("Imagine real search result here....");
-    this.isSpinnerVisible = false;
+    // this.resultDiv.html("Imagine real search result here....");
+    // this.isSpinnerVisible = false;
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://fictional-university.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+      alert(posts[0].title.rendered);
+    });
   }
 }
 
