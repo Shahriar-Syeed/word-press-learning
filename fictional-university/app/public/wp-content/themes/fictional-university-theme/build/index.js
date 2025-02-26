@@ -4106,10 +4106,12 @@ class Search {
       // const testArray = ['red', 'blue']
       this.resultDiv.html(`<h2 class="search-overlay__section-title">General Information</h2>
         <ul class="link-list min-list">
+        ${posts.length ? '<ul class="link-list min-list">' : '<p>No general Information matches that search.</p>'}
         ${posts.map(item => `<li><a href='${item.link}'>${item.title.rendered}</li>`).join('')}       
-        </ul>`);
+        ${posts.length ? '</ul>' : ''}`);
       // alert(posts[0].title.rendered);
     });
+    this.isSpinnerVisible = false;
   }
 }
 
