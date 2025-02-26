@@ -25,9 +25,11 @@ class Search {
   // wearsHat(){}
   openOverlay(){
     this.searchOverlay.addClass("search-overlay--active");
+    $("body").addClass("body-no-scroll");
   }
   closeOverlay(){
     this.searchOverlay.removeClass("search-overlay--active");
+    $("body").removeClass("body-no-scroll");
 
   }
 }
@@ -58,9 +60,11 @@ class Search {
 //   // wearsHat(){}
 //   openOverlay(){
 //     this.searchOverlay.classList.add("search-overlay--active");
+//     document.querySelector("body").classList.add("search-overlay--active");
 //   }
 //   closeOverlay(){
-//     this.searchOverlay.classList.remove("search-overlay--active");
+  //     this.searchOverlay.classList.remove("search-overlay--active");
+  //     document.querySelector("body").classList.remove("search-overlay--active");
 
 //   }
 // }
