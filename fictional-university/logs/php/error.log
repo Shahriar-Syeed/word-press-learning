@@ -190,3 +190,4 @@ Stack trace:
 [27-Feb-2025 08:29:35 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 15
 [27-Feb-2025 08:29:35 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 15
 [27-Feb-2025 08:29:35 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 15
+[27-Feb-2025 09:20:15 UTC] PHP Warning:  Undefined array key 3 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-query.php on line 3671
