@@ -4108,7 +4108,7 @@ class Search {
       this.resultDiv.html(`<h2 class="search-overlay__section-title">General Information</h2>
         <ul class="link-list min-list">
         ${combinedResult.length ? '<ul class="link-list min-list">' : '<p>No general Information matches that search.</p>'}
-        ${combinedResult.map(item => `<li><a href='${item.link}'>${item.title.rendered}</li>`).join('')}       
+        ${combinedResult.map(item => `<li><a href='${item.link}'>${item.title.rendered}</a> ${item.type === 'post' ? `by ${item.authorName}` : ''}</li>`).join('')}       
         ${combinedResult.length ? '</ul>' : ''}`);
       this.isSpinnerVisible = false;
     }, this.resultDiv.html('<p>Unexpected error; please try again please.</p>'));
