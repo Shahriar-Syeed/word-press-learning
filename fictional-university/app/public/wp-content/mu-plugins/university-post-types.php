@@ -49,7 +49,7 @@ function university_post_type()
 
   //Program post type
   register_post_type('program', array(
-    'show_in_rest' => true,
+    'show_in_rest' => true, //add custom route through rest api
     'supports' => array(
       'title',
       'editor',
