@@ -88,7 +88,7 @@ class Search {
         ${combinedResult.map(item=>`<li><a href='${item.link}'>${item.title.rendered}</li>`).join('')}       
         ${combinedResult.length ?'</ul>':''}`);
         this.isSpinnerVisible = false;
-    })
+    }, this.resultDiv.html('<p>Unexpected error; please try again please.</p>'));
     // this.resultDiv.html("Imagine real search result here....");
     // this.isSpinnerVisible = false;
     // $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search='+ this.searchField.val(), (posts)=>{
