@@ -52,7 +52,7 @@ function university_post_type()
     'show_in_rest' => true, //add custom route through rest api
     'supports' => array(
       'title',
-      'editor',
+      // 'editor',
       // 'excerpt',
       // 'custom-fields'
     ),
