@@ -191,3 +191,105 @@ Stack trace:
 [27-Feb-2025 08:29:35 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 15
 [27-Feb-2025 08:29:35 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 15
 [27-Feb-2025 09:20:15 UTC] PHP Warning:  Undefined array key 3 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-query.php on line 3671
+[27-Feb-2025 09:54:43 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:60
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(60): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 60
+[27-Feb-2025 09:56:24 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:60
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(60): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 60
+[27-Feb-2025 09:56:26 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:60
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(60): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 60
+[27-Feb-2025 09:56:26 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:60
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(60): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 60
+[27-Feb-2025 09:56:30 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:60
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(60): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 60
+[27-Feb-2025 09:56:39 UTC] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php:54
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php(54): array_push(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): universitySearchResults(Object(WP_REST_Request))
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(449): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp.php(813): WP->parse_request('')
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\functions.php(1336): WP->main('')
+#11 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#13 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 54
