@@ -293,3 +293,9 @@ Stack trace:
 #12 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
 #13 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 54
+[27-Feb-2025 12:36:42 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 94
+[27-Feb-2025 13:06:54 UTC] PHP Warning:  Undefined array key 0 in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 88
+[27-Feb-2025 13:06:54 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 88
+[02-Mar-2025 17:31:19 UTC] PHP Parse error:  syntax error, unexpected identifier "array_push", expecting "(" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 54
+[02-Mar-2025 17:31:19 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[02-Mar-2025 17:31:19 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368

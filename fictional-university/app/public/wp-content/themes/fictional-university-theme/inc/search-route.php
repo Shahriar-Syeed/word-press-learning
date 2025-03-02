@@ -49,6 +49,23 @@ function universitySearchResults($data)
       ));
     }
     if (get_post_type() == 'program') {
+      $relatedCampuses = get_field('related_campus');
+      if ($relatedCampuses) {
+        // array_push(
+        //   $results['campuses'],
+        //   $relatedCampuses,
+        //   // 'permalink' => get_the_permalink(),
+        // );
+        foreach ($relatedCampuses as $campus) {
+          array_push(
+            $results['campuses'],
+            array(
+              'title' => get_the_title($campus),
+              'permalink' => get_the_permalink($campus),
+            )
+          );
+        }
+      }
       array_push($results['programs'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
