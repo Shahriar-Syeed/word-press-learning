@@ -116,3 +116,37 @@ function university_adjust_query($query)
 }
 
 add_action('pre_get_posts', 'university_adjust_query');
+
+function universityMapKey($api)
+{
+  $api['key'] = 'pk.eyJ1Ijoic2FyaWthMzQzIiwiYSI6ImNsZno2OHhnaTE3emYzcXF1em5mOHVwaDcifQ.r4d8RIU9Dja96ijziSKBfQ';
+  return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'universityMapKey');
+
+// Redirect subscriber accounts out of admin and onto homepage
+
+
+add_action('admin_init', 'redirectSubsToFrontend');
+
+function redirectSubsToFrontend()
+{
+  $ourCurrentUser = wp_get_current_user();
+
+  if (count($ourCurrentUser->roles) == 1 and $ourCurrentUser->roles[0] == 'subscriber') {
+    wp_redirect(site_url('/'));
+    exit;
+  }
+}
+
+add_action('wp_loaded', 'noSubsAdminBar');
+
+function noSubsAdminBar()
+{
+  $roles = wp_get_current_user()->roles;
+
+  if (count($roles) == 1 and $roles[0] == 'subscriber') {
+    show_admin_bar(false);
+  }
+}

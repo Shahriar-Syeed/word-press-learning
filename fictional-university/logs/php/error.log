@@ -299,3 +299,8 @@ Stack trace:
 [02-Mar-2025 17:31:19 UTC] PHP Parse error:  syntax error, unexpected identifier "array_push", expecting "(" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\search-route.php on line 54
 [02-Mar-2025 17:31:19 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [02-Mar-2025 17:31:19 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[04-Mar-2025 08:45:04 UTC] PHP Parse error:  syntax error, unexpected identifier "esc_url" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\header.php on line 35
+[04-Mar-2025 10:04:46 UTC] PHP Parse error:  syntax error, unexpected identifier "add_action" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 130
+[04-Mar-2025 10:04:46 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[04-Mar-2025 10:04:46 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[04-Mar-2025 10:04:46 UTC] PHP Parse error:  syntax error, unexpected identifier "add_action" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 130
