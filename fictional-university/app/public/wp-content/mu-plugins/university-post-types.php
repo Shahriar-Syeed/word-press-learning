@@ -112,11 +112,11 @@ function university_post_type()
     'show_ui' => true,
     // 'show_in_reset' => true,
     'labels' => array(
-      'name' => 'notes',
-      'add_new_item' => 'Add New note',
-      'edit_item' => 'Edit note',
-      'all_items' => 'All notes',
-      'singular_name' => 'note',
+      'name' => 'Notes',
+      'add_new_item' => 'Add New Note',
+      'edit_item' => 'Edit Note',
+      'all_items' => 'All Notes',
+      'singular_name' => 'Note',
     ),
     'menu_icon' => 'dashicons-welcome-write-blog',
   ));
