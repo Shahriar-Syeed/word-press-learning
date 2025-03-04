@@ -304,3 +304,36 @@ Stack trace:
 [04-Mar-2025 10:04:46 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [04-Mar-2025 10:04:46 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
 [04-Mar-2025 10:04:46 UTC] PHP Parse error:  syntax error, unexpected identifier "add_action" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 130
+[04-Mar-2025 10:25:58 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 163
+[04-Mar-2025 10:30:33 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "ourLoginCss" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(120): do_action('login_enqueue_s...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(1154): login_header('Registration Fo...', '<div class="not...', Object(WP_Error))
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[04-Mar-2025 10:31:11 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "ourLoginCss" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(120): do_action('login_enqueue_s...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(1154): login_header('Registration Fo...', '<div class="not...', Object(WP_Error))
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[04-Mar-2025 10:31:43 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "ourLoginCss" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(120): do_action('login_enqueue_s...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(1154): login_header('Registration Fo...', '<div class="not...', Object(WP_Error))
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[04-Mar-2025 10:35:13 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "ourLoginTitle" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(256): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(719): apply_filters_ref_array('login_headertit...', Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(150): apply_filters_deprecated('login_headertit...', Array, '5.2.0', 'login_headertex...', 'Usage of the ti...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(1489): login_header('Log In', '', Object(WP_Error))
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
