@@ -4,6 +4,8 @@ function university_post_type()
   // camus post type
   register_post_type('campus', array(
     'show_in_rest' => true,
+    'capability_type' => 'campus',
+    'map_meta_cap' => true,
     'supports' => array(
       'title',
       'editor',
@@ -27,6 +29,8 @@ function university_post_type()
   // event post type
   register_post_type('event', array(
     'show_in_rest' => true,
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'supports' => array(
       'title',
       'editor',
