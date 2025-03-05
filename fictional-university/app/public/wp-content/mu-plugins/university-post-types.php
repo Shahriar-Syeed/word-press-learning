@@ -96,6 +96,7 @@ function university_post_type()
     ),
     'menu_icon' => 'dashicons-welcome-learn-more',
   ));
+
   //Note post type
   register_post_type('note', array(
     'capability_type' => 'note',
@@ -104,15 +105,9 @@ function university_post_type()
     'supports' => array(
       'title',
       'editor',
-      // 'thumbnail',
-      // 'excerpt',
-      // 'custom-fields'
     ),
-    // 'rewrite' => array('slug' => 'notes'),
-    // 'has_archive' => true,
     'public' => false,
     'show_ui' => true,
-    // 'show_in_reset' => true,
     'labels' => array(
       'name' => 'Notes',
       'add_new_item' => 'Add New Note',
@@ -121,6 +116,28 @@ function university_post_type()
       'singular_name' => 'Note',
     ),
     'menu_icon' => 'dashicons-welcome-write-blog',
+  ));
+
+  //Like post type
+  register_post_type('like', array(
+    // 'capability_type' => 'note',
+    // 'map_meta_cap' => true,
+    // 'show_in_rest' => true,
+    'supports' => array(
+      'title',
+      // 'editor',
+    ),
+    'public' => false,
+    'show_ui' => true,
+    // 'show_in_reset' => true,
+    'labels' => array(
+      'name' => 'Likes',
+      'add_new_item' => 'Add New Like',
+      'edit_item' => 'Edit Like',
+      'all_items' => 'All Likes',
+      'singular_name' => 'Like',
+    ),
+    'menu_icon' => 'dashicons-heart',
   ));
 }
 add_action('init', 'university_post_type');
