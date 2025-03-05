@@ -11,14 +11,16 @@ $(".delete-note").on("click", this.deleteNote);
   }
 
   // Methods will go here
-  deleteNote(){
+  deleteNote(e){
+    const thisNote = $(e.target).parents("li");
     $.ajax({
       beforeSend: (xhr)=>{
         xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
       },
-      url: universityData.root_url + '/wp-json/wp/v2/note/' + '121',
+      url: universityData.root_url + '/wp-json/wp/v2/note/' + thisNote.data('id'),
       type: 'DELETE',
       success:(response)=>{
+        thisNote.slideUp();
         console.log("deleted success");
         console.log(response);
       },
