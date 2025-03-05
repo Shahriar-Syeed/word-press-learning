@@ -7,9 +7,15 @@ class MyNotes {
 
   events() {
     $(".delete-note").on("click", this.deleteNote);
+    $(".edit-note").on("click", this.editNote);
   }
 
   // Methods will go here
+  editNote(e){
+    const thisNote = $(e.target).parents("li");
+    thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field");
+    thisNote.find(".update-note").addClass("update-note--visible");
+  }
   deleteNote(e) {
     const thisNote = $(e.target).parents("li");
     $.ajax({

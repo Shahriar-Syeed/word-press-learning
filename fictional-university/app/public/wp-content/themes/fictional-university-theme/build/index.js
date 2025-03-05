@@ -6107,9 +6107,15 @@ class MyNotes {
   }
   events() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".delete-note").on("click", this.deleteNote);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".edit-note").on("click", this.editNote);
   }
 
   // Methods will go here
+  editNote(e) {
+    const thisNote = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parents("li");
+    thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field");
+    thisNote.find(".update-note").addClass("update-note--visible");
+  }
   deleteNote(e) {
     const thisNote = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parents("li");
     jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
