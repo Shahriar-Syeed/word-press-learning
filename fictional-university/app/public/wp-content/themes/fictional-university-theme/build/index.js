@@ -6114,10 +6114,10 @@ class MyNotes {
     const thisNote = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parents("li");
     jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
       beforeSend: xhr => {
-        xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+        xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
       },
-      url: universityData.root_url + '/wp-json/wp/v2/note/' + thisNote.data('id'),
-      type: 'DELETE',
+      url: universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.data("id"),
+      type: "DELETE",
       success: response => {
         thisNote.slideUp();
         console.log("deleted success");
