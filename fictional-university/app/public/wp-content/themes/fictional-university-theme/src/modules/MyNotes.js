@@ -52,6 +52,9 @@ class MyNotes {
         thisNote.slideUp();
         console.log("deleted success");
         console.log(response);
+        if(response.userNoteCount < 5){
+          $(".note-limit-message").removeClass('active');
+        }
       },
       error: (response) => {
         console.log("Sorry");
@@ -113,6 +116,9 @@ class MyNotes {
         console.log(response);
       },
       error: (response) => {
+        if(response.responseText == "You have reached post limit."){
+          $(".note-limit-message").addClass("active");
+        }
         console.log("Sorry");
         console.log(response);
       },
