@@ -6092,6 +6092,9 @@ class Like {
   createLike(currentLikeBox) {
     // alert("create mess");
     jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+      beforeSend: xhr => {
+        xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
+      },
       url: universityData.root_url + '/wp-json/university/v1/manageLike',
       type: 'POST',
       data: {
@@ -6108,6 +6111,9 @@ class Like {
   deleteLike() {
     // alert("delete mess");
     jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+      beforeSend: xhr => {
+        xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
+      },
       url: universityData.root_url + '/wp-json/university/v1/manageLike',
       type: 'DELETE',
       success: response => {

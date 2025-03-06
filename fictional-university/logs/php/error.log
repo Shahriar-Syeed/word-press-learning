@@ -337,3 +337,8 @@ Stack trace:
 #3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-login.php(1489): login_header('Log In', '', Object(WP_Error))
 #4 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Mar-2025 06:39:05 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\like-route.php on line 24
+[06-Mar-2025 06:39:05 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[06-Mar-2025 06:39:05 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[06-Mar-2025 06:40:13 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\like-route.php on line 26
+[06-Mar-2025 06:40:13 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\like-route.php on line 26
