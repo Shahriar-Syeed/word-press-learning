@@ -24,7 +24,9 @@ class WordCountAmdTimePlugin
   function shaHTML()
   {
 ?>
-    <p>Hello world, real plugin</p>
+    <div class="wrap">
+      <h1>Word Count Settings</h1>
+    </div>
 
 <?php
   }
