@@ -1,7 +1,7 @@
 <?php
 function university_post_type()
 {
-  // camus post type
+  // campus post type
   register_post_type('campus', array(
     'show_in_rest' => true,
     'capability_type' => 'campus',
