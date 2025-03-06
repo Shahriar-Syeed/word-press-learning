@@ -14,9 +14,19 @@ function universityLikeRoutes()
   ));
 }
 
-function createLike()
+function createLike($data)
 {
-  return 'try to create Like';
+  $professor = sanitize_text_field($data['professorId']);
+  wp_insert_post(array(
+    'post_type' => 'like',
+    'post_status' => 'publish',
+    'post_title' => '3rd PHP Create Post Test',
+    // 'post_content' => 'Hello world 12345678910',
+    'meta_input' => array(
+      'liked_professor_id' => $professor,
+    ),
+  ));
+  // return 'try to create Like';
 }
 
 function deleteLike()

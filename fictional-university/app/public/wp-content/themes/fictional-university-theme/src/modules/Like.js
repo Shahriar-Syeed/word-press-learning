@@ -16,16 +16,17 @@ class Like {
     const currentLikeBox = $(e.target).closest(".like-box");
 
     if(currentLikeBox.data('exists') == 'yes'){
-      this.deleteLike();
+      this.deleteLike(currentLikeBox);
     }else{
-      this.createLike();
+      this.createLike(currentLikeBox);
     }
   }
-  createLike(){
+  createLike(currentLikeBox){
     // alert("create mess");
     $.ajax({
       url: universityData.root_url + '/wp-json/university/v1/manageLike', 
       type: 'POST',
+      data: {'professorId': currentLikeBox.data('professor')},
       success: (response)=>{
         console.log(response);
       },
