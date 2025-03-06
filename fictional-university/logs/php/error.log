@@ -342,3 +342,18 @@ Stack trace:
 [06-Mar-2025 06:39:05 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
 [06-Mar-2025 06:40:13 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\like-route.php on line 26
 [06-Mar-2025 06:40:13 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\inc\like-route.php on line 26
+[06-Mar-2025 10:50:51 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "addToEndOfPost" not found or invalid function name in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(205): WP_Hook->apply_filters('\n<p>Biology is ...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\endpoints\class-wp-rest-posts-controller.php(1933): apply_filters('the_content', '<!-- wp:paragra...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\endpoints\class-wp-rest-posts-controller.php(635): WP_REST_Posts_Controller->prepare_item_for_response(Object(WP_Post), Object(WP_REST_Request))
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): WP_REST_Posts_Controller->get_item(Object(WP_REST_Request))
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/wp/v2/posts/(?...', Array, NULL)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(576): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\rest-api.php(2957): rest_do_request(Object(WP_REST_Request))
+#7 [internal function]: rest_preload_api_request(Array, '/wp/v2/posts/10...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\block-editor.php(753): array_reduce(Array, 'rest_preload_ap...', Array)
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\edit-form-blocks.php(77): block_editor_rest_api_preload(Array, Object(WP_Block_Editor_Context))
+#10 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\post.php(187): require('C:\\Users\\Dell\\L...')
+#11 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
