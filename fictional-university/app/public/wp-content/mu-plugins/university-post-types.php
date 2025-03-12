@@ -139,5 +139,28 @@ function university_post_type()
     ),
     'menu_icon' => 'dashicons-heart',
   ));
+  // event post type
+  register_post_type('slide', array(
+    'show_in_rest' => true,
+    'capability_type' => 'slide',
+    'map_meta_cap' => true,
+    'supports' => array(
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail'
+    ),
+    'rewrite' => array('slug' => 'slides'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'Slides',
+      'add_new_item' => 'Add New Slide',
+      'edit_item' => 'Edit Slide',
+      'all_items' => 'All Slides',
+      'singular_name' => 'Slide',
+    ),
+    'menu_icon' => 'dashicons-images-alt2',
+  ));
 }
 add_action('init', 'university_post_type');

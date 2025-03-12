@@ -224,7 +224,7 @@
   </div>
 </div>
 
-<div class="hero-slider">
+<!-- <div class="hero-slider">
   <div data-glide-el="track" class="glide__track">
     <div class="glide__slides">
       <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('images/bus.jpg'); ?>)">
@@ -257,8 +257,11 @@
     </div>
     <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
   </div>
-</div>
+</div> -->
+
+
 <?php
+get_template_part('template-parts/content-hero-slider');
 // }
 
 get_footer();

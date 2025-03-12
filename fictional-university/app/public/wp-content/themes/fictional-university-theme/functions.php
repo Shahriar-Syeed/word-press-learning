@@ -202,3 +202,22 @@ function makeNotePrivate($data, $postArr)
   }
   return $data;
 }
+
+// for slider
+// add_action('wp_enqueue_scripts', 'enqueue_glide_assets');
+
+// function enqueue_glide_assets()
+// {
+//   wp_enqueue_style('glide-css', 'https: //cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css');
+//   wp_enqueue_script('glide-js', 'https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js', array(), null, true);
+//   wp_add_inline_script('glide-js', '
+//     document.addEventListener("DOMContentLoaded, function() {
+//         new Glide("#glideSlider", {
+//           type: "carousel",
+//           perView: 1,
+//           autoplay: 3000,
+//           hoverpause: true,
+//         }).mount();
+//       });
+//   ');
+// }
