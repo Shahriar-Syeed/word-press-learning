@@ -358,3 +358,179 @@ Stack trace:
 #11 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
 [12-Mar-2025 13:32:17 UTC] PHP Parse error:  syntax error, unexpected token "else" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\template-parts\content-hero-slider.php on line 19
+[13-Mar-2025 07:13:25 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:15:25 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:17:25 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:19:25 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:21:25 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:23:26 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 70
+[13-Mar-2025 07:24:26 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 79
+[13-Mar-2025 07:26:26 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 79
+[13-Mar-2025 07:28:26 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 79
+[13-Mar-2025 07:28:32 UTC] PHP Parse error:  syntax error, unexpected variable "$wordCountAmdTimePlugin", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 125
+[13-Mar-2025 07:28:32 UTC] PHP Parse error:  syntax error, unexpected variable "$wordCountAmdTimePlugin", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 125
+[13-Mar-2025 07:30:26 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:30:26 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:30:26 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class WordCountAmdTimePlugin does not have a method "wcp_checkboxHTML" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php:1837
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php(1791): do_settings_fields('word-count-sett...', 'wcp_first_secti...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(92): do_settings_sections('word-count-sett...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAmdTimePlugin->shaHTML('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(259): do_action('settings_page_w...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\options-general.php(10): require_once('C:\\Users\\Dell\\L...')
+#7 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php on line 1837
+[13-Mar-2025 07:33:23 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 78
+[13-Mar-2025 07:33:23 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting "function" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 78
+[13-Mar-2025 07:39:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:39:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:39:12 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class WordCountAmdTimePlugin does not have a method "wcp_checkboxHTML" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php:1837
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php(1791): do_settings_fields('word-count-sett...', 'wcp_first_secti...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(90): do_settings_sections('word-count-sett...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAmdTimePlugin->shaHTML('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(259): do_action('settings_page_w...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\options-general.php(10): require_once('C:\\Users\\Dell\\L...')
+#7 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php on line 1837
+[13-Mar-2025 07:39:14 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:39:14 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:39:14 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class WordCountAmdTimePlugin does not have a method "wcp_checkboxHTML" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php:1837
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php(1791): do_settings_fields('word-count-sett...', 'wcp_first_secti...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(90): do_settings_sections('word-count-sett...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAmdTimePlugin->shaHTML('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(259): do_action('settings_page_w...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\options-general.php(10): require_once('C:\\Users\\Dell\\L...')
+#7 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php on line 1837
+[13-Mar-2025 07:42:22 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:42:22 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 07:42:22 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class WordCountAmdTimePlugin does not have a method "wcp_checkboxHTML" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php:1837
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php(1791): do_settings_fields('word-count-sett...', 'wcp_first_secti...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(90): do_settings_sections('word-count-sett...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAmdTimePlugin->shaHTML('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(259): do_action('settings_page_w...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\options-general.php(10): require_once('C:\\Users\\Dell\\L...')
+#7 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php on line 1837
+[13-Mar-2025 07:58:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 65
+[13-Mar-2025 07:58:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 65
+[13-Mar-2025 07:58:12 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class WordCountAmdTimePlugin does not have a method "wcp_checkboxHTML" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php:1837
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php(1791): do_settings_fields('word-count-sett...', 'wcp_first_secti...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(83): do_settings_sections('word-count-sett...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAmdTimePlugin->shaHTML('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(259): do_action('settings_page_w...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\options-general.php(10): require_once('C:\\Users\\Dell\\L...')
+#7 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\template.php on line 1837
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:41:23 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:12 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:44:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:31 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:33 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:35 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:40 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:45:41 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:10 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:13 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:46:25 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:01 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:04 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 08:47:16 UTC] PHP Warning:  Undefined array key "theName" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 72
+[13-Mar-2025 09:35:25 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 62
+[13-Mar-2025 09:37:24 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 62
+[13-Mar-2025 09:56:44 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
+[13-Mar-2025 09:58:16 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
+[13-Mar-2025 09:58:45 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
+[13-Mar-2025 10:00:16 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
+[13-Mar-2025 10:00:46 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
+[13-Mar-2025 10:02:17 UTC] PHP Parse error:  syntax error, unexpected token "=>", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 25
