@@ -6,7 +6,7 @@
   Version: 1.0
   Author: Shahriar
   Author URI: HTTPS://WWW.GOOGLE.COM
-  Text Domain: wcpDomain
+  Text domain: wcpDomain
   Domain path: /languages
 
 */
