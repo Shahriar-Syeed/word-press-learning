@@ -26,6 +26,15 @@ class WordCountAmdTimePlugin
 
     add_settings_field('wcp_headline', 'Headline Text', array($this, 'headlineHTML'), 'word-count-settings-page', 'wcp_first_section');
     register_setting('wordcountplugin', 'wcp_headline', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Post Statistics'));
+
+    add_settings_field('wcp_wordCount', 'Word Count', array($this, 'wordCountHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_wordCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+
+    add_settings_field('wcp_characterCount', 'Character Count', array($this, 'characterCountHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_characterCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '0'));
+
+    add_settings_field('wcp_readTime', 'Read Time', array($this, 'readTimeHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_readTime', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
   }
 
   function locationHTML()
@@ -42,6 +51,30 @@ class WordCountAmdTimePlugin
   {
   ?>
     <input type="text" name="wcp_headline" value="<?php echo esc_attr(get_option('wcp_headline'));  ?>">
+
+  <?php
+  }
+
+  function wordCountHTML()
+  {
+  ?>
+    <input type="checkbox" name="wcp_wordCount" value="1" <?php checked(esc_attr(get_option('wcp_wordCount'))); ?>>
+
+  <?php
+  }
+
+  function characterCountHTML()
+  {
+  ?>
+    <input type="checkbox" name="wcp_characterCount" value="0" <?php checked(esc_attr(get_option('wcp_characterCount'))); ?>>
+
+  <?php
+  }
+
+  function readTimeHTML()
+  {
+  ?>
+    <input type="checkbox" name="wcp_readTime" value="1" <?php checked(esc_attr(get_option('wcp_readTime'))); ?>>
 
   <?php
   }
