@@ -6,6 +6,8 @@
   Version: 1.0
   Author: Shahriar
   Author URI: HTTPS://WWW.GOOGLE.COM
+  Text Domain: wcpDomain
+  Domain path: /languages
 
 */
 
@@ -16,6 +18,12 @@ class WordCountAndTimePlugin
     add_action('admin_menu', array($this, 'adminPage'));
     add_action('admin_init', array($this, 'settings'));
     add_filter('the_content', array($this, 'ifWrap'));
+    add_action('init', array($this, 'languages'));
+  }
+
+  function languages()
+  {
+    load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . 'languages');
   }
 
   function ifWrap($content)
@@ -34,13 +42,13 @@ class WordCountAndTimePlugin
       $wordCount = str_word_count(strip_tags($content));
     }
     if (get_option('wcp_wordcount', '1')) {
-      $html .= 'This post has ' . $wordCount . ' words.<br>';
+      $html .= __('This post has', 'wcpDomain') . ' ' . $wordCount . ' ' . __('words.', 'wcpDomain') . '<br>';
     }
     if (get_option('wcp_characterCount', '1')) {
-      $html .= 'This post has ' . strlen(strip_tags($content)) . ' characters.<br>';
+      $html .= __('This post has', 'wcpDomain') . ' ' . strlen(strip_tags($content)) . ' ' . __('characters.', 'wcpDomain') . '<br>';
     }
     if (get_option('wcp_readTime', '1')) {
-      $html .= 'This post will take about ' . round($wordCount / 225) . ' minute(s) to read.<br>';
+      $html .= __('This post will take about', 'wcpDomain') . ' ' . round($wordCount / 225) . ' ' . __('minute(s) to read.', 'wcpDomain') . '<br>';
     }
     $html .= '</p>';
     if (get_option('wcp_location', '0') == '0') {
@@ -119,7 +127,7 @@ class WordCountAndTimePlugin
 
   function adminPage()
   {
-    add_options_page('Word Count Settings', 'Word Count', 'manage_options', 'word-count-settings-page', array($this, 'shaHTML'));
+    add_options_page('Word Count Settings', __('Word Count', 'wcpDomain'), 'manage_options', 'word-count-settings-page', array($this, 'shaHTML'));
   }
 
   function shaHTML()

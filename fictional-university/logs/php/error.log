@@ -545,3 +545,15 @@ Stack trace:
 [13-Mar-2025 10:47:15 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 31
 [13-Mar-2025 10:51:08 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "]" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 35
 [13-Mar-2025 11:20:36 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 38
+[13-Mar-2025 12:37:35 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function load_plugin_textdomain(), 0 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php on line 26 and at least 1 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\l10n.php:998
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\word-count-sha-plugin\word-count-sha.php(26): load_plugin_textdomain()
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): WordCountAndTimePlugin->languages('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(Object(RegenerateThumbnails), Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\l10n.php on line 998
