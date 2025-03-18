@@ -6,8 +6,8 @@
   Version: 1.0
   Author: Shahriar
   Author URI: HTTPS://WWW.GOOGLE.COM
-  Text domain: wcpDomain
-  Domain path: /languages
+  Text Domain: wcpDomain
+  Domain Path: ./languages
 
 */
 
@@ -23,7 +23,8 @@ class WordCountAndTimePlugin
 
   function languages()
   {
-    load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . 'languages');
+    // load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
   }
 
   function ifWrap($content)
