@@ -43,13 +43,13 @@ class WordCountAndTimePlugin
       $wordCount = str_word_count(strip_tags($content));
     }
     if (get_option('wcp_wordcount', '1')) {
-      $html .= __('This post has', 'wcpDomain') . ' ' . $wordCount . ' ' . __('words.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post has', 'wcpDomain') . ' ' . $wordCount . ' ' . esc_html__('words.', 'wcpDomain') . '<br>';
     }
     if (get_option('wcp_characterCount', '1')) {
-      $html .= __('This post has', 'wcpDomain') . ' ' . strlen(strip_tags($content)) . ' ' . __('characters.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post has', 'wcpDomain') . ' ' . strlen(strip_tags($content)) . ' ' . esc_html__('characters.', 'wcpDomain') . '<br>';
     }
     if (get_option('wcp_readTime', '1')) {
-      $html .= __('This post will take about', 'wcpDomain') . ' ' . round($wordCount / 225) . ' ' . __('minute(s) to read.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post will take about', 'wcpDomain') . ' ' . round($wordCount / 225) . ' ' . esc_html__('minute(s) to read.', 'wcpDomain') . '<br>';
     }
     $html .= '</p>';
     if (get_option('wcp_location', '0') == '0') {
