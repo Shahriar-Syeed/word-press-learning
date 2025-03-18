@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Our Test word count Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-18 09:37+0000\n"
-"PO-Revision-Date: 2025-03-18 10:33+0000\n"
+"PO-Revision-Date: 2025-03-18 10:28+0000\n"
 "Last-Translator: Shahriar\n"
-"Language-Team: Español de México\n"
+"Language-Team: Spanish (Mexico)\n"
 "Language: es_MX\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: word-count-sha.php:46 word-count-sha.php:49
 msgid "This post has"
-msgstr "Esta <strong>publicación</strong> tiene"
+msgstr "Esta publicación tiene"
 
 #: word-count-sha.php:52
 msgid "This post will take about"
