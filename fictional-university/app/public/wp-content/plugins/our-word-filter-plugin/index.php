@@ -34,7 +34,7 @@ class OurWordFilterPlugin
 
   function handleForm()
   {
-    update_option('plugin_word_to_filter', $_POST['plugin-word-to-filter']); ?>
+    update_option('plugin_words_to_filter', $_POST['plugin-words-to-filter']); ?>
     <div class="updated">
       <p>Your filtered words were saved.</p>
     </div>
@@ -56,7 +56,7 @@ class OurWordFilterPlugin
           <p>Enter a <strong>comma-separated</strong> list of words to filter form your site's content</p>
         </label>
         <div class="word-filter__flex-container">
-          <textarea name="plugin-word-to-filter" id="pluginWordToFilter" placeholder="bad, mean, awful, horrible"></textarea>
+          <textarea name="plugin-words-to-filter" id="pluginWordToFilter" placeholder="bad, mean, awful, horrible"><?php echo esc_textarea(get_option('plugin_words_to_filter')); ?></textarea>
         </div>
         <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
       </form>
