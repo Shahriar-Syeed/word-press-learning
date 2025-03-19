@@ -21,14 +21,31 @@ class OurWordFilterPlugin
   function ourMenu()
   {
     // add_menu_page('Word To Filter', 'Word Filter', 'manage_options', 'our-word-filter', array($this, 'wordFilterPage'), plugin_dir_url(__FILE__) . 'custom.svg', 100);
-    add_menu_page('Word To Filter', 'Word Filter', 'manage_options', 'our-word-filter', array($this, 'wordFilterPage'), 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCAyMEMxNS41MjI5IDIwIDIwIDE1LjUyMjkgMjAgMTBDMjAgNC40NzcxNCAxNS41MjI5IDAgMTAgMEM0LjQ3NzE0IDAgMCA0LjQ3NzE0IDAgMTBDMCAxNS41MjI5IDQuNDc3MTQgMjAgMTAgMjBaTTExLjk5IDcuNDQ2NjZMMTAuMDc4MSAxLjU2MjVMOC4xNjYyNiA3LjQ0NjY2SDEuOTc5MjhMNi45ODQ2NSAxMS4wODMzTDUuMDcyNzUgMTYuOTY3NEwxMC4wNzgxIDEzLjMzMDhMMTUuMDgzNSAxNi45Njc0TDEzLjE3MTYgMTEuMDgzM0wxOC4xNzcgNy40NDY2NkgxMS45OVoiIGZpbGw9IiNGRkRGOEQiLz4KPC9zdmc+', 100);
+    $mainPageHook = add_menu_page('Word To Filter', 'Word Filter', 'manage_options', 'our-word-filter', array($this, 'wordFilterPage'), 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCAyMEMxNS41MjI5IDIwIDIwIDE1LjUyMjkgMjAgMTBDMjAgNC40NzcxNCAxNS41MjI5IDAgMTAgMEM0LjQ3NzE0IDAgMCA0LjQ3NzE0IDAgMTBDMCAxNS41MjI5IDQuNDc3MTQgMjAgMTAgMjBaTTExLjk5IDcuNDQ2NjZMMTAuMDc4MSAxLjU2MjVMOC4xNjYyNiA3LjQ0NjY2SDEuOTc5MjhMNi45ODQ2NSAxMS4wODMzTDUuMDcyNzUgMTYuOTY3NEwxMC4wNzgxIDEzLjMzMDhMMTUuMDgzNSAxNi45Njc0TDEzLjE3MTYgMTEuMDgzM0wxOC4xNzcgNy40NDY2NkgxMS45OVoiIGZpbGw9IiNGRkRGOEQiLz4KPC9zdmc+', 100);
     add_submenu_page('our-word-filter', 'Word To Filter', 'Word list', 'manage_options', 'our-word-filter', array($this, 'wordFilterPage'), 100);
     add_submenu_page('our-word-filter', 'Word Filter Options', 'Options', 'manage_options', 'word-filter-options', array($this, 'optionsSubPage'), 100);
+    add_action("load-{$mainPageHook}", array($this, 'mainPageAssets'));
+  }
+
+  function mainPageAssets()
+  {
+    wp_enqueue_style('filterAdminCss', plugin_dir_url(__FILE__) . 'style.css');
   }
   function wordFilterPage()
   { ?>
+    <div class="wrap">
+      <h1>Word Filter</h1>
+      <form method="POST">
+        <label for="pluginWordToFilter">
+          <p>Enter a <strong>comma-separated</strong> list of words to filter form your site's content</p>
+        </label>
+        <div class="word-filter__flex-container">
+          <textarea name="plugin-word-to-filter" id="pluginWordToFilter" placeholder="bad, mean, awful, horrible"></textarea>
+        </div>
+        <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
+      </form>
+    </div>
 
-    Hello World
 
   <?php }
   function optionsSubPage()
