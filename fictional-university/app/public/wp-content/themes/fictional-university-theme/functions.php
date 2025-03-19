@@ -20,7 +20,7 @@ add_action('rest_api_init', 'university_custom_rest');
 
 function pageBanner($args = NULL)
 {
-  //phplogicwill live here
+  //php logic will live here
   if (!isset($args['title'])) {
     $args['title'] = get_the_title();
   }
@@ -124,13 +124,13 @@ function university_adjust_query($query)
 
 add_action('pre_get_posts', 'university_adjust_query');
 
-function universityMapKey($api)
-{
-  $api['key'] = 'pk.eyJ1Ijoic2FyaWthMzQzIiwiYSI6ImNsZno2OHhnaTE3emYzcXF1em5mOHVwaDcifQ.r4d8RIU9Dja96ijziSKBfQ';
-  return $api;
-}
+// function universityMapKey($api)
+// {
+//   $api['key'] = 'pk.eyJ1Ijoic2FyaWthMzQzIiwiYSI6ImNsZno2OHhnaTE3emYzcXF1em5mOHVwaDcifQ.r4d8RIU9Dja96ijziSKBfQ';
+//   return $api;
+// }
 
-add_filter('acf/fields/google_map/api', 'universityMapKey');
+// add_filter('acf/fields/google_map/api', 'universityMapKey');
 
 // Redirect subscriber accounts out of admin and onto homepage
 
