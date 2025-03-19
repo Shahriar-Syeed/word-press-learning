@@ -695,3 +695,10 @@ Stack trace:
 [19-Mar-2025 07:29:46 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 27
 [19-Mar-2025 07:31:19 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 27
 [19-Mar-2025 07:31:47 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 27
+[19-Mar-2025 08:12:04 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:12:07 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:13:56 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:14:05 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:14:56 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:16:06 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37
+[19-Mar-2025 08:16:56 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 37

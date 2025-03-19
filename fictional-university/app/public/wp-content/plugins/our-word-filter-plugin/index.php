@@ -31,11 +31,27 @@ class OurWordFilterPlugin
   {
     wp_enqueue_style('filterAdminCss', plugin_dir_url(__FILE__) . 'style.css');
   }
+
+  function handleForm()
+  {
+    update_option('plugin_word_to_filter', $_POST['plugin-word-to-filter']); ?>
+    <div class="updated">
+      <p>Your filtered words were saved.</p>
+    </div>
+
+  <?php
+  }
+
   function wordFilterPage()
   { ?>
     <div class="wrap">
       <h1>Word Filter</h1>
+      <?php if (isset($_POST['justsubmitted']) == "true") {
+        // echo 'Thank you';
+        $this->handleForm();
+      } ?>
       <form method="POST">
+        <input type="hidden" name="justsubmitted" value="true">
         <label for="pluginWordToFilter">
           <p>Enter a <strong>comma-separated</strong> list of words to filter form your site's content</p>
         </label>
