@@ -557,3 +557,126 @@ Stack trace:
 #7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
 #8 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\l10n.php on line 998
+[19-Mar-2025 05:48:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:48:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:49:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:49:47 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:57:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(879): activate_plugin('our-word-filter...', 'http://fictiona...', false, false)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(126): activate_plugins(Array, 'http://fictiona...', false)
+#5 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:59:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 05:59:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:00:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:01:42 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:01:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:04:49 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:07:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:08:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:09:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: define() expects at least 2 arguments, 1 given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php:9
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php(9): define('ABSPATH')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(2387): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(673): plugin_sandbox_scrape('our-word-filter...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('our-word-filter...', 'http://fictiona...', false)
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 9
+[19-Mar-2025 06:16:36 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:16:43 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:18:37 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:18:43 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:20:38 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:20:43 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24
+[19-Mar-2025 06:22:32 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 35
+[19-Mar-2025 06:22:36 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 35
+[19-Mar-2025 06:22:36 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 35
+[19-Mar-2025 06:22:39 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 35
