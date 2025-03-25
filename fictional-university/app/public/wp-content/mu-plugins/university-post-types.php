@@ -139,7 +139,7 @@ function university_post_type()
     ),
     'menu_icon' => 'dashicons-heart',
   ));
-  // event post type
+  // slide post type
   register_post_type('slide', array(
     'show_in_rest' => true,
     'capability_type' => 'slide',

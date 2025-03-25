@@ -6,9 +6,8 @@
   Author: Shahriar
   Author URI: https://www.google.com
 */
-if (!defined('ABSPATH')) {
-  exit; // Exit if accessed directly
-}
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
 
 
 class OurWordFilterPlugin

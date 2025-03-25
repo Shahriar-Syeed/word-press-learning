@@ -29,6 +29,14 @@ class WordCountAndTimePlugin
 
   function ifWrap($content)
   {
+    // error_log('Checking ifWrap conditions...');
+    // error_log('is_admin(): ' . (is_admin() ? 'true' : 'false'));
+    // error_log('wp_doing_ajax(): ' . (wp_doing_ajax() ? 'true' : 'false'));
+    // error_log('is_main_query(): ' . (is_main_query() ? 'true' : 'false'));
+    // error_log('is_single(): ' . (is_single() ? 'true' : 'false'));
+    if (is_admin() || wp_doing_ajax()) {
+      return $content;
+    }
     if (is_main_query() and is_single() and (get_option('wcp_wordcount', '1') or get_option('wcp_characterCount', '1') or get_option('wcp_readTime', '1'))) {
       return $this->createHTML($content);
     }
