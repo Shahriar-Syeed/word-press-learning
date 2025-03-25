@@ -6,8 +6,8 @@
   Version: 1.0
   Author: Shahriar
   Author URI: HTTPS://WWW.GOOGLE.COM
-  Text Domain: wcpDomain
-  Domain Path: ./languages
+  Text Domain: wcpdomain
+  Domain Path: /languages
 
 */
 
@@ -23,8 +23,8 @@ class WordCountAndTimePlugin
 
   function languages()
   {
-    // load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
-    load_plugin_textdomain('wcpDomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    // load_plugin_textdomain('wcpdomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('wcpdomain', false, dirname(plugin_basename(__FILE__)) . '/languages');
   }
 
   function ifWrap($content)
@@ -51,13 +51,13 @@ class WordCountAndTimePlugin
       $wordCount = str_word_count(strip_tags($content));
     }
     if (get_option('wcp_wordcount', '1')) {
-      $html .= esc_html__('This post has', 'wcpDomain') . ' ' . $wordCount . ' ' . esc_html__('words.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post has', 'wcpdomain') . ' ' . $wordCount . ' ' . esc_html__('words.', 'wcpdomain') . '<br>';
     }
     if (get_option('wcp_characterCount', '1')) {
-      $html .= esc_html__('This post has', 'wcpDomain') . ' ' . strlen(strip_tags($content)) . ' ' . esc_html__('characters.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post has', 'wcpdomain') . ' ' . strlen(strip_tags($content)) . ' ' . esc_html__('characters.', 'wcpdomain') . '<br>';
     }
     if (get_option('wcp_readTime', '1')) {
-      $html .= esc_html__('This post will take about', 'wcpDomain') . ' ' . round($wordCount / 225) . ' ' . esc_html__('minute(s) to read.', 'wcpDomain') . '<br>';
+      $html .= esc_html__('This post will take about', 'wcpdomain') . ' ' . round($wordCount / 225) . ' ' . esc_html__('minute(s) to read.', 'wcpdomain') . '<br>';
     }
     $html .= '</p>';
     if (get_option('wcp_location', '0') == '0') {
@@ -76,14 +76,14 @@ class WordCountAndTimePlugin
     add_settings_field('wcp_headline', 'Headline Text', array($this, 'headlineHTML'), 'word-count-settings-page', 'wcp_first_section');
     register_setting('wordcountplugin', 'wcp_headline', array('sanitize_callback' => 'sanitize_text_field', 'default' => 'Post Statistics'));
 
-    // add_settings_field('wcp_wordCount', 'Word Count', array($this, 'wordCountHTML'), 'word-count-settings-page', 'wcp_first_section');
-    // register_setting('wordcountplugin', 'wcp_wordCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+    /*add_settings_field('wcp_wordCount', 'Word Count', array($this, 'wordCountHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_wordCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
 
-    // add_settings_field('wcp_characterCount', 'Character Count', array($this, 'characterCountHTML'), 'word-count-settings-page', 'wcp_first_section');
-    // register_setting('wordcountplugin', 'wcp_characterCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '0'));
+    add_settings_field('wcp_characterCount', 'Character Count', array($this, 'characterCountHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_characterCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '0'));
 
-    // add_settings_field('wcp_readTime', 'Read Time', array($this, 'readTimeHTML'), 'word-count-settings-page', 'wcp_first_section');
-    // register_setting('wordcountplugin', 'wcp_readTime', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
+    add_settings_field('wcp_readTime', 'Read Time', array($this, 'readTimeHTML'), 'word-count-settings-page', 'wcp_first_section');
+    register_setting('wordcountplugin', 'wcp_readTime', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));*/
 
     add_settings_field('wcp_wordCount', 'Word Count', array($this, 'checkboxHTML'), 'word-count-settings-page', 'wcp_first_section', array('theName' => 'wcp_wordCount'));
     register_setting('wordcountplugin', 'wcp_wordCount', array('sanitize_callback' => 'sanitize_text_field', 'default' => '1'));
@@ -128,7 +128,7 @@ class WordCountAndTimePlugin
   {
     if (isset($args['theName'])) {
     ?>
-      <input type="checkbox" name="<?php echo $args['theName']; ?>" value="1" <?php checked(get_option($args['theName']), '1'); ?>>
+      <input type="checkbox" name="<?php echo esc_attr($args['theName']); ?>" value="1" <?php checked(get_option($args['theName']), '1'); ?>>
 
     <?php
     }
@@ -136,7 +136,7 @@ class WordCountAndTimePlugin
 
   function adminPage()
   {
-    add_options_page('Word Count Settings', __('Word Count', 'wcpDomain'), 'manage_options', 'word-count-settings-page', array($this, 'shaHTML'));
+    add_options_page('Word Count Settings', __('Word Count', 'wcpdomain'), 'manage_options', 'word-count-settings-page', array($this, 'shaHTML'));
   }
 
   function shaHTML()
@@ -158,22 +158,22 @@ class WordCountAndTimePlugin
   }
 }
 
-$wordCountAndTimePlugin = new WordCountAndTimePlugin;
+$wordCountAndTimePlugin = new WordCountAndTimePlugin();
 
-// add_action('admin_menu', 'shaPluginSettingsLink');
+/*add_action('admin_menu', 'shaPluginSettingsLink');
 
-// function shaPluginSettingsLink()
-// {
-//   add_options_page('Word Count Settings', 'Word Count', 'manage_options', 'word-count-settings-page', 'shaSettingPageHTML');
-// }
+function shaPluginSettingsLink()
+{
+  add_options_page('Word Count Settings', 'Word Count', 'manage_options', 'word-count-settings-page', 'shaSettingPageHTML');
+}
 
-// function shaSettingPageHTML()
-// {
+function shaSettingPageHTML()
+{
 
-// 
+
 ?>
 
-<!-- <p>Hello world, real plugin</p> -->
+<p>Hello world, real plugin</p>
 
 <?php
-// }
+}*/
