@@ -94,24 +94,51 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention", {
   title: "Are You Paying Attention?",
   icon: "smiley",
   category: "common",
-  edit: function () {
+  attributes: {
+    skyColor: {
+      type: "string",
+      source: "text",
+      selector: ".skyColor"
+    },
+    grassColor: {
+      type: "string"
+    }
+  },
+  edit: function (props) {
     //what will you see in admin editor screen
+    function updateSkyColor(e) {
+      props.setAttributes({
+        skyColor: e.target.value
+      });
+    }
+    function updateGrassColor(e) {
+      props.setAttributes({
+        grassColor: e.target.value
+      });
+    }
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
-        children: "Hello, this is a paragraph."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
-        children: "Hi there."
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+        type: "text",
+        placeholder: "sky color",
+        value: props.attributes.skyColor,
+        onChange: updateSkyColor
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+        type: "text",
+        placeholder: "grass color",
+        value: props.attributes.grassColor,
+        onChange: updateGrassColor
       })]
     });
   },
-  save: function () {
+  save: function (props) {
     //what public will see in your content
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
-        children: "Hello, this is the frontend."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", {
-        children: "Hi there. Hello, this is the frontend."
-      })]
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+        children: ["Today the sky is ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+          className: "skyColor",
+          children: props.attributes.skyColor
+        }), " and the grass is ", props.attributes.grassColor, "."]
+      })
     });
   }
 });
