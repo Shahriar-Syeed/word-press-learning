@@ -96,9 +96,7 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention", {
   category: "common",
   attributes: {
     skyColor: {
-      type: "string",
-      source: "text",
-      selector: ".skyColor"
+      type: "string"
     },
     grassColor: {
       type: "string"
@@ -134,13 +132,54 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention", {
     //what public will see in your content
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-        children: ["Today the sky is ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+        children: ["Today the sky is comletely ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
           className: "skyColor",
           children: props.attributes.skyColor
         }), " and the grass is ", props.attributes.grassColor, "."]
       })
     });
-  }
+  },
+  deprecated: [{
+    attributes: {
+      skyColor: {
+        type: "string"
+      },
+      grassColor: {
+        type: "string"
+      }
+    },
+    save: function (props) {
+      //what public will see in your content
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+          children: ["Today the sky is ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+            className: "skyColor",
+            children: props.attributes.skyColor
+          }), " and the grass is ", props.attributes.grassColor, "."]
+        })
+      });
+    }
+  }, {
+    attributes: {
+      skyColor: {
+        type: "string"
+      },
+      grassColor: {
+        type: "string"
+      }
+    },
+    save: function (props) {
+      //what public will see in your content
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+          children: ["Today the sky is absolutely ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+            className: "skyColor",
+            children: props.attributes.skyColor
+          }), " and the grass is ", props.attributes.grassColor, "."]
+        })
+      });
+    }
+  }]
 });
 })();
 

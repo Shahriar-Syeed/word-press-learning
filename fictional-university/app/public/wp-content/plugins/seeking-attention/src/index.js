@@ -3,7 +3,7 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention",{
   icon: "smiley",
   category: "common",
   attributes: {
-    skyColor: {type: "string", source:"text", selector: ".skyColor" },
+    skyColor: {type: "string" },
     grassColor: {type: "string"},
   },
   edit: function (props) {
@@ -23,7 +23,29 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention",{
   save: function (props) {
     //what public will see in your content
     return (<>
-    <p>Today the sky is <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
+    <p>Today the sky is comletely <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
     </>);
   },
+  deprecated: [{
+    attributes: {
+    skyColor: {type: "string" },
+    grassColor: {type: "string"},
+  },
+  save: function (props) {
+    //what public will see in your content
+    return (<>
+    <p>Today the sky is <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
+    </>);
+  },},{
+     attributes: {
+      skyColor: {type: "string" },
+      grassColor: {type: "string"},
+  },
+  save: function (props) {
+    //what public will see in your content
+    return (<>
+      <p>Today the sky is absolutely <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
+    </>);
+  },
+  },]
 });
