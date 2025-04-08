@@ -27,21 +27,22 @@ function EditComponent (props){
     return(
       <div className="a-multiple-choice-edit-block">
 
-        <TextControl label="Question:" />
-        <p>Answers:</p>
+        <TextControl label="Question:" style={{fontSize: "20px"}} />
+        <p style={{fontSize: "13px", marginBlock: "20px 8px"}}>Answers:</p>
         <Flex>
           <FlexBlock>
             <TextControl/>
           </FlexBlock>
           <FlexItem>
             <Button>
-              <Icon icon="star-empty" />
+              <Icon className="mark-as-answer" icon="star-empty" />
             </Button>
           </FlexItem>
           <FlexItem>
-            <Button>Delete</Button>
+            <Button isLink className="choice-delete" >Delete</Button>
           </FlexItem>
         </Flex>
+        <Button isPrimary >Add another answer</Button>
         
       </div>
     );
