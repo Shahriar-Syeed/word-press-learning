@@ -1,7 +1,7 @@
 <?php
 /*
-  Plugin Name: Seeking Attention Quiz
-  Description: Give your readers a multiple choice question.
+  Plugin Name: Seeking Attention 
+  Description: Make a headline dynamically
   Version: 1.0
   Author: Shahriar
   Author URI: http://google.com
