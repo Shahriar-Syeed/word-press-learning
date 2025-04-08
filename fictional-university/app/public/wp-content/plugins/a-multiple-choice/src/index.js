@@ -1,5 +1,5 @@
 import "./index.scss";
-import {TextControl} from "@wordpress/components";
+import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon} from "@wordpress/components";
 
 
 wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
@@ -28,6 +28,20 @@ function EditComponent (props){
       <div className="a-multiple-choice-edit-block">
 
         <TextControl label="Question:" />
+        <p>Answers:</p>
+        <Flex>
+          <FlexBlock>
+            <TextControl/>
+          </FlexBlock>
+          <FlexItem>
+            <Button>
+              <Icon icon="star-empty" />
+            </Button>
+          </FlexItem>
+          <FlexItem>
+            <Button>Delete</Button>
+          </FlexItem>
+        </Flex>
         
       </div>
     );
