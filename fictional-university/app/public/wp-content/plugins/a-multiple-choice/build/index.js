@@ -122,11 +122,12 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   icon: "list-view",
   category: "common",
   attributes: {
-    x: {
+    question: {
       type: 'string'
     },
-    y: {
-      type: 'string'
+    answers: {
+      type: 'array',
+      default: ["red", "blue"]
     }
   },
   edit: EditComponent,
@@ -135,20 +136,23 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   }
 });
 function EditComponent(props) {
-  function updateX(e) {
+  function updateQuestion(value) {
     props.setAttributes({
-      x: e.target.value
+      question: value
     });
   }
-  function updateY(e) {
+  function deleteAnswer(indexToDelete) {
+    const newAnswers = props.attributes.answers.filter((value, index) => index != indexToDelete);
     props.setAttributes({
-      y: e.target.value
+      answers: newAnswers
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "a-multiple-choice-edit-block",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
       label: "Question:",
+      value: props.attributes.question,
+      onChange: updateQuestion,
       style: {
         fontSize: "20px"
       }
@@ -158,9 +162,18 @@ function EditComponent(props) {
         marginBlock: "20px 8px"
       },
       children: "Answers:"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Flex, {
+    }), props.attributes.answers.map((answer, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Flex, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexBlock, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+          value: answer,
+          onChange: newValue => {
+            const newAnswers = props.attributes.answers.concat([]);
+            newAnswers[index] = newValue;
+            props.setAttributes({
+              answers: newAnswers
+            });
+          }
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexItem, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {
@@ -172,11 +185,17 @@ function EditComponent(props) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
           isLink: true,
           className: "choice-delete",
+          onClick: () => deleteAnswer(index),
           children: "Delete"
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
+    })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
       isPrimary: true,
+      onClick: () => {
+        props.setAttributes({
+          answers: props.attributes.answers.concat([""])
+        });
+      },
       children: "Add another answer"
     })]
   });
