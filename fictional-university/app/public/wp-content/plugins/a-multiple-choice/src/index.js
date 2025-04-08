@@ -1,4 +1,6 @@
+import "./index.scss";
 import {TextControl} from "@wordpress/components";
+
 
 wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
   title: "Are You Making Choice?",
@@ -23,11 +25,10 @@ function EditComponent (props){
       props.setAttributes({y: e.target.value});
     }
     return(
-      <>
-        {/* <input type="text" placeholder="X" value={props.attributes.x} onChange={updateX} />
-        <input type="text" placeholder="Y" value={props.attributes.y} onChange={updateY} /> */}
+      <div className="a-multiple-choice-edit-block">
+
         <TextControl label="Question:" />
         
-      </>
+      </div>
     );
   }
