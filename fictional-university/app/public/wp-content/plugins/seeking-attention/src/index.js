@@ -22,30 +22,10 @@ wp.blocks.registerBlockType("ourplugin/seeking-attention",{
   },
   save: function (props) {
     //what public will see in your content
-    return (<>
-    <p>Today the sky is comletely <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
-    </>);
+    return (
+    // <p>Today the sky is completely <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
+    null
+    );
   },
-  deprecated: [{
-    attributes: {
-    skyColor: {type: "string" },
-    grassColor: {type: "string"},
-  },
-  save: function (props) {
-    //what public will see in your content
-    return (<>
-    <p>Today the sky is <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
-    </>);
-  },},{
-     attributes: {
-      skyColor: {type: "string" },
-      grassColor: {type: "string"},
-  },
-  save: function (props) {
-    //what public will see in your content
-    return (<>
-      <p>Today the sky is absolutely <span className="skyColor">{props.attributes.skyColor}</span> and the grass is {props.attributes.grassColor}.</p>
-    </>);
-  },
-  },]
+  
 });

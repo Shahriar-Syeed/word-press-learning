@@ -711,3 +711,205 @@ Stack trace:
 [19-Mar-2025 13:29:55 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 26
 [19-Mar-2025 13:36:12 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 29
 [19-Mar-2025 13:42:12 UTC] PHP Parse error:  syntax error, unexpected identifier "submit_button" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 112
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "thumbnail" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorLandscape" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "professorPortrait" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 172
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 177
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 178
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 179
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 180
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:44:51 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[20-Mar-2025 09:45:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 09:45:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_field() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php:31
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\index.php(3): pageBanner(Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 31
+[20-Mar-2025 10:52:16 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:52:16 UTC] is_admin(): false
+[20-Mar-2025 10:52:16 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:52:16 UTC] is_main_query(): true
+[20-Mar-2025 10:52:16 UTC] is_single(): true
+[20-Mar-2025 10:52:40 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:52:40 UTC] is_admin(): true
+[20-Mar-2025 10:52:40 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:52:40 UTC] is_main_query(): true
+[20-Mar-2025 10:52:40 UTC] is_single(): false
+[20-Mar-2025 10:52:43 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:52:43 UTC] is_admin(): false
+[20-Mar-2025 10:52:43 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:52:43 UTC] is_main_query(): true
+[20-Mar-2025 10:52:43 UTC] is_single(): false
+[20-Mar-2025 10:52:43 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:52:43 UTC] is_admin(): false
+[20-Mar-2025 10:52:43 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:52:43 UTC] is_main_query(): true
+[20-Mar-2025 10:52:43 UTC] is_single(): false
+[20-Mar-2025 10:53:03 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:53:03 UTC] is_admin(): true
+[20-Mar-2025 10:53:03 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:53:03 UTC] is_main_query(): true
+[20-Mar-2025 10:53:03 UTC] is_single(): false
+[20-Mar-2025 10:53:03 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:53:03 UTC] is_admin(): true
+[20-Mar-2025 10:53:03 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:53:03 UTC] is_main_query(): true
+[20-Mar-2025 10:53:03 UTC] is_single(): false
+[20-Mar-2025 10:53:05 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:53:05 UTC] is_admin(): false
+[20-Mar-2025 10:53:05 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:53:05 UTC] is_main_query(): true
+[20-Mar-2025 10:53:05 UTC] is_single(): false
+[20-Mar-2025 10:53:05 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:53:05 UTC] is_admin(): false
+[20-Mar-2025 10:53:05 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:53:05 UTC] is_main_query(): true
+[20-Mar-2025 10:53:05 UTC] is_single(): false
+[20-Mar-2025 10:56:25 UTC] Checking ifWrap conditions...
+[20-Mar-2025 10:56:25 UTC] is_admin(): false
+[20-Mar-2025 10:56:25 UTC] wp_doing_ajax(): false
+[20-Mar-2025 10:56:25 UTC] is_main_query(): true
+[20-Mar-2025 10:56:25 UTC] is_single(): true
+[25-Mar-2025 05:41:04 UTC] Cron unschedule event error for hook: members_admin_notifications_update, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
+[25-Mar-2025 05:56:21 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-customize-widgets.php on line 923
+[25-Mar-2025 10:59:50 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-customize-widgets.php on line 923
+[26-Mar-2025 12:42:26 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 25
+[26-Mar-2025 12:42:26 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 25
