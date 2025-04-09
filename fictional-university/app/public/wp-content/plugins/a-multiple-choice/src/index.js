@@ -1,6 +1,24 @@
 import "./index.scss";
 import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon} from "@wordpress/components";
 
+(function /*ourStartFunction*/(){
+  let locked = false;
+  wp.data.subscribe(function(){
+    const result = wp.data.select("core/block-editor").getBlocks().filter(block=>block.name === "ourplugin/a-multiple-choice" && block.attributes.correctAnswer === null);
+
+    if(result.length && locked == false){
+      locked = true;
+      wp.data.dispatch("core/editor").lockPostSaving("noanswer");
+    }
+
+    if(!result.length && locked){
+      locked = false;
+      wp.data.dispatch("core/editor").unlockPostSaving("noanswer");
+    }
+  });
+})();
+
+// ourStartFunction();
 
 wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
   title: "Are You Making Choice?",
@@ -9,6 +27,7 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
   attributes:{
     question: {type:'string'},
     answers: {type:'array', default:["red", "blue"]},
+    correctAnswer: {type: "number", default: null},
   },
   edit: EditComponent,
   save: function (props){
@@ -21,10 +40,19 @@ function EditComponent (props){
     function updateQuestion(value){
       props.setAttributes({question: value});
     }
+
     function deleteAnswer(indexToDelete){
       const newAnswers = props.attributes.answers.filter((value, index)=>index != indexToDelete);
       props.setAttributes({answers: newAnswers});
+      if(indexToDelete == props.attributes.correctAnswer){
+        props.setAttributes({correctAnswer : null});
+      }
     }
+
+    function markAsCorrect(indexToCorrect){
+      props.setAttributes({correctAnswer: indexToCorrect});
+    }
+
     return(
       <div className="a-multiple-choice-edit-block">
 
@@ -32,15 +60,15 @@ function EditComponent (props){
         <p style={{fontSize: "13px", marginBlock: "20px 8px"}}>Answers:</p>
         {props.attributes.answers.map((answer, index)=> (<Flex>
           <FlexBlock>
-            <TextControl value={answer} autoFocus={answer == null} onChange={newValue => {
+            <TextControl value={answer} autoFocus={answer == '' && index == props.attributes.answers.length - 1} onChange={newValue => {
               const newAnswers = props.attributes.answers.concat([]);
               newAnswers[index] = newValue;
               props.setAttributes({answers: newAnswers});
             }} />
           </FlexBlock>
           <FlexItem>
-            <Button>
-              <Icon className="mark-as-answer" icon="star-empty" />
+            <Button onClick={()=> markAsCorrect(index)}>
+              <Icon className="mark-as-answer" icon={props.attributes.correctAnswer == index ? "star-filled" : "star-empty"} />
             </Button>
           </FlexItem>
           <FlexItem>
@@ -61,7 +89,7 @@ function EditComponent (props){
           </FlexItem>
         </Flex> */}
         <Button isPrimary onClick={()=>{
-          props.setAttributes({answers: props.attributes.answers.concat([null])});
+          props.setAttributes({answers: props.attributes.answers.concat([''])});
         }} >Add another answer</Button>
         
       </div>

@@ -117,6 +117,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+(function /*ourStartFunction*/
+() {
+  let locked = false;
+  wp.data.subscribe(function () {
+    const result = wp.data.select("core/block-editor").getBlocks().filter(block => block.name === "ourplugin/a-multiple-choice" && block.attributes.correctAnswer === null);
+    if (result.length && locked == false) {
+      locked = true;
+      wp.data.dispatch("core/editor").lockPostSaving("noanswer");
+    }
+    if (!result.length && locked) {
+      locked = false;
+      wp.data.dispatch("core/editor").unlockPostSaving("noanswer");
+    }
+  });
+})();
+
+// ourStartFunction();
+
 wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   title: "Are You Making Choice?",
   icon: "list-view",
@@ -128,6 +146,10 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
     answers: {
       type: 'array',
       default: ["red", "blue"]
+    },
+    correctAnswer: {
+      type: "number",
+      default: null
     }
   },
   edit: EditComponent,
@@ -145,6 +167,16 @@ function EditComponent(props) {
     const newAnswers = props.attributes.answers.filter((value, index) => index != indexToDelete);
     props.setAttributes({
       answers: newAnswers
+    });
+    if (indexToDelete == props.attributes.correctAnswer) {
+      props.setAttributes({
+        correctAnswer: null
+      });
+    }
+  }
+  function markAsCorrect(indexToCorrect) {
+    props.setAttributes({
+      correctAnswer: indexToCorrect
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -166,7 +198,7 @@ function EditComponent(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexBlock, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
           value: answer,
-          autoFocus: answer == null,
+          autoFocus: answer == '' && index == props.attributes.answers.length - 1,
           onChange: newValue => {
             const newAnswers = props.attributes.answers.concat([]);
             newAnswers[index] = newValue;
@@ -177,9 +209,10 @@ function EditComponent(props) {
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexItem, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
+          onClick: () => markAsCorrect(index),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {
             className: "mark-as-answer",
-            icon: "star-empty"
+            icon: props.attributes.correctAnswer == index ? "star-filled" : "star-empty"
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexItem, {
@@ -194,7 +227,7 @@ function EditComponent(props) {
       isPrimary: true,
       onClick: () => {
         props.setAttributes({
-          answers: props.attributes.answers.concat([null])
+          answers: props.attributes.answers.concat([''])
         });
       },
       children: "Add another answer"
