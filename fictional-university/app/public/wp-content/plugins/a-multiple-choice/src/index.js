@@ -32,7 +32,7 @@ function EditComponent (props){
         <p style={{fontSize: "13px", marginBlock: "20px 8px"}}>Answers:</p>
         {props.attributes.answers.map((answer, index)=> (<Flex>
           <FlexBlock>
-            <TextControl value={answer} onChange={newValue => {
+            <TextControl value={answer} autoFocus={answer == null} onChange={newValue => {
               const newAnswers = props.attributes.answers.concat([]);
               newAnswers[index] = newValue;
               props.setAttributes({answers: newAnswers});
@@ -61,7 +61,7 @@ function EditComponent (props){
           </FlexItem>
         </Flex> */}
         <Button isPrimary onClick={()=>{
-          props.setAttributes({answers: props.attributes.answers.concat([""])});
+          props.setAttributes({answers: props.attributes.answers.concat([null])});
         }} >Add another answer</Button>
         
       </div>

@@ -166,6 +166,7 @@ function EditComponent(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexBlock, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
           value: answer,
+          autoFocus: answer == null,
           onChange: newValue => {
             const newAnswers = props.attributes.answers.concat([]);
             newAnswers[index] = newValue;
@@ -193,7 +194,7 @@ function EditComponent(props) {
       isPrimary: true,
       onClick: () => {
         props.setAttributes({
-          answers: props.attributes.answers.concat([""])
+          answers: props.attributes.answers.concat([null])
         });
       },
       children: "Add another answer"
