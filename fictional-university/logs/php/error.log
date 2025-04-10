@@ -1140,3 +1140,85 @@ Stack trace:
 [09-Apr-2025 10:15:08 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
 [09-Apr-2025 10:15:08 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
 [09-Apr-2025 10:15:08 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:03:53 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:03:53 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:03:53 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:03:53 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 11:26:58 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 12:17:07 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 12:19:07 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 32
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:20:28 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:15 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:21:21 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:22:03 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:22:03 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:22:03 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:22:03 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:22:27 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:22:37 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:30:53 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:31:01 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:02 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:02 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:02 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:11 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:11 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:11 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:12 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:18 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:18 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:18 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:32:40 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:43 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:32:55 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[09-Apr-2025 12:37:16 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:37:16 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:37:16 UTC] PHP Warning:  Undefined array key "x" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:37:16 UTC] PHP Warning:  Undefined array key "y" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:39:21 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:39:24 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:41:22 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:41:25 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:43:23 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37
+[09-Apr-2025 12:43:26 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\a-multiple-choice\index.php on line 37

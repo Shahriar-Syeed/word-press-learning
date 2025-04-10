@@ -28,8 +28,13 @@ class MultipleChoice
   }
   function thisHTML($attributes)
   {
+    if (!is_admin()) {
+      wp_enqueue_script('multipleChoiceFrontend', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element', 'wp-blocks'));
+      wp_enqueue_style('multipleChoiceFrontendStyle', plugin_dir_url(__FILE__) . 'build/frontend.css');
+    }
+
     ob_start(); ?>
-    <h4>The output is <?php echo esc_html($attributes['x']) ?> and <?php echo esc_html($attributes['y']) ?></h4>
+    <div class="multiple-choice-update-me"></div>
 <?php return ob_get_clean();
   }
 }
