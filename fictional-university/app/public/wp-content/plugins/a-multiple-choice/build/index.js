@@ -145,7 +145,7 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
     },
     answers: {
       type: 'array',
-      default: ["red", "blue"]
+      default: [""]
     },
     correctAnswer: {
       type: "number",

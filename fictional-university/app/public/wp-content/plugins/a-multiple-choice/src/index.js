@@ -26,7 +26,7 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
   category: "common",
   attributes:{
     question: {type:'string'},
-    answers: {type:'array', default:["red", "blue"]},
+    answers: {type:'array', default:[""]},
     correctAnswer: {type: "number", default: null},
   },
   edit: EditComponent,

@@ -34,7 +34,9 @@ class MultipleChoice
     }
 
     ob_start(); ?>
-    <div class="multiple-choice-update-me"></div>
+    <div class="multiple-choice-update-me">
+      <pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre>
+    </div>
 <?php return ob_get_clean();
   }
 }
