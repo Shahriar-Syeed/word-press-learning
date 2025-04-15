@@ -16224,10 +16224,10 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   example: {
     attributes: {
       question: "What is my name?",
-      correctAnswer: 3,
       answers: ["Meowalot", "Barkalot", "Purrsloud", "Shahriar"],
-      theAlignment: "center",
-      bgColor: "#CFE8F1"
+      correctAnswer: 3,
+      bgColor: "#CFE8F1",
+      theAlignment: "center"
     }
   },
   edit: EditComponent,
