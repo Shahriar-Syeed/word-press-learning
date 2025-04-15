@@ -46,7 +46,7 @@ function Quiz(props) {
     }
   }
   return (
-    <div className="multiple-choice-frontend" style={{backgroundColor: props.bgColor}}>
+    <div className="multiple-choice-frontend" style={{backgroundColor: props.bgColor, textAlign: props.theAlignment}}>
       <p>{props.question}</p>
       <ul>
         {props.answers.map((answer, index) => (

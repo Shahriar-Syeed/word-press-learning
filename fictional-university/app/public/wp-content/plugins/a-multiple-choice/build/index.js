@@ -16178,8 +16178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(function /*ourStartFunction*/
-() {
+(function () /*ourStartFunction*/{
   let locked = false;
   wp.data.subscribe(function () {
     const result = wp.data.select("core/block-editor").getBlocks().filter(block => block.name === "ourplugin/a-multiple-choice" && block.attributes.correctAnswer === null);
@@ -16202,10 +16201,10 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   category: "common",
   attributes: {
     question: {
-      type: 'string'
+      type: "string"
     },
     answers: {
-      type: 'array',
+      type: "array",
       default: [""]
     },
     correctAnswer: {
@@ -16215,6 +16214,20 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
     bgColor: {
       type: "string",
       default: "EBEBEB"
+    },
+    theAlignment: {
+      type: "string",
+      default: "left"
+    }
+  },
+  description: "Give your audience a chance to prove their comprehension.",
+  example: {
+    attributes: {
+      question: "What is my name?",
+      correctAnswer: 3,
+      answers: ["Meowalot", "Barkalot", "Purrsloud", "Shahriar"],
+      theAlignment: "center",
+      bgColor: "#CFE8F1"
     }
   },
   edit: EditComponent,
@@ -16249,7 +16262,14 @@ function EditComponent(props) {
     style: {
       backgroundColor: props.attributes.bgColor
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.AlignmentToolbar, {
+        value: props.attributes.theAlignment,
+        onChange: x => props.setAttributes({
+          theAlignment: x
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
         title: "Background Color",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelRow, {
@@ -16279,7 +16299,7 @@ function EditComponent(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.FlexBlock, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
           value: answer,
-          autoFocus: answer == '' && index == props.attributes.answers.length - 1,
+          autoFocus: answer == "" && index == props.attributes.answers.length - 1,
           onChange: newValue => {
             const newAnswers = props.attributes.answers.concat([]);
             newAnswers[index] = newValue;
@@ -16308,7 +16328,7 @@ function EditComponent(props) {
       isPrimary: true,
       onClick: () => {
         props.setAttributes({
-          answers: props.attributes.answers.concat([''])
+          answers: props.attributes.answers.concat([""])
         });
       },
       children: "Add another answer"

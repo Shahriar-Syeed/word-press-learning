@@ -171,7 +171,8 @@ function Quiz(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "multiple-choice-frontend",
     style: {
-      backgroundColor: props.bgColor
+      backgroundColor: props.bgColor,
+      textAlign: props.theAlignment
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       children: props.question
