@@ -142,25 +142,37 @@ function Quiz(props) {
   const [isCorrect, setIsCorrect] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   const [isCorrectDelayed, setIsCorrectDelayed] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (isCorrect === false) {}
+    if (isCorrect === false) {
+      setTimeout(() => {
+        setIsCorrect(null);
+      }, 2600);
+    }
+    if (isCorrect === true) {
+      setTimeout(() => {
+        setIsCorrectDelayed(true);
+      }, 1000);
+    }
   }, [isCorrect]);
   function handleAnswer(index) {
     if (index === props.correctAnswer) {
       setIsCorrect(true);
-      setTimeout(() => {
-        setIsCorrectDelayed(true);
-      }, 1000);
+      // setTimeout(() => {
+      //   setIsCorrectDelayed(true);
+      // }, 1000);
       // alert("Congrats!");
     } else {
       setIsCorrect(false);
-      setTimeout(() => {
-        setIsCorrect(null);
-      }, 2600);
+      // setTimeout(() => {
+      //   setIsCorrect(null);
+      // }, 2600);
       // alert("Sad");
     }
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "multiple-choice-frontend",
+    style: {
+      backgroundColor: props.bgColor
+    },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       children: props.question
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
@@ -188,7 +200,7 @@ function Quiz(props) {
         }), answer]
       }))
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "correct-message" + (isCorrect === true && " correct-message--visible"),
+      className: "correct-message" + (isCorrect === true ? " correct-message--visible" : ""),
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         width: "24",

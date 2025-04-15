@@ -1,5 +1,7 @@
 import "./index.scss";
-import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon} from "@wordpress/components";
+import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow, ColorPicker} from "@wordpress/components";
+import {InspectorControls} from "@wordpress/block-editor";
+import {ChromePicker} from "react-color";
 
 (function /*ourStartFunction*/(){
   let locked = false;
@@ -28,6 +30,7 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice",{
     question: {type:'string'},
     answers: {type:'array', default:[""]},
     correctAnswer: {type: "number", default: null},
+    bgColor: {type: "string", default: "EBEBEB"},
   },
   edit: EditComponent,
   save: function (props){
@@ -54,8 +57,14 @@ function EditComponent (props){
     }
 
     return(
-      <div className="a-multiple-choice-edit-block">
-
+      <div className="a-multiple-choice-edit-block" style={{backgroundColor: props.attributes.bgColor}}>
+        <InspectorControls>
+          <PanelBody title="Background Color">
+            <PanelRow>
+              <ChromePicker color={props.attributes.bgColor} onChangeComplete={x=>props.setAttributes({bgColor: x.hex})} disableAlpha={true} />
+            </PanelRow>
+          </PanelBody>
+        </InspectorControls>
         <TextControl label="Question:" value={props.attributes.question} onChange={updateQuestion} style={{fontSize: "20px"}} />
         <p style={{fontSize: "13px", marginBlock: "20px 8px"}}>Answers:</p>
         {props.attributes.answers.map((answer, index)=> (<Flex>

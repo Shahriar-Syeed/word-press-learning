@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState  } from "react";
 import ReactDOM from "react-dom";
 
 import "./frontend.scss";
@@ -16,28 +16,37 @@ function Quiz(props) {
   const [isCorrect, setIsCorrect] = useState(null);
   const [isCorrectDelayed, setIsCorrectDelayed] = useState(null);
 
-  useEffect(() => {
-    if (isCorrect === false) {
+  useEffect(()=>{
+    if(isCorrect === false){
+      setTimeout(() => {
+        setIsCorrect(null);
+      }, 2600);
     }
-  }, [isCorrect]);
+    if(isCorrect === true){
+      setTimeout(() => {
+        setIsCorrectDelayed(true);
+      }, 1000);
+    }
+  },[isCorrect])
+
 
   function handleAnswer(index) {
     if (index === props.correctAnswer) {
       setIsCorrect(true);
-      setTimeout(() => {
-        setIsCorrectDelayed(true);
-      }, 1000);
+      // setTimeout(() => {
+      //   setIsCorrectDelayed(true);
+      // }, 1000);
       // alert("Congrats!");
     } else {
       setIsCorrect(false);
-      setTimeout(() => {
-        setIsCorrect(null);
-      }, 2600);
+      // setTimeout(() => {
+      //   setIsCorrect(null);
+      // }, 2600);
       // alert("Sad");
     }
   }
   return (
-    <div className="multiple-choice-frontend">
+    <div className="multiple-choice-frontend" style={{backgroundColor: props.bgColor}}>
       <p>{props.question}</p>
       <ul>
         {props.answers.map((answer, index) => (
@@ -71,7 +80,7 @@ function Quiz(props) {
       <div
         className={
           "correct-message" +
-          (isCorrect === true && " correct-message--visible")
+          (isCorrect === true ? " correct-message--visible" : "")
         }
       >
         <svg

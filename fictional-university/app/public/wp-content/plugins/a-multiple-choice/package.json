@@ -13,5 +13,8 @@
   "description": "",
   "devDependencies": {
     "@wordpress/scripts": "^30.14.1"
+  },
+  "dependencies": {
+    "react-color": "^2.19.3"
   }
 }
