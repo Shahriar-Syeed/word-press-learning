@@ -109,25 +109,39 @@ wp.blocks.registerBlockType("ourplugin/featured-professor", {
   description: "Include a short description and link to a professor of your choice",
   icon: "welcome-learn-more",
   category: "common",
+  attributes: {
+    profId: {
+      type: "string"
+    }
+  },
   edit: EditComponent,
   save: function () {
     return null;
   }
 });
-function EditComponent() {
+function EditComponent(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: "featured-professor-wrapper",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "professor-select-container",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+        onChange: e => props.setAttributes({
+          profId: e.target.value
+        }),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+          value: "",
+          children: "Select a professor"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
           value: "1",
+          selected: props.attributes.profId == 1,
           children: "1"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
           value: "2",
+          selected: props.attributes.profId == 2,
           children: "2"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
           value: "3",
+          selected: props.attributes.profId == 3,
           children: "3"
         })]
       })
