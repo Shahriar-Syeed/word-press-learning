@@ -16236,6 +16236,12 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
   }
 });
 function EditComponent(props) {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: "a-multiple-choice-edit-block",
+    style: {
+      backgroundColor: props.attributes.bgColor
+    }
+  });
   function updateQuestion(value) {
     props.setAttributes({
       question: value
@@ -16258,10 +16264,7 @@ function EditComponent(props) {
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "a-multiple-choice-edit-block",
-    style: {
-      backgroundColor: props.attributes.bgColor
-    },
+    ...blockProps,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.AlignmentToolbar, {
         value: props.attributes.theAlignment,

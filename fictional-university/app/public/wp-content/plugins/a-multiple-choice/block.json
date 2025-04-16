@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ourplugin/a-multiple-choice",
+    "title": "Are You Making Choice?",   
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "script": "file:./build/script.js",
+    "viewScript": [ "file:./build/frontend.js", "example-shared-view-script" ],
+    "style": [ "file:./build/style.css", "example-shared-style" ],
+    "viewStyle": [ "file:./build/frontend.css", "example-view-style" ],
+    "render": "file:./render.php"
+}

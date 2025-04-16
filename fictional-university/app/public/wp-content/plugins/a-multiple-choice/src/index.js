@@ -14,6 +14,7 @@ import {
   InspectorControls,
   BlockControls,
   AlignmentToolbar,
+  useBlockProps,
 } from "@wordpress/block-editor";
 import { ChromePicker } from "react-color";
 
@@ -71,6 +72,11 @@ wp.blocks.registerBlockType("ourplugin/a-multiple-choice", {
 });
 
 function EditComponent(props) {
+  const blockProps = useBlockProps({
+    className: "a-multiple-choice-edit-block",
+    style: { backgroundColor: props.attributes.bgColor },
+  });
+
   function updateQuestion(value) {
     props.setAttributes({ question: value });
   }
@@ -91,8 +97,9 @@ function EditComponent(props) {
 
   return (
     <div
-      className="a-multiple-choice-edit-block"
-      style={{ backgroundColor: props.attributes.bgColor }}
+      {...blockProps}
+      // className="a-multiple-choice-edit-block"
+      // style={{ backgroundColor: props.attributes.bgColor }}
     >
       <BlockControls>
         <AlignmentToolbar
