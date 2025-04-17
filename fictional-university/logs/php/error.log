@@ -1228,3 +1228,102 @@ Stack trace:
 [16-Apr-2025 09:13:00 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
 [16-Apr-2025 12:17:51 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\generateProfessorHTML.php on line 30
 [16-Apr-2025 12:17:51 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\generateProfessorHTML.php on line 30
+[17-Apr-2025 10:27:25 UTC] PHP Warning:  Undefined array key "profId" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 52
+[17-Apr-2025 10:50:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 0 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta()
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:52:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 1 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:52:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 1 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:54:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 2 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post', 'featuredprofess...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:54:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 2 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post', 'featuredprofess...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:56:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 2 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post', 'featuredprofess...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:58:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 2 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post', 'featuredprofess...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 10:58:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_meta(), 2 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 40 and at least 3 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1407
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(40): register_meta('post', 'featuredprofess...')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
+[17-Apr-2025 11:54:36 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[17-Apr-2025 13:08:44 UTC] PHP Warning:  Undefined array key "profId" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 58

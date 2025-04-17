@@ -142,6 +142,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { __ } from "@wordpress/i18n";
+// import { RawHTML } from "@wordpress/element";
 
 wp.blocks.registerBlockType("ourplugin/featured-professor", {
   title: "Professor Callout",
@@ -161,20 +163,41 @@ wp.blocks.registerBlockType("ourplugin/featured-professor", {
 function EditComponent(props) {
   const [thePreview, setThePreview] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    if (props.attributes.profId == "") {
-      setThePreview("");
-      return;
+    // if(props.attributes.profId == ""){
+    //   setThePreview("");
+    //   return ()=>{
+    //     updateTheMeta();
+    //   };
+    // }
+    if (props.attributes.profId) {
+      updateTheMeta();
+      async function go() {
+        const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_3___default()({
+          path: `featuredProfessor/getHTML?profId=${props.attributes.profId}`,
+          method: "GET"
+        });
+        setThePreview(response);
+        console.log(response);
+      }
+      go();
     }
-    async function go() {
-      const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_3___default()({
-        path: `featuredProfessor/getHTML?profId=${props.attributes.profId}`,
-        method: 'GET'
-      });
-      setThePreview(response);
-      console.log(response);
-    }
-    go();
   }, [props.attributes.profId]);
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+    return () => {
+      updateTheMeta();
+    };
+  }, []);
+  function updateTheMeta() {
+    const profsForMeta = wp.data.select("core/block-editor").getBlocks().filter(value => value.name == "ourplugin/featured-professor").map(x => x.attributes.profId).filter((value, index, arr) => arr.indexOf(value) == index);
+    console.log("core/block-editor", wp.data.select("core/block-editor").getBlocks());
+    console.log("propsForMeta", profsForMeta);
+    wp.data.dispatch("core/editor").editPost({
+      meta: {
+        featuredprofessor: profsForMeta
+      }
+    }); /* propsForMet = array of props.attributes.profId*/
+    // wp.data.dispatch("core/editor").editPost({meta: {featuredprofessor: profsForMeta}})
+  }
   const allProfessors = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => {
     return select("core").getEntityRecords("postType", "professor", {
       per_page: -1
