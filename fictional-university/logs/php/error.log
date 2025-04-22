@@ -1447,3 +1447,33 @@ Stack trace:
 [22-Apr-2025 06:28:41 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "class" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\relatedPostHTML.php on line 5
 [22-Apr-2025 06:54:19 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
 [22-Apr-2025 07:59:56 UTC] PHP Parse error:  syntax error, unexpected identifier "register_meta" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 54
+[22-Apr-2025 12:59:24 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:00:07 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:01:25 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:02:07 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:03:26 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:04:07 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:05:27 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:07:28 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:08:42 UTC] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 25
+[22-Apr-2025 13:09:29 UTC] PHP Parse error:  syntax error, unexpected token ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 24
+[22-Apr-2025 13:09:42 UTC] PHP Parse error:  syntax error, unexpected token ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 24
+[22-Apr-2025 13:29:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PetAdoptionTablePlugin::add_action() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php:19
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php(82): PetAdoptionTablePlugin->__construct()
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(526): include_once('C:\\Users\\Dell\\L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#5 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 19
+[22-Apr-2025 13:31:53 UTC] PHP Warning:  require_once(C:\Users\Dell\Local Sites\fictional-university\app\public/wp-admin/include/upgrade.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 28
+[22-Apr-2025 13:31:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Dell\Local Sites\fictional-university\app\public/wp-admin/include/upgrade.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php:28
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): PetAdoptionTablePlugin->onActivate(false)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\includes\plugin.php(703): do_action('activate_new-da...', false)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('new-database-ta...', 'http://fictiona...', false)
+#5 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 28
