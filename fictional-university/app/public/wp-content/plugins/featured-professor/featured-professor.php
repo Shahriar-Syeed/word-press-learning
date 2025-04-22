@@ -10,6 +10,7 @@
 if (! defined('ABSPATH')) exit; // Exit if accessed directly
 
 require_once plugin_dir_path(__FILE__) . 'inc/generateProfessorHTML.php';
+require_once plugin_dir_path(__FILE__) . 'inc/relatedPostHTML.php';
 
 class FeaturedProfessor
 {
@@ -17,7 +18,17 @@ class FeaturedProfessor
   {
     add_action('init', [$this, 'onInit']);
     add_action("rest_api_init", [$this, 'profHTML']);
+    add_filter('the_content', [$this, 'addRelatedPosts']);
   }
+
+  function addRelatedPosts($content)
+  {
+    if (is_singular('professor') && in_the_loop() && is_main_query()) {
+      return $content . relatedPostHTML(get_the_id());
+    }
+    return $content;
+  }
+
 
   function profHTML()
   {
@@ -37,11 +48,23 @@ class FeaturedProfessor
 
   function onInit()
   {
-    register_meta('post', 'featuredprofessor', array(
-      'show_in_rest' => true,
-      'type' => 'number',
-      'single' => false
-    ));
+    $post_types = ['post', 'professor', 'event', 'program', 'campus', 'note', 'slid'];
+    foreach ($post_types as $post_type) {
+      // register_post_meta($post_type, 'featuredprofessors', [
+      //   'show_in_rest' => true,
+      //   'type' => 'array',  // Changed to array since we're storing multiple IDs
+      //   'single' => false,
+      //   'auth_callback' => function () {
+      //     return current_user_can('edit_posts');
+      //   }
+      // ]);
+      register_meta($post_type, 'featuredprofessor', array(
+        'show_in_rest' => true,
+        'type' => 'number',
+        'single' => false,
+        'object_subtype' => $post_type,
+      ));
+    }
 
     wp_register_script('featuredProfessorScript', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-i18n', 'wp-editor'));
     wp_register_style('featuredProfessorStyle', plugin_dir_url(__FILE__) . 'build/index.css');

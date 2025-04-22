@@ -1327,3 +1327,123 @@ Stack trace:
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1407
 [17-Apr-2025 11:54:36 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
 [17-Apr-2025 13:08:44 UTC] PHP Warning:  Undefined array key "profId" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 58
+[22-Apr-2025 04:31:35 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:35 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:35 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:31:42 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:42 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:42 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:31:46 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:46 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:31:46 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:33:47 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:33:47 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:33:47 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:35:48 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:35:48 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:35:48 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:37:49 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:37:49 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:37:49 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:39:50 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:39:50 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:39:50 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 04:41:51 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:41:51 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1503
+[22-Apr-2025 04:41:51 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type array on array in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php:1531
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php(41): register_meta(Array, 'featuredprofess...', Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): FeaturedProfessor->onInit('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(704): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\meta.php on line 1531
+[22-Apr-2025 05:32:27 UTC] PHP Parse error:  syntax error, unexpected token ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 24
+[22-Apr-2025 06:26:18 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "class" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\relatedPostHTML.php on line 5
+[22-Apr-2025 06:26:41 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "class" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\relatedPostHTML.php on line 5
+[22-Apr-2025 06:28:19 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "class" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\relatedPostHTML.php on line 5
+[22-Apr-2025 06:28:41 UTC] PHP Parse error:  syntax error, unexpected token "return", expecting "class" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\inc\relatedPostHTML.php on line 5
+[22-Apr-2025 06:54:19 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\seeking-attention\index.php on line 33
+[22-Apr-2025 07:59:56 UTC] PHP Parse error:  syntax error, unexpected identifier "register_meta" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 54
