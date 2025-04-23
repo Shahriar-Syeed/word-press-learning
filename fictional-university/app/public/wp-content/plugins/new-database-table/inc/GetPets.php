@@ -17,8 +17,8 @@ class GetPets
     $countQuery .= $this->createWhereText();
     $query .= " LIMIT 100";
 
-    $this->count = $wpdb->get_var($wpdb->prepare($countQuery, $this->placeholders));
-    $this->pets = $wpdb->get_results($wpdb->prepare($query, $this->placeholders));
+    $this->count = $wpdb->get_var($wpdb->prepare($countQuery, $this->args));
+    $this->pets = $wpdb->get_results($wpdb->prepare($query, $this->args));
   }
 
   function getArgs()
