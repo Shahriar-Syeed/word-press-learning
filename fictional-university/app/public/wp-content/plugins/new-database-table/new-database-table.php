@@ -22,7 +22,7 @@ class PetAdoptionTablePlugin
 
     // add_action('admin_head', array($this, 'populateFast'));
     add_action('wp_enqueue_scripts', array($this, 'loadAssets'));
-    add_filter('template_include', array($this, 'loadTemplate'), 99);
+    add_filter('template_include', array($this, 'loadTemplate'), 99); //loading custom page
   }
 
   function onActivate()
@@ -54,7 +54,7 @@ class PetAdoptionTablePlugin
     }
   }
 
-  function loadTemplate($template)
+  function loadTemplate($template) //loading custom page
   {
     if (is_page('pet-adoption')) {
       return plugin_dir_path(__FILE__) . 'inc/template-pets.php';
