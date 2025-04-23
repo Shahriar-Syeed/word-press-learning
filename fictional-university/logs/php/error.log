@@ -1540,3 +1540,36 @@ Stack trace:
 [23-Apr-2025 10:53:10 UTC] PHP Warning:  Undefined variable $CountQuery in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 17
 [23-Apr-2025 10:53:10 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 20
 [23-Apr-2025 10:58:07 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 20
+[23-Apr-2025 13:16:10 UTC] PHP Warning:  Undefined variable $temp in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48
+[23-Apr-2025 13:16:10 UTC] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php:48
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(48): array_filter(NULL, Object(Closure))
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(11): GetPets->getArgs()
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php(4): GetPets->__construct()
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#6 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48
+[23-Apr-2025 13:34:13 UTC] PHP Warning:  Undefined variable $temp in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48
+[23-Apr-2025 13:34:13 UTC] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php:48
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(48): array_filter(NULL, Object(Closure))
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(11): GetPets->getArgs()
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php(4): GetPets->__construct()
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#6 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48
+[23-Apr-2025 13:34:15 UTC] PHP Warning:  Undefined variable $temp in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48
+[23-Apr-2025 13:34:15 UTC] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php:48
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(48): array_filter(NULL, Object(Closure))
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php(11): GetPets->getArgs()
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php(4): GetPets->__construct()
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Dell\\L...')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Dell\\L...')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#6 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 48

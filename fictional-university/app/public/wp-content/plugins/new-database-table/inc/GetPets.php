@@ -23,7 +23,7 @@ class GetPets
 
   function getArgs()
   {
-    // $temp = [];
+    $temp = [];
 
     if (isset($_GET['favcolor'])) $temp['favcolor'] = sanitize_text_field($_GET['favcolor']);
     if (isset($_GET['species'])) $temp['species'] = sanitize_text_field($_GET['species']);
