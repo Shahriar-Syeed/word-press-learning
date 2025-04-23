@@ -20,7 +20,7 @@ class PetAdoptionTablePlugin
 
     add_action('activate_new-database-table/new-database-table.php', array($this, 'onActivate')); //fire when only activated one time
 
-    add_action('admin_head', array($this, 'onAdminRefresh'));
+    // add_action('admin_head', array($this, 'populateFast'));
     add_action('wp_enqueue_scripts', array($this, 'loadAssets'));
     add_filter('template_include', array($this, 'loadTemplate'), 99);
   }
@@ -41,7 +41,11 @@ class PetAdoptionTablePlugin
     ) $this->charset");
   }
 
-  function onAdminRefresh() {}
+  function onAdminRefresh()
+  {
+    global $wpdb;
+    $wpdb->insert($this->tablename, generatePet());
+  }
 
   function loadAssets()
   {
@@ -61,7 +65,7 @@ class PetAdoptionTablePlugin
   function populateFast()
   {
     $query = "INSERT INTO $this->tablename (`species`, `birthyear`, `petweight`, `favfood`, `favhobby`, `favcolor`, `petname`) VALUES ";
-    $numberofpets = 100000;
+    $numberofpets = 10000;
     for ($i = 0; $i < $numberofpets; $i++) {
       $pet = generatePet();
       $query .= "('{$pet['species']}', {$pet['birthyear']}, {$pet['petweight']}, '{$pet['favfood']}', '{$pet['favhobby']}', '{$pet['favcolor']}', '{$pet['petname']}')";

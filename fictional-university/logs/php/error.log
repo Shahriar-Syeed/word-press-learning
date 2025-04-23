@@ -1477,3 +1477,20 @@ Stack trace:
 #4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(60): activate_plugin('new-database-ta...', 'http://fictiona...', false)
 #5 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 28
+[23-Apr-2025 05:40:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function populateFast() in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php:47
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): PetAdoptionTablePlugin->onAdminRefresh('')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-header.php(163): do_action('admin_head')
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(637): require_once('C:\\Users\\Dell\\L...')
+#5 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\new-database-table.php on line 47
+[23-Apr-2025 05:41:14 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class PetAdoptionTablePlugin does not have a method "populateFast(10000)" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-header.php(163): do_action('admin_head')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\plugins.php(637): require_once('C:\\Users\\Dell\\L...')
+#4 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php on line 324
