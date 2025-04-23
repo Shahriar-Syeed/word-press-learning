@@ -1537,3 +1537,6 @@ Stack trace:
 #5 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 68
 [23-Apr-2025 10:22:28 UTC] PHP Warning:  Undefined property: GetPets::$placeholder in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 19
+[23-Apr-2025 10:53:10 UTC] PHP Warning:  Undefined variable $CountQuery in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\GetPets.php on line 17
+[23-Apr-2025 10:53:10 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 20
+[23-Apr-2025 10:58:07 UTC] PHP Warning:  Array to string conversion in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 20
