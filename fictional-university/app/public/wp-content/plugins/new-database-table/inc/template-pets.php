@@ -83,7 +83,7 @@ get_header(); ?>
     <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="create-pet-form" method="POST">
       <p>Enter just the name for a new pet. its species, weight, and other details will be randomly generated.</p>
       <input type="hidden" name="action" value="createpet">
-      <input type="text" name="incomingpetname" placehoder="name...">
+      <input type="text" name="incomingpetname" placeholder="name...">
       <button>Add Pet</button>
 
 
