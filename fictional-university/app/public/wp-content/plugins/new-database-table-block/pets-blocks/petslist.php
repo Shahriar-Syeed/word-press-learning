@@ -1,0 +1,81 @@
+<?php
+
+require_once(NEWDATABASETABLEPATH . "inc/GetPets.php");
+$getPets = new GetPets();
+
+?>
+<p>This page took <strong><?php echo timer_stop(); ?></strong> seconds to prepare. Found <strong><?php echo number_format($getPets->count); ?></strong> results (showing the first <?php echo count($getPets->pets) ?>).</p>
+
+<?php
+/*
+  global $wpdb;
+  $tablename = $wpdb->prefix . 'pets';
+  // $ourQuery = $wpdb->prepare("SELECT * FROM wp_pets WHERE species = %s AND birthyear > %d LIMIT 10", array('hamster', 2015));
+  $ourQuery = $wpdb->prepare("SELECT * FROM $tablename LIMIT 100");
+  // $pets = $wpdb->get_results("SELECT * from wp_pets WHERE species = 'dog' LIMIT 100");
+  $pets = $wpdb->get_results($ourQuery);
+  // var_dump($pets);
+  */
+?>
+
+<table class="pet-adoption-table">
+  <tr>
+    <th>Name</th>
+    <th>Species</th>
+    <th>Weight</th>
+    <th>Birth Year</th>
+    <th>Hobby</th>
+    <th>Favorite Color</th>
+    <th>Favorite Food</th>
+    <?php
+    if (current_user_can('administrator')) {
+    ?>
+      <th>Delete</th>
+    <?php
+    } ?>
+  </tr>
+  <?php
+  foreach ($getPets->pets as $pet) {
+  ?>
+    <tr>
+      <td><?php echo $pet->petname ?></td>
+      <td><?php echo $pet->species ?></td>
+      <td><?php echo $pet->petweight ?></td>
+      <td><?php echo $pet->birthyear ?></td>
+      <td><?php echo $pet->favhobby ?></td>
+      <td><?php echo $pet->favcolor ?></td>
+      <td><?php echo $pet->favfood ?></td>
+      <?php
+      if (current_user_can('administrator')) {
+      ?>
+        <td>
+          <form action="<?php echo esc_url(admin_url('admin-post.php')) ?>" method="POST">
+            <input type="hidden" name="action" value="deletepet">
+            <input type="hidden" name="idtodelete" value="<?php echo $pet->id; ?>">
+            <button class="delete-pet-button">X</button>
+          </form>
+        </td>
+      <?php
+      }
+      ?>
+    </tr>
+  <?php
+  }
+  ?>
+</table>
+
+<?php
+if (current_user_can('administrator')) {
+?>
+  <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="create-pet-form" method="POST">
+    <p>Enter just the name for a new pet. its species, weight, and other details will be randomly generated.</p>
+    <input type="hidden" name="action" value="createpet">
+    <input type="text" name="incomingpetname" placeholder="name...">
+    <button>Add Pet</button>
+
+
+  </form>
+<?php
+}
+
+?>
