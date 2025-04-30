@@ -1603,3 +1603,8 @@ Stack trace:
 #7 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table-block\new-database-table.php on line 145
 [24-Apr-2025 11:10:15 UTC] PHP Fatal error:  Cannot redeclare function generatePet() (previously declared in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\new-database-table-block\inc\generatePet.php:3) in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\database-table-block\inc\generatePet.php on line 3
+[29-Apr-2025 12:54:23 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 227
+[29-Apr-2025 12:54:23 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[29-Apr-2025 12:54:23 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[29-Apr-2025 12:56:23 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 227
+[29-Apr-2025 12:58:23 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 229
