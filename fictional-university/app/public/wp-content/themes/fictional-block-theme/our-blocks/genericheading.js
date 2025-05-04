@@ -1,4 +1,5 @@
-import { RichText } from "@wordpress/block-editor";
+import { ToolbarGroup, ToolbarButton } from "@wordpress/components";
+import { RichText, BlockControls } from "@wordpress/block-editor";
 import { registerBlockType } from "@wordpress/blocks";
 
 registerBlockType("ourblocktheme/genericheading", {
@@ -23,6 +24,28 @@ function EditComponent(props) {
 
   return (
     <>
+      <BlockControls>
+        <ToolbarGroup>
+          <ToolbarButton
+            isPressed={props.attributes.size === "large"}
+            onClick={() => props.setAttributes({ size: "large" })}
+          >
+            Large
+          </ToolbarButton>
+          <ToolbarButton
+            isPressed={props.attributes.size === "medium"}
+            onClick={() => props.setAttributes({ size: "medium" })}
+          >
+            Medium
+          </ToolbarButton>
+          <ToolbarButton
+            isPressed={props.attributes.size === "small"}
+            onClick={() => props.setAttributes({ size: "small" })}
+          >
+            Small
+          </ToolbarButton>
+        </ToolbarGroup>
+      </BlockControls>
       <RichText
         allowedFormats={["core/bold", "core/italic"]}
         tagName="h1"
@@ -33,6 +56,23 @@ function EditComponent(props) {
     </>
   );
 }
-function SaveComponent() {
-  return <h1 className="">This is our heading block</h1>;
+function SaveComponent(props) {
+  function createTagName() {
+    switch (props.attributes.size) {
+      case "large":
+        return "h1";
+      case "medium":
+        return "h2";
+      case "small":
+        return "h3";
+    }
+  }
+
+  return (
+    <RichText.Content
+      tagName={createTagName()}
+      value={props.attributes.text}
+      className={`headline headline--${props.attributes.size}`}
+    />
+  );
 }
