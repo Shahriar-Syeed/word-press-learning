@@ -34,7 +34,7 @@ function EditComponent(){
   <div className="page-banner">
     <div className="page-banner__bg-image" style={{ backgroundImage: `url(${defaultImage})` }}></div>
     <div className="page-banner__content container t-center c-white">
-      <InnerBlocks allowedBlocks={["ourblocktheme/genericheading"]} />
+      <InnerBlocks allowedBlocks={["ourblocktheme/genericheading", "ourblocktheme/genericbutton"]} />
     </div>
 </div>);
 }
