@@ -12,6 +12,12 @@ import defaultImage from '../images/library-hero.jpg';
 
 registerBlockType("ourblocktheme/banner",{
   title: "Banner",
+    supports: {
+    align: ["full"],
+  },
+  attributes:{
+    align: {type: "string", default:"full"},
+  },
   edit: EditComponent,
   save: SaveComponent,
 });
