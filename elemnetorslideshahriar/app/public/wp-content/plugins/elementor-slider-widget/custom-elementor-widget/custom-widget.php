@@ -571,7 +571,68 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
-    // Add similar controls for bottom, left, right
+    $this->add_responsive_control(
+      'image_right',
+      [
+        'label' => __('Right', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-image' => 'right: {{SIZE}}{{UNIT}};',
+          '{{WRAPPER}} .splide-slide-image-bg' => 'right: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'image_position' => ['absolute', 'fixed', 'relative'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'image_bottom',
+      [
+        'label' => __('Bottom', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-image' => 'bottom: {{SIZE}}{{UNIT}};',
+          '{{WRAPPER}} .splide-slide-image-bg' => 'bottom: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'image_position' => ['absolute', 'fixed', 'relative'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'image_left',
+      [
+        'label' => __('Left', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-image' => 'left: {{SIZE}}{{UNIT}};',
+          '{{WRAPPER}} .splide-slide-image-bg' => 'left: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'image_position' => ['absolute', 'fixed', 'relative'],
+        ],
+      ]
+    );
 
     // Spacing
     $this->add_responsive_control(
@@ -670,7 +731,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
     $this->end_controls_section();
 
-
+    // Content style
     $this->start_controls_section(
       'slide_content_style',
       [
@@ -996,19 +1057,544 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
     $this->end_controls_section();
 
-    // Style Section
-    // $this->start_controls_section(
-    //   'style_section',
-    //   [
-    //     'label' => __('Slider Style', 'custom-slide-widget'),
-    //     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
-    //   ]
-    // );
+    /**
+     * arrow style
+     */
 
-    // // Add your style controls here...
+    $this->start_controls_section(
+      'arrow_style_section',
+      [
+        'label' => __('Navigation Arrows', 'custom-slide-widget'),
+        'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+        'condition' => [
+          'show_arrows' => 'yes',
+        ],
+      ]
+    );
 
-    // $this->end_controls_section();
+    // Arrow container styles
+    $this->add_responsive_control(
+      'arrow_size',
+      [
+        'label' => __('Size', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 10,
+            'max' => 200,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_display',
+      [
+        'label' => __('Display', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'flex',
+        'options' => [
+          'flex' => __('Flex', 'custom-slide-widget'),
+          'inline-flex' => __('Inline Flex', 'custom-slide-widget'),
+          'block' => __('Block', 'custom-slide-widget'),
+          'inline-block' => __('Inline Block', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'display: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_align_items',
+      [
+        'label' => __('Align Items', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'center',
+        'options' => [
+          'flex-start' => __('Start', 'custom-slide-widget'),
+          'flex-end' => __('End', 'custom-slide-widget'),
+          'center' => __('Center', 'custom-slide-widget'),
+          'baseline' => __('Baseline', 'custom-slide-widget'),
+          'stretch' => __('Stretch', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'align-items: {{VALUE}};',
+        ],
+        'condition' => [
+          'arrow_display' => ['flex', 'inline-flex'],
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_justify_content',
+      [
+        'label' => __('Justify Content', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'center',
+        'options' => [
+          'flex-start' => __('Start', 'custom-slide-widget'),
+          'flex-end' => __('End', 'custom-slide-widget'),
+          'center' => __('Center', 'custom-slide-widget'),
+          'space-between' => __('Space Between', 'custom-slide-widget'),
+          'space-around' => __('Space Around', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'justify-content: {{VALUE}};',
+        ],
+        'condition' => [
+          'arrow_display' => ['flex', 'inline-flex'],
+        ],
+      ]
+    );
+
+    // Arrow position
+    $this->add_control(
+      'arrow_position',
+      [
+        'label' => __('Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'absolute',
+        'options' => [
+          'absolute' => __('Absolute', 'custom-slide-widget'),
+          'relative' => __('Relative', 'custom-slide-widget'),
+          'fixed' => __('Fixed', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'position: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_left',
+      [
+        'label' => __('Left Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -200,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -100,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow--prev' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+        ],
+        'condition' => [
+          'arrow_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_right',
+      [
+        'label' => __('Right Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -200,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -100,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow--next' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+        ],
+        'condition' => [
+          'arrow_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_top',
+      [
+        'label' => __('Top Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -200,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -100,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'top: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'arrow_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_bottom',
+      [
+        'label' => __('Bottom Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -200,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -100,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+        ],
+        'condition' => [
+          'arrow_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_zindex',
+      [
+        'label' => __('Z-Index', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'min' => 0,
+        'max' => 9999,
+        'step' => 1,
+        'default' => 10,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'z-index: {{VALUE}};',
+        ],
+      ]
+    );
+
+    // Arrow background
+    $this->add_control(
+      'arrow_background_color',
+      [
+        'label' => __('Background Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'background-color: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_background_hover_color',
+      [
+        'label' => __('Background Hover Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow:hover' => 'background-color: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'arrow_border',
+        'label' => __('Border', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide__arrow',
+      ]
+    );
+
+    $this->add_control(
+      'arrow_border_radius',
+      [
+        'label' => __('Border Radius', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'arrow_box_shadow',
+        'label' => __('Box Shadow', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide__arrow',
+      ]
+    );
+
+    // SVG icon styles
+    $this->add_control(
+      'arrow_icon_heading',
+      [
+        'label' => __('Icon Styles', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->add_responsive_control(
+      'arrow_icon_size',
+      [
+        'label' => __('Icon Size', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', 'em'],
+        'range' => [
+          'px' => [
+            'min' => 5,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+          '{{WRAPPER}} .splide__arrow i' => 'font-size: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_icon_color',
+      [
+        'label' => __('Icon Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow svg' => 'fill: {{VALUE}};',
+          '{{WRAPPER}} .splide__arrow i' => 'color: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_icon_hover_color',
+      [
+        'label' => __('Icon Hover Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow:hover svg' => 'fill: {{VALUE}};',
+          '{{WRAPPER}} .splide__arrow:hover i' => 'color: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_icon_stroke_color',
+      [
+        'label' => __('Icon Stroke Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow svg' => 'stroke: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_icon_stroke_hover_color',
+      [
+        'label' => __('Icon Stroke Hover Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow:hover svg' => 'stroke: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'arrow_border',
+        'label' => __('Border', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide__arrow',
+        'fields_options' => [
+          'border' => [
+            'responsive' => true,
+          ],
+          'width' => [
+            'responsive' => true,
+            'selectors' => [
+              '{{WRAPPER}} .splide__arrow' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+          ],
+          'color' => [
+            'responsive' => true,
+          ],
+        ],
+      ]
+    );
+
+    // Add responsive border radius control (replace the existing one)
+    $this->add_responsive_control(
+      'arrow_border_radius',
+      [
+        'label' => __('Border Radius', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'em'],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    // Add responsive border hover color control
+    $this->add_control(
+      'arrow_border_color',
+      [
+        'label' => __('Border Hover Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'border-color: {{VALUE}};',
+        ],
+        'separator' => 'before',
+      ]
+    );
+
+    // Add responsive border hover color control
+    $this->add_control(
+      'arrow_border_hover_color',
+      [
+        'label' => __('Border Hover Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow:hover' => 'border-color: {{VALUE}};',
+        ],
+        'separator' => 'before',
+      ]
+    );
+
+    // Add responsive border transition control
+    $this->add_control(
+      'arrow_border_transition',
+      [
+        'label' => __('Border Transition', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['s'],
+        'range' => [
+          's' => [
+            'min' => 0,
+            'max' => 3,
+            'step' => 0.1,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'transition: border-color {{SIZE}}{{UNIT}} ease;',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'arrow_opacity_heading',
+      [
+        'label' => __('Opacity', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    // Normal state opacity
+    $this->add_responsive_control(
+      'arrow_opacity',
+      [
+        'label' => __('Opacity', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 0,
+            'max' => 1,
+            'step' => 0.01,
+          ],
+        ],
+        'default' => [
+          'size' => 1,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'opacity: {{SIZE}};',
+        ],
+      ]
+    );
+
+    // Hover state opacity
+    $this->add_responsive_control(
+      'arrow_opacity_hover',
+      [
+        'label' => __('Hover Opacity', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 0,
+            'max' => 1,
+            'step' => 0.01,
+          ],
+        ],
+        'default' => [
+          'size' => 1,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow:hover' => 'opacity: {{SIZE}};',
+        ],
+      ]
+    );
+
+    // Transition for smooth opacity changes
+    $this->add_control(
+      'arrow_opacity_transition',
+      [
+        'label' => __('Opacity Transition Duration (seconds)', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'min' => 0,
+        'max' => 1,
+        'step' => 0.1,
+        'default' => 0.3,
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'transition: opacity {{VALUE}}s ease;',
+        ],
+      ]
+    );
+
+    $this->end_controls_section();
   }
+
+
 
   protected function render()
   {

@@ -36,9 +36,7 @@ function custom_slider_widget_scripts()
   // CSS
   wp_enqueue_style(
     'splide-core',
-    'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css',
-    [],
-    '4.1.4'
+    'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css'
   );
   wp_enqueue_style(
     'custom-slider-widget-style',
