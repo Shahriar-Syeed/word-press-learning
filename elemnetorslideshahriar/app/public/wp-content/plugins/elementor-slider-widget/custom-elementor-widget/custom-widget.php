@@ -1592,6 +1592,356 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
+    $this->start_controls_section(
+      'pagination_style_section',
+      [
+        'label' => __('Pagination Dots', 'custom-slide-widget'),
+        'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+        'condition' => [
+          'show_dots' => 'yes',
+        ],
+      ]
+    );
+
+    // Position controls
+    $this->add_responsive_control(
+      'pagination_position',
+      [
+        'label' => __('Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'absolute' => __('Absolute', 'custom-slide-widget'),
+          'relative' => __('Relative', 'custom-slide-widget'),
+          'fixed' => __('Fixed', 'custom-slide-widget'),
+        ],
+        'default' => 'absolute',
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'position: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_bottom',
+      [
+        'label' => __('Bottom Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => [
+            'min' => -100,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -20,
+            'max' => 100,
+          ],
+          'vh' => [
+            'min' => 0,
+            'max' => 100,
+          ],
+        ],
+        'default' => [
+          'unit' => 'px',
+          'size' => 10,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_top',
+      [
+        'label' => __('Top Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => [
+            'min' => -100,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -20,
+            'max' => 100,
+          ],
+          'vh' => [
+            'min' => 0,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_left',
+      [
+        'label' => __('Left Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -100,
+            'max' => 1000,
+          ],
+          '%' => [
+            'min' => 0,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_right',
+      [
+        'label' => __('Right Position', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -100,
+            'max' => 1000,
+          ],
+          '%' => [
+            'min' => 0,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    // Pagination dots styling
+    $this->add_responsive_control(
+      'pagination_dots_width',
+      [
+        'label' => __('Dots Width', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 2,
+            'max' => 30,
+          ],
+        ],
+        'default' => [
+          'size' => 8,
+          'unit' => 'px',
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page' => 'width: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    // Height control
+    $this->add_responsive_control(
+      'pagination_dots_height',
+      [
+        'label' => __('Dots Height', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 2,
+            'max' => 30,
+          ],
+        ],
+        'default' => [
+          'size' => 8,
+          'unit' => 'px',
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page' => 'height: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_dots_gap',
+      [
+        'label' => __('Dots Spacing', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 0,
+            'max' => 30,
+          ],
+        ],
+        'default' => [
+          'size' => 6,
+          'unit' => 'px',
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page' => 'margin: 0 {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    // Normal state styling
+    $this->add_control(
+      'pagination_dots_style',
+      [
+        'label' => __('Dots Style', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'pagination_dots_bg',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .splide__pagination__page',
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'pagination_dots_border',
+        'label' => __('Border', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide__pagination__page',
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_dots_border_radius',
+      [
+        'label' => __('Border Radius', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'pagination_dots_box_shadow',
+        'label' => __('Box Shadow', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide__pagination__page',
+      ]
+    );
+
+    // Active state styling
+    $this->add_control(
+      'pagination_dots_active_style',
+      [
+        'label' => __('Active Dot Style', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'pagination_dots_active_bg',
+        'label' => __('Active Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .splide__pagination__page.is-active',
+      ]
+    );
+
+    $this->add_control(
+      'pagination_dots_active_border_color',
+      [
+        'label' => __('Active Border Color', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::COLOR,
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page.is-active' => 'border-color: {{VALUE}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_dots_active_width',
+      [
+        'label' => __('Active Dots Width', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 2,
+            'max' => 30,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page.is-active' => 'width: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    // Height control
+    $this->add_responsive_control(
+      'pagination_dots_active_height',
+      [
+        'label' => __('Active Dots Height', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 2,
+            'max' => 30,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page.is-active' => 'height: {{SIZE}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    $this->add_responsive_control(
+      'pagination_dots_active_scale',
+      [
+        'label' => __('Active Dot Scale', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 0.5,
+            'max' => 2,
+            'step' => 0.1,
+          ],
+        ],
+        'default' => [
+          'size' => 1.2,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page.is-active' => 'transform: scale({{SIZE}});',
+        ],
+      ]
+    );
+
+    $this->end_controls_section();
   }
 
 
@@ -1661,16 +2011,17 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
                   <?php if (!empty($slide['slide_title'])) : ?>
                     <h3 class="splide-slide-title">
-                      <?php if (!empty($slide['slide_link']['url'])) :
-                        $this->add_link_attributes('slide_link', $slide['slide_link']);
-                      ?>
-                        <a <?php echo $this->get_render_attribute_string('slide_link'); ?>>
-                          <?php echo esc_html($slide['slide_title']); ?>
-                        </a>
-                      <?php else : ?>
-                        <?php echo esc_html($slide['slide_title']); ?>
-                      <?php endif; ?>
+
+                      <?php echo esc_html($slide['slide_title']); ?>
+
                     </h3>
+                  <?php endif; ?>
+                  <?php if (!empty($slide['slide_link']['url'])) :
+                    $this->add_link_attributes('slide_link', $slide['slide_link']);
+                  ?>
+                    <a href="?php echo $this->get_render_attribute_string('slide_link'); ?>" class="slide-link">
+                      <?php echo esc_html($slide['slide_title']); ?>
+                    </a>
                   <?php endif; ?>
 
                   <?php if (!empty($slide['slide_description'])) : ?>
