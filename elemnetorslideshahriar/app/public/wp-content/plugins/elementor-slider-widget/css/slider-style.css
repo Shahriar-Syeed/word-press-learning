@@ -1,4 +1,7 @@
 /* Splide slider overrides */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tagesschrift&display=swap');
+
+
 .elementor-splide-slider {
   position: relative;
   width: 100%;
@@ -92,6 +95,15 @@
   transition: all 0.3s ease;
 }
 
+
+
+.splide-slide-title {
+  font-family: "Lato", sans-serif;
+  margin: 0 0 15px 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 767px) {
   .splide-slide-content {
@@ -105,14 +117,10 @@
 
 .splide-slide-title {
   margin: 0 0 15px 0;
-  color: #333;
-  font-size: 24px;
 }
 
 .splide-slide-description {
-  color: #666;
   line-height: 1.5;
-  font-size: 16px;
 }
 
 /* Regular Image */
@@ -149,7 +157,39 @@
 .splide__pagination__page{
   transition: all 300ms;
 }
-.
+
+.slide-button{
+  padding: 16px 32px;
+  border-radius: 900px;
+  color:#fff;
+  font-size: 24px;
+  background-color: #05503a;
+  transition: background-color 300ms ease;
+}
+.slide-button:hover{
+  
+  background-color: #044532;
+}
+.slide-details{
+  position: relative;
+  z-index: 6;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (max-width: 992px) {
+  .slide-details {
+      max-width: 900px;
+      padding-inline: 15px;
+    }
+}
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
@@ -169,4 +209,14 @@
   .splide-slide-description {
     font-size: 14px;
   }
+  .slide-details{
+    max-width: 700px;
+    padding-inline: 10px;
+  }
+}
+@media(max-width: 576px) {
+  .slide-details {
+      max-width: 500px;
+      padding-inline: 10px;
+    }
 }

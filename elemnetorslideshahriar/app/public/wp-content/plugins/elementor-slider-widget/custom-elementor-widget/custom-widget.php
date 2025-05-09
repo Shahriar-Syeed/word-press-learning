@@ -2008,27 +2008,37 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                   <?php if ('yes' === $settings['show_overlay']) : ?>
                     <div class="splide-slide-overlay"></div>
                   <?php endif; ?>
+                  <div class="slide-details">
 
-                  <?php if (!empty($slide['slide_title'])) : ?>
-                    <h3 class="splide-slide-title">
+                    <?php if (!empty($slide['slide_title'])) : ?>
+                      <h1 class="splide-slide-title">
 
-                      <?php echo esc_html($slide['slide_title']); ?>
+                        <?php echo esc_html($slide['slide_title']); ?>
 
-                    </h3>
-                  <?php endif; ?>
-                  <?php if (!empty($slide['slide_link']['url'])) :
-                    $this->add_link_attributes('slide_link', $slide['slide_link']);
-                  ?>
-                    <a href="?php echo $this->get_render_attribute_string('slide_link'); ?>" class="slide-link">
-                      <?php echo esc_html($slide['slide_title']); ?>
-                    </a>
-                  <?php endif; ?>
+                      </h1>
+                    <?php endif; ?>
+                    <?php if (!empty($slide['slide_description'])) : ?>
+                      <h4 class="splide-slide-description">
+                        <?php echo wp_kses_post($slide['slide_description']); ?>
+                      </h4>
+                    <?php endif; ?>
+                    <?php if (!empty($slide['slide_link']['url'])) :
+                      $this->add_link_attributes('slide_link', $slide['slide_link']);
+                    ?>
+                      <a href="<?php echo $this->get_render_attribute_string('slide_link'); ?>" class="slide-button">
+                        <?php echo esc_html($slide['slide_title']); ?>
+                      </a>
+                    <?php endif; ?>
 
-                  <?php if (!empty($slide['slide_description'])) : ?>
-                    <div class="splide-slide-description">
-                      <?php echo wp_kses_post($slide['slide_description']); ?>
-                    </div>
-                  <?php endif; ?>
+
+                  </div>
+
+                  <div class="slide-inner">
+                    <?php
+                    // Render inner section content
+                    // echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['_id']);
+                    ?>
+                  </div>
                 </div>
               </li>
             <?php endforeach; ?>
@@ -2117,12 +2127,10 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       loop: 'yes'===settings.loop,
       arrows: 'yes'===settings.show_arrows,
       pagination: 'yes'===settings.show_dots,
-      prev_icon: prevIcon,
-      next_icon: nextIcon
       };
       #>
 
-      <div class="elementor-splide-slider" id="alif" data-slider-settings="{{ JSON.stringify(sliderOptions) }}">
+      <div class="elementor-splide-slider" data-slider-settings="{{ JSON.stringify(sliderOptions) }}">
         <div class="splide">
           <div class="splide__track">
             <ul class="splide__list">
