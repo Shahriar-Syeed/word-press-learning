@@ -2022,23 +2022,13 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                         <?php echo wp_kses_post($slide['slide_description']); ?>
                       </h4>
                     <?php endif; ?>
-                    <?php if (!empty($slide['slide_link']['url'])) :
-                      $this->add_link_attributes('slide_link', $slide['slide_link']);
-                    ?>
-                      <a href="<?php echo $this->get_render_attribute_string('slide_link'); ?>" class="slide-button">
+                    <?php if (!empty($slide['slide_link']['url'])): ?>
+                      <a href="<?php echo esc_html($slide['slide_link']['url']); ?>" class="slide-button">
                         <?php echo esc_html($slide['slide_title']); ?>
                       </a>
                     <?php endif; ?>
-
-
                   </div>
 
-                  <div class="slide-inner">
-                    <?php
-                    // Render inner section content
-                    // echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['_id']);
-                    ?>
-                  </div>
                 </div>
               </li>
             <?php endforeach; ?>
@@ -2138,28 +2128,31 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                 <li class="splide__slide">
                   <div class="splide-slide-content">
                     <# if (slide.slide_image.url) { #>
-                      <div class="splide-slide-image">
-                        <img src="{{ slide.slide_image.url }}" alt="">
-                      </div>
-                      <# } #>
-
-                        <# if (slide.slide_title) { #>
-                          <h3 class="splide-slide-title">
-                            <# if (slide.slide_link.url) { #>
-                              <a href="{{ slide.slide_link.url }}">
-                                {{{ slide.slide_title }}}
-                              </a>
-                              <# } else { #>
-                                {{{ slide.slide_title }}}
-                                <# } #>
-                          </h3>
+                      <# if ('bg'===settings.image_type) { #>
+                        <div class="splide-slide-image-bg" style="background-image: url('{{ slide.slide_image.url }}')"></div>
+                        <# } else { #>
+                          <img class="splide-slide-image" src="{{ slide.slide_image.url }}" alt="">
                           <# } #>
+                            <# } #>
 
-                            <# if (slide.slide_description) { #>
-                              <div class="splide-slide-description">
-                                {{{ slide.slide_description }}}
-                              </div>
-                              <# } #>
+                              <# if ('yes'===settings.show_overlay) { #>
+                                <div class="splide-slide-overlay"></div>
+                                <# } #>
+
+                                  <div class="slide-details">
+                                    <# if (slide.slide_title) { #>
+                                      <h1 class="splide-slide-title">{{{ slide.slide_title }}}</h1>
+                                      <# } #>
+
+                                        <# if (slide.slide_description) { #>
+                                          <h4 class="splide-slide-description">{{{ slide.slide_description }}}</h4>
+                                          <# } #>
+
+                                            <# if (slide.slide_link && slide.slide_link.url) { #>
+                                              <a href="{{ slide.slide_link.url }}" class="slide-button">{{{ slide.slide_title }}}</a>
+                                              <# } #>
+                                  </div>
+
                   </div>
                 </li>
                 <# }); #>
