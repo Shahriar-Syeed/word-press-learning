@@ -76,6 +76,19 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::URL,
       ]
     );
+    // Add this in register_controls() where you define the slide content
+    $repeater->add_control(
+      'descriptions',
+      [
+        'label' => __('Descriptions', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXTAREA,
+        'default' => '',
+        'description' => __('Add multiple descriptions separated by new lines. Each line will become a paragraph.'),
+        'label_block' => true,
+      ]
+    );
+
+
 
     $this->add_control(
       'slides',
@@ -252,7 +265,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
     $this->end_controls_section();
 
-    // Add this in your widget's register_controls() method
+    // overlay
     $this->start_controls_section(
       'overlay_section',
       [
@@ -1055,6 +1068,135 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    $this->end_controls_section();
+
+    // description container styling
+    $this->start_controls_section(
+      'description_container_style',
+      [
+        'label' => __('Description Container', 'custom-slide-widget'),
+        'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+      ]
+    );
+
+    // Layout control
+    $this->add_control(
+      'desc_container_layout',
+      [
+        'label' => __('Layout', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'block' => __('Block', 'custom-slide-widget'),
+          'flex' => __('Flex', 'custom-slide-widget'),
+          'grid' => __('Grid', 'custom-slide-widget'),
+        ],
+        'default' => 'block',
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'display: {{VALUE}};',
+        ],
+      ]
+    );
+
+    // Add flex-specific controls
+    $this->add_control(
+      'desc_flex_direction',
+      [
+        'label' => __('Flex Direction', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'row' => __('Row', 'custom-slide-widget'),
+          'column' => __('Column', 'custom-slide-widget'),
+          'row-reverse' => __('Row Reverse', 'custom-slide-widget'),
+          'column-reverse' => __('Column Reverse', 'custom-slide-widget'),
+        ],
+        'default' => 'column',
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'flex-direction: {{VALUE}};',
+        ],
+        'condition' => [
+          'desc_container_layout' => 'flex',
+        ],
+      ]
+    );
+
+    // Add grid-specific controls
+    $this->add_responsive_control(
+      'desc_grid_columns',
+      [
+        'label' => __('Grid Columns', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'min' => 1,
+        'max' => 12,
+        'step' => 1,
+        'default' => 1,
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+        ],
+        'condition' => [
+          'desc_container_layout' => 'grid',
+        ],
+      ]
+    );
+
+    // Add gap control for flex/grid layouts
+    $this->add_responsive_control(
+      'desc_gap',
+      [
+        'label' => __('Gap', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => 0,
+            'max' => 100,
+          ],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'gap: {{SIZE}}{{UNIT}};',
+        ],
+        'conditions' => [
+          'relation' => 'or',
+          'terms' => [
+            [
+              'name' => 'desc_container_layout',
+              'operator' => '===',
+              'value' => 'flex'
+            ],
+            [
+              'name' => 'desc_container_layout',
+              'operator' => '===',
+              'value' => 'grid'
+            ]
+          ]
+        ],
+      ]
+    );
+
+    // Common styling controls
+    $this->add_responsive_control(
+      'desc_container_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'em'],
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
+
+    // Common styling controls
+    $this->add_responsive_control(
+      'desc_container_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'em'],
+        'selectors' => [
+          '{{WRAPPER}} .description-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
+      ]
+    );
     $this->end_controls_section();
 
     /**
@@ -1983,6 +2125,8 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       'next_icon' => $next_icon,
     ];
 
+
+
     $this->add_render_attribute('slider', [
       'class' => 'elementor-splide-slider',
       'data-slider-settings' => wp_json_encode($slider_options),
@@ -1993,42 +2137,44 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       <div class="splide">
         <div class="splide__track">
           <ul class="splide__list">
-            <?php foreach ($settings['slides'] as $slide) : ?>
+            <?php foreach ($settings['slides'] as $slide): ?>
               <li class="splide__slide">
                 <div class="splide-slide-content">
-                  <?php if (!empty($slide['slide_image']['url'])) :
-                    if ('bg' === $settings['image_type']) : ?>
+                  <?php if (!empty($slide['slide_image']['url'])): ?>
+                    <?php if ('bg' === $settings['image_type']): ?>
                       <div class="splide-slide-image-bg" style="background-image: url('<?php echo esc_url($slide['slide_image']['url']); ?>')"></div>
-                  <?php else :
-                      echo \Elementor\Group_Control_Image_Size::get_attachment_image_html($slide, 'slide_image', 'full', [
-                        'class' => 'splide-slide-image'
-                      ]);
-                    endif;
-                  endif; ?>
-                  <?php if ('yes' === $settings['show_overlay']) : ?>
+                    <?php else: ?>
+                      <?php echo \Elementor\Group_Control_Image_Size::get_attachment_image_html($slide, 'slide_image', 'full', ['class' => 'splide-slide-image']); ?>
+                    <?php endif; ?>
+                  <?php endif; ?>
+
+                  <?php if ('yes' === $settings['show_overlay']): ?>
                     <div class="splide-slide-overlay"></div>
                   <?php endif; ?>
+
                   <div class="slide-details">
-
-                    <?php if (!empty($slide['slide_title'])) : ?>
-                      <h1 class="splide-slide-title">
-
-                        <?php echo esc_html($slide['slide_title']); ?>
-
-                      </h1>
+                    <?php if (!empty($slide['slide_title'])): ?>
+                      <h1 class="splide-slide-title"><?php echo esc_html($slide['slide_title']); ?></h1>
                     <?php endif; ?>
-                    <?php if (!empty($slide['slide_description'])) : ?>
-                      <h4 class="splide-slide-description">
-                        <?php echo wp_kses_post($slide['slide_description']); ?>
-                      </h4>
+
+                    <?php
+                    $descriptions = !empty($slide['descriptions']) ? explode("\n", $slide['descriptions']) : [];
+                    if (!empty($descriptions)): ?>
+                      <div class="description-container">
+                        <?php foreach ($descriptions as $desc): ?>
+                          <?php if (!empty(trim($desc))): ?>
+                            <p class="description-item"><?php echo esc_html(trim($desc)); ?></p>
+                          <?php endif; ?>
+                        <?php endforeach; ?>
+                      </div>
                     <?php endif; ?>
+
                     <?php if (!empty($slide['slide_link']['url'])): ?>
-                      <a href="<?php echo esc_html($slide['slide_link']['url']); ?>" class="slide-button">
+                      <a href="<?php echo esc_url($slide['slide_link']['url']); ?>" class="slide-button">
                         <?php echo esc_html($slide['slide_title']); ?>
                       </a>
                     <?php endif; ?>
                   </div>
-
                 </div>
               </li>
             <?php endforeach; ?>
@@ -2036,6 +2182,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         </div>
       </div>
     </div>
+
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -2117,6 +2264,8 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       loop: 'yes'===settings.loop,
       arrows: 'yes'===settings.show_arrows,
       pagination: 'yes'===settings.show_dots,
+      prev_icon: prevIcon,
+      next_icon: nextIcon
       };
       #>
 
@@ -2144,15 +2293,24 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                       <h1 class="splide-slide-title">{{{ slide.slide_title }}}</h1>
                                       <# } #>
 
-                                        <# if (slide.slide_description) { #>
-                                          <h4 class="splide-slide-description">{{{ slide.slide_description }}}</h4>
+                                        <# if (slide.descriptions) {
+                                          var descriptions=slide.descriptions.split('\n');
+                                          #>
+                                          <div class="description-container">
+                                            <# _.each(descriptions, function(desc) { #>
+                                              <# if (desc.trim()) { #>
+                                                <p class="description-item">{{{ desc.trim() }}}</p>
+                                                <# } #>
+                                                  <# }); #>
+                                          </div>
                                           <# } #>
 
                                             <# if (slide.slide_link && slide.slide_link.url) { #>
-                                              <a href="{{ slide.slide_link.url }}" class="slide-button">{{{ slide.slide_title }}}</a>
+                                              <a href="{{ slide.slide_link.url }}" class="slide-button">
+                                                {{{ slide.slide_title }}}
+                                              </a>
                                               <# } #>
                                   </div>
-
                   </div>
                 </li>
                 <# }); #>
@@ -2164,11 +2322,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       <script>
         (function() {
           const initSliders = function() {
-            const sliders = document.querySelectorAll('.elementor-splide-slider');
+            const sliders = document.querySelectorAll('.elementor-splide-slider:not([data-initialized])');
 
             sliders.forEach(function(slider) {
-              if (slider.dataset.initialized) return;
-
               const settings = JSON.parse(slider.dataset.sliderSettings);
               const splideEl = slider.querySelector('.splide');
 
@@ -2201,7 +2357,8 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                 }
               }
 
-              slider.dataset.initialized = true;
+              // Mark as initialized to prevent duplicate inits
+              slider.setAttribute('data-initialized', 'true');
             });
           };
 
