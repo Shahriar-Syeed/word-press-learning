@@ -5,6 +5,24 @@ if (!defined('ABSPATH')) {
 
 class Elementor_Slide_Widget extends \Elementor\Widget_Base
 {
+  public function __construct($data = [], $args = null)
+  {
+    parent::__construct($data, $args);
+    add_action('elementor/editor/after_enqueue_styles', [$this, 'editor_styles']);
+  }
+
+  public function editor_styles()
+  {
+    echo '
+    <style>
+        /* Hide only the "Add Desc" button */
+        .elementor-control-description_items .elementor-repeater-add {
+            display: none !important;
+        }
+        
+    </style>
+    ';
+  }
 
   public function get_name()
   {
@@ -38,6 +56,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $repeater = new \Elementor\Repeater();
+    $desc_repeater = new \Elementor\Repeater();
 
     $repeater->add_control(
       'slide_image',
@@ -70,40 +89,130 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $repeater->add_control(
-      'slide_link',
+      'slide_primary_link_text',
       [
-        'label' => __('Link', 'custom-slide-widget'),
+        'label' => __('Primary Link Text', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXT,
+        'default' => 'Learn More',
+      ]
+    );
+    $repeater->add_control(
+      'slide_primary_link',
+      [
+        'label' => __('Primary Link', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::URL,
       ]
     );
-    // Add this in register_controls() where you define the slide content
     $repeater->add_control(
-      'descriptions',
+      'slide_secondary_link_text',
       [
-        'label' => __('Descriptions', 'custom-slide-widget'),
-        'type' => \Elementor\Controls_Manager::TEXTAREA,
-        'default' => '',
-        'description' => __('Add multiple descriptions separated by new lines. Each line will become a paragraph.'),
-        'label_block' => true,
+        'label' => __('Secondary Link Text', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXT,
+        'default' => 'Back',
+      ]
+    );
+    $repeater->add_control(
+      'slide_secondary_link',
+      [
+        'label' => __('Secondary Link', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::URL,
       ]
     );
 
 
+    // $desc_repeater->add_control(
+    //   'description_items',
+    //   [
+    //     'label' => __('Description Items', 'custom-slide-widget'),
+    //     'type' => \Elementor\Controls_Manager::REPEATER,
+    //     'title_field' => '{{{ description_text }}}',
+    //     'button_text' => __('Add Desc', 'custom-slide-widget'),
+    //   ]
+    // );
 
+    $desc_repeater->add_control(
+      'description_text',
+      [
+        'label' => __('Text', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXTAREA,
+        'default' => __('Description paragraph', 'custom-slide-widget'),
+      ]
+    );
+    $desc_repeater->add_control(
+      'button_text',
+      [
+        'label' => __('Button Text', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXT,
+        'default' => __('Learn More', 'custom-slide-widget'),
+      ]
+    );
+    $desc_repeater->add_control(
+      'button_link',
+      [
+        'label' => __('Button Link', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::URL,
+        'placeholder' => __('https://your-link.com', 'custom-slide-widget'),
+      ]
+    );
+    $repeater->add_control('description_items', [
+      'label' => __('Description Items', 'custom-slide-widget'),
+      'type' => \Elementor\Controls_Manager::REPEATER,
+      'fields' => $desc_repeater->get_controls(),
+      'title_field' => '{{{ description_text }}}',
+      'button_text' => __('Add Desc', 'custom-slide-widget'),
+      'separator' => 'before',
+    ]);
+
+
+
+    // $this->add_control(
+    //   'slides',
+    //   [
+    //     'label' => __('Slides', 'custom-slide-widget'),
+    //     'type' => \Elementor\Controls_Manager::REPEATER,
+    //     'fields' => $repeater->get_controls(),
+    //     'default' => [
+    //       [
+    //         'slide_title' => __('Slide 1', 'custom-slide-widget'),
+    //         'slide_description' => __('First slide description', 'custom-slide-widget'),
+    //       ],
+    //       [
+    //         'slide_title' => __('Slide 2', 'custom-slide-widget'),
+    //         'slide_description' => __('Second slide description', 'custom-slide-widget'),
+    //       ],
+    //     ],
+    //     'title_field' => '{{{ slide_title }}}',
+    //     'button_text' => __('Add Desc', 'custom-slide-widget'),
+    //   ]
+    // );
     $this->add_control(
       'slides',
       [
         'label' => __('Slides', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::REPEATER,
-        'fields' => $repeater->get_controls(),
+        'fields' => $repeater->get_controls(), // This includes all controls from $repeater (including description_items)
         'default' => [
           [
             'slide_title' => __('Slide 1', 'custom-slide-widget'),
             'slide_description' => __('First slide description', 'custom-slide-widget'),
+            'description_items' => [ // ← Nested repeater data
+              [
+                'description_text' => __('First description item', 'custom-slide-widget'),
+                'button_text' => __('Learn More', 'custom-slide-widget'),
+                'button_link' => ['url' => '#'],
+              ],
+            ],
           ],
           [
             'slide_title' => __('Slide 2', 'custom-slide-widget'),
             'slide_description' => __('Second slide description', 'custom-slide-widget'),
+            'description_items' => [ // ← Nested repeater data
+              [
+                'description_text' => __('Second description item', 'custom-slide-widget'),
+                'button_text' => __('Read More', 'custom-slide-widget'),
+                'button_link' => ['url' => '#'],
+              ],
+            ],
           ],
         ],
         'title_field' => '{{{ slide_title }}}',
@@ -2157,23 +2266,57 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                       <h1 class="splide-slide-title"><?php echo esc_html($slide['slide_title']); ?></h1>
                     <?php endif; ?>
 
-                    <?php
-                    $descriptions = !empty($slide['descriptions']) ? explode("\n", $slide['descriptions']) : [];
-                    if (!empty($descriptions)): ?>
+                    <?php if (!empty($slide['slide_description'])): ?>
+                      <div class="splide-slide-description"><?php echo wp_kses_post($slide['slide_description']); ?></div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($slide['description_items'])): ?>
                       <div class="description-container">
-                        <?php foreach ($descriptions as $desc): ?>
-                          <?php if (!empty(trim($desc))): ?>
-                            <p class="description-item"><?php echo esc_html(trim($desc)); ?></p>
-                          <?php endif; ?>
+                        <?php foreach ($slide['description_items'] as $item): ?>
+                          <div class="description-item">
+                            <?php if (!empty($item['description_text'])): ?>
+                              <p><?php echo wp_kses_post($item['description_text']); ?></p>
+                            <?php endif; ?>
+
+                            <?php
+                            if (!empty($item['button_text']) && !empty($item['button_link']['url'])):
+                            ?>
+                              <?php
+                              $this->add_render_attribute('button-link-' . $item['_id'], [
+                                'href' => esc_url($item['button_link']['url']),
+                                'class' => 'description-button',
+                              ]);
+                              if ($item['button_link']['is_external']) {
+                                $this->add_render_attribute('button-link-' . $item['_id'], 'target', '_blank');
+                              }
+                              if ($item['button_link']['nofollow']) {
+                                $this->add_render_attribute('button-link-' . $item['_id'], 'rel', 'nofollow');
+                              }
+                              ?>
+                              <a <?php echo $this->get_render_attribute_string('button-link-' . $item['_id']); ?>>
+                                <?php
+                                echo esc_html($item['button_text']);
+                                ?>
+                              </a>
+                            <?php endif;
+                            ?>
+                          </div>
                         <?php endforeach; ?>
                       </div>
                     <?php endif; ?>
+                    <div class="slide-button-container">
 
-                    <?php if (!empty($slide['slide_link']['url'])): ?>
-                      <a href="<?php echo esc_url($slide['slide_link']['url']); ?>" class="slide-button">
-                        <?php echo esc_html($slide['slide_title']); ?>
-                      </a>
-                    <?php endif; ?>
+                      <?php if (!empty($slide['slide_primary_link']['url'])): ?>
+                        <a href="<?php echo esc_url($slide['slide_primary_link']['url']); ?>" class="slide-primary-button">
+                          <?php echo esc_html($slide['slide_primary_link_text']); ?>
+                        </a>
+                      <?php endif; ?>
+                      <?php if (!empty($slide['slide_secondary_link']['url'])): ?>
+                        <a href="<?php echo esc_url($slide['slide_secondary_link']['url']); ?>" class="slide-secondary-button">
+                          <?php echo esc_html($slide['slide_secondary_link_text']); ?>
+                        </a>
+                      <?php endif; ?>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -2182,6 +2325,10 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         </div>
       </div>
     </div>
+    <?php echo '<pre>';
+    print_r($settings['slides']);
+    echo '</pre>' ?>
+
 
 
     <script>
@@ -2276,7 +2423,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
               <# _.each(settings.slides, function(slide) { #>
                 <li class="splide__slide">
                   <div class="splide-slide-content">
-                    <# if (slide.slide_image.url) { #>
+                    <# if (slide.slide_image && slide.slide_image.url) { #>
                       <# if ('bg'===settings.image_type) { #>
                         <div class="splide-slide-image-bg" style="background-image: url('{{ slide.slide_image.url }}')"></div>
                         <# } else { #>
@@ -2293,23 +2440,33 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                       <h1 class="splide-slide-title">{{{ slide.slide_title }}}</h1>
                                       <# } #>
 
-                                        <# if (slide.descriptions) {
-                                          var descriptions=slide.descriptions.split('\n');
-                                          #>
-                                          <div class="description-container">
-                                            <# _.each(descriptions, function(desc) { #>
-                                              <# if (desc.trim()) { #>
-                                                <p class="description-item">{{{ desc.trim() }}}</p>
-                                                <# } #>
-                                                  <# }); #>
-                                          </div>
+                                        <# if (slide.slide_description) { #>
+                                          <div class="splide-slide-description">{{{ slide.slide_description }}}</div>
                                           <# } #>
 
-                                            <# if (slide.slide_link && slide.slide_link.url) { #>
-                                              <a href="{{ slide.slide_link.url }}" class="slide-button">
-                                                {{{ slide.slide_title }}}
-                                              </a>
+                                            <# if (slide.description_items) { #>
+                                              <div class="description-container">
+                                                <# _.each(slide.description_items, function(item) { #>
+                                                  <div class="description-item">
+                                                    <# if (item.description_text) { #>
+                                                      <p>{{{ item.description_text }}}</p>
+                                                      <# } #>
+
+                                                        <# if (item.button_text && item.button_link && item.button_link.url) { #>
+                                                          <a href="{{ item.button_link.url }}" class="description-button">
+                                                            {{{ item.button_text }}}
+                                                          </a>
+                                                          <# } #>
+                                                  </div>
+                                                  <# }); #>
+                                              </div>
                                               <# } #>
+
+                                                <# if (slide.slide_link && slide.slide_link.url) { #>
+                                                  <a href="{{ slide.slide_link.url }}" class="slide-button">
+                                                    {{{ slide.slide_link_text }}}
+                                                  </a>
+                                                  <# } #>
                                   </div>
                   </div>
                 </li>

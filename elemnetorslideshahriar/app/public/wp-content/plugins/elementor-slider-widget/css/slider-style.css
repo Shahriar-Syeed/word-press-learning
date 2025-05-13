@@ -1,7 +1,9 @@
 /* Splide slider overrides */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tagesschrift&display=swap');
 
-
+.elementor-repeater-fields .elementor-button.elementor-repeater-add{
+  display: none;
+}
 .elementor-splide-slider {
   position: relative;
   width: 100%;
@@ -158,12 +160,20 @@
   transition: all 300ms;
 }
 
-.slide-button{
+.slide-primary-button{
   padding: 16px 32px;
   border-radius: 900px;
   color:#fff;
   font-size: 24px;
   background-color: #05503a;
+  transition: background-color 300ms ease;
+}
+.slide-secondary-button{
+  padding: 16px 32px;
+  border-radius: 900px;
+  color:#fff;
+  font-size: 24px;
+  background-color: #03735f;
   transition: background-color 300ms ease;
 }
 .slide-button:hover{
