@@ -3174,6 +3174,4 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
   <?php
   }
 }
-?> 
-<p class="font-semibold text-3xl sm:text-7xl xl:text-[96px] xl:leading-[100px] font-fira">Nurturing Communities, <br>Simplified</p>
-<?php
+  ?>
