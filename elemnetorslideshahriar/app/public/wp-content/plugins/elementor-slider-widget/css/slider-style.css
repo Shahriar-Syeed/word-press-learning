@@ -1,6 +1,11 @@
 /* Splide slider overrides */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tagesschrift&display=swap');
-
+html{
+  margin:0 !important;
+}
+#header{
+display: none;
+}
 .elementor-repeater-fields .elementor-button.elementor-repeater-add{
   display: none;
 }
@@ -159,26 +164,36 @@
 .splide__pagination__page{
   transition: all 300ms;
 }
+.slide-button-container{
+  display: flex;
+  gap:10px;
+}
 
 .slide-primary-button{
+  cursor: pointer;
   padding: 16px 32px;
   border-radius: 900px;
   color:#fff;
+  font-weight: 600;
   font-size: 24px;
   background-color: #05503a;
   transition: background-color 300ms ease;
 }
 .slide-secondary-button{
+  cursor: pointer;
   padding: 16px 32px;
   border-radius: 900px;
+  font-weight: 600;
   color:#fff;
   font-size: 24px;
   background-color: #03735f;
   transition: background-color 300ms ease;
 }
-.slide-button:hover{
-  
+.slide-primary-button:hover{  
   background-color: #044532;
+}
+.slide-secondary-button:hover{  
+  background-color: #035e64;
 }
 .slide-details{
   position: relative;
@@ -194,6 +209,8 @@
   margin-inline: auto;
   padding-inline: 20px;
 }
+
+
 @media (max-width: 992px) {
   .slide-details {
       max-width: 900px;

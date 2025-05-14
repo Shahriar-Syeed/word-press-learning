@@ -165,26 +165,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
 
 
-    // $this->add_control(
-    //   'slides',
-    //   [
-    //     'label' => __('Slides', 'custom-slide-widget'),
-    //     'type' => \Elementor\Controls_Manager::REPEATER,
-    //     'fields' => $repeater->get_controls(),
-    //     'default' => [
-    //       [
-    //         'slide_title' => __('Slide 1', 'custom-slide-widget'),
-    //         'slide_description' => __('First slide description', 'custom-slide-widget'),
-    //       ],
-    //       [
-    //         'slide_title' => __('Slide 2', 'custom-slide-widget'),
-    //         'slide_description' => __('Second slide description', 'custom-slide-widget'),
-    //       ],
-    //     ],
-    //     'title_field' => '{{{ slide_title }}}',
-    //     'button_text' => __('Add Desc', 'custom-slide-widget'),
-    //   ]
-    // );
+
     $this->add_control(
       'slides',
       [
@@ -521,6 +502,23 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
     $this->end_controls_section();
 
+    $this->start_controls_section(
+      'title_style_section',
+      [
+        'label' => __('Title Style', 'custom-slide-widget'),
+        'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Typography::get_type(),,
+      [
+        'name' => 'button_typography', // Used internally
+        'label' => __('Typography', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide-slide-title',
+      ]
+    );
+
+    $this->end_controls_section();
     // Image Style Section
     $this->start_controls_section(
       'image_style_section',
@@ -1097,6 +1095,63 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
+    $this->add_responsive_control(
+      'content_bottom',
+      [
+        'label' => __('Bottom', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-content' => 'bottom: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'content_position' => ['absolute', 'fixed', 'relative', 'sticky'],
+        ],
+      ]
+    );
+    $this->add_responsive_control(
+      'content_left',
+      [
+        'label' => __('Left', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-content' => 'left: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'content_position' => ['absolute', 'fixed', 'relative', 'sticky'],
+        ],
+      ]
+    );
+    $this->add_responsive_control(
+      'content_right',
+      [
+        'label' => __('Right', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => ['min' => -500, 'max' => 500],
+          '%' => ['min' => -100, 'max' => 100],
+          'vh' => ['min' => -100, 'max' => 100],
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-content' => 'right: {{SIZE}}{{UNIT}};',
+        ],
+        'condition' => [
+          'content_position' => ['absolute', 'fixed', 'relative', 'sticky'],
+        ],
+      ]
+    );
 
     $this->add_control(
       'content_zindex',
@@ -1116,10 +1171,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
-
-
-
-    // [Add similar controls for bottom, left, right]
 
     // Background
     $this->add_group_control(
@@ -2190,6 +2241,418 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           '{{WRAPPER}} .splide__pagination__page.is-active' => 'transform: scale({{SIZE}});',
         ],
       ]
+    );
+
+    $this->end_controls_section();
+
+    // button style
+    $this->start_controls_section(
+      'buttons_style_section',
+      [
+        'label' => __('Button Style', 'custom-slide-widget'),
+        'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+      ]
+    );
+
+    $this->add_control(
+      'button_container_layout',
+      [
+        'label' => __('Layout', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'block' => __('Block', 'custom-slide-widget'),
+          'flex' => __('Flex', 'custom-slide-widget'),
+          'grid' => __('Grid', 'custom-slide-widget'),
+        ],
+        'default' => 'flex',
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'display: {{value}};'
+        ],
+      ],
+    );
+
+    $this->add_responsive_control(
+      'btn_container_flex_direction',
+      [
+        'label' => __('Flex Direction', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'row' => __('Row', 'custom-slide-widget'),
+          'column' => __('Column', 'custom-slide-widget'),
+          'row-reverse' => __('Row Reverse', 'custom-slide-widget'),
+          'column-reverse' => __('Column Reverse', 'custom-slide-widget'),
+        ],
+        'default' => 'row',
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'flex-direction:{{VALUE}}'
+        ],
+        'condition' => [
+          'button_container_layout' => 'flex',
+        ],
+      ]
+    );
+    $this->add_control(
+      'btn_container_align_items',
+      [
+        'label' => __('Align Items', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'start',
+        'options' => [
+          'flex-start' => __('Start', 'custom-slide-widget'),
+          'flex-end' => __('End', 'custom-slide-widget'),
+          'center' => __('Center', 'custom-slide-widget'),
+          'baseline' => __('Baseline', 'custom-slide-widget'),
+          'stretch' => __('Stretch', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'align-items: {{VALUE}};',
+        ],
+        'condition' => [
+          'button_container_layout' => 'flex',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'btn_container_justify_content',
+      [
+        'label' => __('Justify Content', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'default' => 'flex-start',
+        'options' => [
+          'flex-start' => __('Start', 'custom-slide-widget'),
+          'flex-end' => __('End', 'custom-slide-widget'),
+          'center' => __('Center', 'custom-slide-widget'),
+          'baseline' => __('Baseline', 'custom-slide-widget'),
+          'stretch' => __('Stretch', 'custom-slide-widget'),
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'justify-content: {{VALUE}};',
+        ],
+        'condition' => [
+          'button_container_layout' => 'flex',
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'btn_container_flex_wrap',
+      [
+        'label' => __('Flex Wrap', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SWITCHER,
+        'label_on' => __('Yes', 'custom-slide-widget'),
+        'label_off' => __('No', 'custom-slide-widget'),
+        'return_value' => 'wrap',
+        'default' => '',
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'flex-wrap: {{VALUE}};'
+        ],
+        'condition' => [
+          'button_container_layout' => 'flex',
+        ],
+      ],
+    );
+
+    $this->add_control(
+      'btn_container_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+
+    $this->add_control(
+      'btn_container_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem', ''],
+        'selectors' => [
+          '{{WRAPPER}} .slide-button-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+
+    // primary button style
+    $this->add_control(
+      'primary_button_style',
+      [
+        'label' => __('Primary Button Style', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Typography::get_type(),
+      [
+        'name' => 'primary_btn_typography', // Used internally
+        'label' => __('Typography', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+
+
+    $this->start_controls_tabs('tabs_primary-btn_style');
+    $this->start_controls_tab(
+      'tab_primary_btn_normal',
+      [
+        'label' => __('Normal', 'custom-slide-widget'),
+      ],
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'primary_btn_background',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+    // Border
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'primary_btn_border',
+        'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+    // Box Shadow
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'primary_btn_box_shadow',
+        'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+
+    $this->end_controls_tab();
+    $this->start_controls_tab(
+      'tab_primary_btn_hover',
+      [
+        'label' => __('Hover', 'custom-slide-widget'),
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'primary_btn_background_hover',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+      ]
+    );
+    // Border
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'primary_btn_border_hover',
+        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+      ]
+    );
+    // Box Shadow
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'primary_btn_box_shadow_hover',
+        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+      ]
+    );
+    // Hover Animation
+    $this->add_control(
+      'primary_btn_hover_animation',
+      [
+        'label' => __('Hover Animation', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HOVER_ANIMATION,
+        'prefix_class' => 'elementor-animation-',
+      ]
+    );
+    // Transition Duration
+    $this->add_control(
+      'primary_btn_hover_transition',
+      [
+        'label' => __('Transition Duration (s)', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'range' => [
+          's' => [
+            'min' => 0,
+            'max' => 3,
+            'step' => 0.1,
+          ],
+        ],
+        'default' => [
+          'size' => 0.3
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button' => 'transition-duration: {{SIZE}}s ease;',
+        ],
+      ]
+    );
+    $this->end_controls_tab();
+    $this->end_controls_tabs();
+    $this->add_responsive_control(
+      'primary_btn_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+    $this->add_responsive_control(
+      'primary_btn_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+    // secondary button style
+    $this->add_control(
+      'secondary_button_style',
+      [
+        'label' => __('Secondary Button Style', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->add_group_control(
+      \Elementor\Group_Control_Typography::get_type(),
+      [
+        'name' => 'button_typography', // Used internally
+        'label' => __('Typography', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+
+    $this->start_controls_tabs('tabs_secondary-btn_style');
+    $this->start_controls_tab(
+      'tab_secondary_btn_normal',
+      [
+        'label' => __('Normal', 'custom-slide-widget'),
+      ],
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'secondary_btn_background',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
+      ]
+    );
+    // Border
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'secondary_btn_border',
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
+      ]
+    );
+    // Box Shadow
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'secondary_btn_box_shadow',
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
+      ]
+    );
+
+    $this->end_controls_tab();
+    $this->start_controls_tab(
+      'tab_secondary_btn_hover',
+      [
+        'label' => __('Hover', 'custom-slide-widget'),
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'secondary_btn_background_hover',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+      ]
+    );
+    // Border
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'secondary_btn_border_hover',
+        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+      ]
+    );
+    // Box Shadow
+    $this->add_group_control(
+      \Elementor\Group_Control_Box_Shadow::get_type(),
+      [
+        'name' => 'secondary_btn_box_shadow_hover',
+        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+      ]
+    );
+    // Hover Animation
+    $this->add_control(
+      'secondary_btn_hover_animation',
+      [
+        'label' => __('Hover Animation', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HOVER_ANIMATION,
+        'prefix_class' => 'elementor-animation-',
+      ]
+    );
+    // Transition Duration
+    $this->add_control(
+      'secondary_btn_hover_transition',
+      [
+        'label' => __('Transition Duration (s)', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'range' => [
+          's' => [
+            'min' => 0,
+            'max' => 3,
+            'step' => 0.1,
+          ],
+        ],
+        'default' => [
+          'size' => 0.3
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button' => 'transition-duration: {{SIZE}}s ease;',
+        ],
+      ]
+    );
+    $this->end_controls_tab();
+    $this->end_controls_tabs();
+    $this->add_responsive_control(
+      'secondary_btn_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-secondary-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+    $this->add_responsive_control(
+      'secondary_btn_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-secondary-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
     );
 
     $this->end_controls_section();
