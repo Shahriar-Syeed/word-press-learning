@@ -46,7 +46,22 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
   protected function register_controls()
   {
-    // Content Section
+
+    $this->register_content_controls();
+    $this->register_setting_controls();
+    $this->register_overlay_settings_controls();
+    $this->register_title_style_controls();
+    $this->register_image_style_controls();
+    $this->register_content_style_controls();
+    $this->register_description_style_controls();
+    $this->register_navigation_style_controls();
+    $this->register_pagination_style_controls();
+    $this->register_button_style_controls();
+  }
+
+
+  protected function register_content_controls()
+  {
     $this->start_controls_section(
       'content_section',
       [
@@ -216,8 +231,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
 
     $this->end_controls_section();
-
-    // Settings Section
+  }
+  protected function register_setting_controls()
+  {
     $this->start_controls_section(
       'settings_section',
       [
@@ -298,6 +314,23 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    // $this->add_control(
+    //   'perPage',
+    //   [
+    //     'label' => __('Per Page Slide Num', 'custom-slide-widget'),
+    //     'type' => \Elementor\Controls_Manager::NUMBER,
+    //     'default' => 1,
+    //   ]
+    // );
+
+    // $this->add_control(
+    //   'perMove',
+    //   [
+    //     'label' => __('Per Move Slide Num', 'custom-slide-widget'),
+    //     'type' => \Elementor\Controls_Manager::NUMBER,
+    //   ]
+    // );
+
     // Icon Controls
     $this->add_control(
       'arrow_icon_heading',
@@ -354,8 +387,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-
-    // overlay
+  }
+  protected function register_overlay_settings_controls()
+  {
     $this->start_controls_section(
       'overlay_section',
       [
@@ -501,7 +535,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-
+  }
+  protected function register_title_style_controls()
+  {
     $this->start_controls_section(
       'title_style_section',
       [
@@ -510,7 +546,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
     $this->add_group_control(
-      \Elementor\Group_Control_Typography::get_type(),,
+      \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'button_typography', // Used internally
         'label' => __('Typography', 'custom-slide-widget'),
@@ -519,7 +555,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-    // Image Style Section
+  }
+  protected function register_image_style_controls()
+  {
     $this->start_controls_section(
       'image_style_section',
       [
@@ -850,8 +888,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-
-    // Content style
+  }
+  protected function register_content_style_controls()
+  {
     $this->start_controls_section(
       'slide_content_style',
       [
@@ -1229,8 +1268,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-
-    // description container styling
+  }
+  protected function register_description_style_controls()
+  {
     $this->start_controls_section(
       'description_container_style',
       [
@@ -1358,11 +1398,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
     $this->end_controls_section();
-
-    /**
-     * arrow style
-     */
-
+  }
+  protected function register_navigation_style_controls()
+  {
     $this->start_controls_section(
       'arrow_style_section',
       [
@@ -1894,6 +1932,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
+  }
+  protected function register_pagination_style_controls()
+  {
     $this->start_controls_section(
       'pagination_style_section',
       [
@@ -2244,8 +2285,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->end_controls_section();
-
-    // button style
+  }
+  protected function register_button_style_controls()
+  {
     $this->start_controls_section(
       'buttons_style_section',
       [
@@ -2657,6 +2699,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
     $this->end_controls_section();
   }
+  // Content Section
 
 
 
@@ -2756,7 +2799,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                 $this->add_render_attribute('button-link-' . $item['_id'], 'rel', 'nofollow');
                               }
                               ?>
-                              <a <?php echo $this->get_render_attribute_string('button-link-' . $item['_id']); ?>>
+                              <a href="<?php echo $this->get_render_attribute_string('button-link-' . $item['_id']); ?>">
                                 <?php
                                 echo esc_html($item['button_text']);
                                 ?>
@@ -2924,12 +2967,19 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                                   <# }); #>
                                               </div>
                                               <# } #>
+                                                <div class="slide-button-container">
 
-                                                <# if (slide.slide_link && slide.slide_link.url) { #>
-                                                  <a href="{{ slide.slide_link.url }}" class="slide-button">
-                                                    {{{ slide.slide_link_text }}}
-                                                  </a>
-                                                  <# } #>
+                                                  <# if (slide.slide_primary_link && slide.slide_primary_link.url) { #>
+                                                    <a href="{{ slide.slide_primary_link.url }}" class="slide-primary-button">
+                                                      {{{ slide.slide_primary_link_text }}}
+                                                    </a>
+                                                    <# } #>
+                                                      <# if (slide.slide_secondary_link && slide.slide_secondary_link.url) { #>
+                                                        <a href="{{ slide.slide_secondary_link.url }}" class="slide-secondary-button">
+                                                          {{{ slide.slide_secondary_link_text }}}
+                                                        </a>
+                                                        <# } #>
+                                                </div>
                                   </div>
                   </div>
                 </li>
