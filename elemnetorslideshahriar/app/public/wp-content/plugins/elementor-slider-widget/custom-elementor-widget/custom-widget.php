@@ -343,7 +343,13 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
-
+    $this->start_controls_tabs('tabs_navigation_icons');
+    $this->start_controls_tab(
+      'tab_prev_navigation_icon',
+      [
+        'label' => __('Prev Icon', 'custom-slide-widget'),
+      ],
+    );
     $this->add_control(
       'prev_icon',
       [
@@ -357,6 +363,24 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           'show_arrows' => 'yes',
         ],
       ]
+    );
+    $this->add_control(
+      'custom_prev_icon_svg',
+      [
+        'label' => __('Custom SVG Code', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::TEXTAREA,
+        'description' => __('Paste SVG code for both arrows (will override icon selection)', 'custom-slide-widget'),
+        'condition' => [
+          'show_arrows' => 'yes',
+        ],
+      ]
+    );
+    $this->end_controls_tab();
+    $this->start_controls_tab(
+      'tab_next_navigation_icon',
+      [
+        'label' => __('Next Icon', 'custom-slide-widget'),
+      ],
     );
 
     $this->add_control(
@@ -375,7 +399,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->add_control(
-      'custom_icon_svg',
+      'custom_next_icon_svg',
       [
         'label' => __('Custom SVG Code', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::TEXTAREA,
@@ -385,6 +409,9 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
 
     $this->end_controls_section();
   }
@@ -2297,6 +2324,18 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->add_control(
+      'button_heading',
+      [
+        'label' => __('Button Container', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'after',
+        // 'condition' => [
+        //   'show_arrows' => 'yes',
+        // ],
+      ]
+    );
+
+    $this->add_control(
       'button_container_layout',
       [
         'label' => __('Layout', 'custom-slide-widget'),
@@ -2433,8 +2472,17 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'primary_btn_typography', // Used internally
-        'label' => __('Typography', 'custom-slide-widget'),
+        'label' => __('Typography Primary Btn', 'custom-slide-widget'),
         'selector' => '{{WRAPPER}} .slide-primary-button',
+
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Typography::get_type(),
+      [
+        'name' => 'secondary_btn_typography', // Used internally
+        'label' => __('Typography Secondary Btn', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
       ]
     );
 
@@ -2455,12 +2503,55 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'selector' => '{{WRAPPER}} .slide-primary-button',
       ]
     );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'secondary_btn_background',
+        'label' => __('Background', 'custom-slide-widget'),
+        'types' => ['classic', 'gradient'],
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
+      ]
+    );
+    $this->add_control(
+      'primary_button_border_heading',
+      [
+        'label' => __('Primary Button border', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+      ]
+    );
     // Border
     $this->add_group_control(
       \Elementor\Group_Control_Border::get_type(),
       [
         'name' => 'primary_btn_border',
         'selector' => '{{WRAPPER}} .slide-primary-button',
+      ]
+    );
+    $this->add_control(
+      'secondary_button_border_heading',
+      [
+        'label' => __('Secondary Button border', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'secondary_btn_border',
+        'selector' => '{{WRAPPER}} .slide-secondary-button',
+      ]
+    );
+
+    $this->add_control(
+      'btn_border_radius',
+      [
+        'label' => __('Border Radius', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide-secondary-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
       ]
     );
     // Box Shadow
@@ -2488,12 +2579,46 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'selector' => '{{WRAPPER}} .slide-primary-button:hover',
       ]
     );
+    $this->add_control(
+      'primary_button_border_heading_hover',
+      [
+        'label' => __('Primary Button border', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+      ]
+    );
     // Border
     $this->add_group_control(
       \Elementor\Group_Control_Border::get_type(),
       [
         'name' => 'primary_btn_border_hover',
         'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+      ]
+    );
+    $this->add_control(
+      'secondary_button_border_heading_hover',
+      [
+        'label' => __('Secondary Button border', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Border::get_type(),
+      [
+        'name' => 'secondary_btn_border_hover',
+        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+      ]
+    );
+
+    $this->add_control(
+      'btn_border_radius_hover',
+      [
+        'label' => __('Border Radius', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%'],
+        'selectors' => [
+          '{{WRAPPER}} .slide-primary-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide-secondary-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        ],
       ]
     );
     // Box Shadow
@@ -2718,14 +2843,16 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     $fallback_next_icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>';
 
     // Get custom SVG if provided
-    $custom_svg = !empty($settings['custom_icon_svg']) ? $settings['custom_icon_svg'] : '';
+    $custom_prev_svg = !empty($settings['custom_prev_icon_svg']) ? $settings['custom_prev_icon_svg'] : '';
+
+    $custom_next_svg = !empty($settings['custom_next_icon_svg']) ? $settings['custom_next_icon_svg'] : '';
 
     // Prepare arrow icons
-    $prev_icon = $custom_svg ?: (!empty($settings['prev_icon']['value']) ?
+    $prev_icon = $custom_prev_svg ?: (!empty($settings['prev_icon']['value']) ?
       $this->render_icon($settings['prev_icon']) :
       $fallback_prev_icon);
 
-    $next_icon = $custom_svg ?: (!empty($settings['next_icon']['value']) ?
+    $next_icon = $custom_next_svg ?: (!empty($settings['next_icon']['value']) ?
       $this->render_icon($settings['next_icon']) :
       $fallback_next_icon);
 
@@ -2898,14 +3025,15 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       var fallbackNextIcon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>' ;
 
       // Get icons
-      var customSvg=settings.custom_icon_svg ? settings.custom_icon_svg : '' ;
+      var customPrevSvg=settings.custom_prev_icon_svg ? settings.custom_prev_icon_svg : '' ;
+      var customNextSvg=settings.custom_next_icon_svg ? settings.custom_next_icon_svg : '' ;
 
-      var prevIcon=customSvg ? customSvg :
+      var prevIcon=customPrevSvg ? customPrevSvg :
       (settings.prev_icon.value ?
       elementor.helpers.renderIcon(view, settings.prev_icon, { 'aria-hidden' : true }).value :
       fallbackPrevIcon);
 
-      var nextIcon=customSvg ? customSvg :
+      var nextIcon=customNextSvg ? customNextSvg :
       (settings.next_icon.value ?
       elementor.helpers.renderIcon(view, settings.next_icon, { 'aria-hidden' : true }).value :
       fallbackNextIcon);
@@ -3046,3 +3174,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
   <?php
   }
 }
+?> 
+<p class="font-semibold text-3xl sm:text-7xl xl:text-[96px] xl:leading-[100px] font-fira">Nurturing Communities, <br>Simplified</p>
+<?php
