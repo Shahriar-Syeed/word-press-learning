@@ -527,10 +527,89 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     $this->add_group_control(
       \Elementor\Group_Control_Typography::get_type(),
       [
-        'name' => 'button_typography', // Used internally
+        'name' => 'splide_slide_title_typography',
         'label' => __('Typography', 'custom-slide-widget'),
         'selector' => '{{WRAPPER}} .splide-slide-title',
       ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Text_Stroke::get_type(),
+      [
+        'name' => 'splide_slide_title_text_color',
+        'label' => __('Text Color', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide-slide-title',
+      ]
+    );
+    $this->add_responsive_control(
+      'slide_title_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+
+    $this->add_responsive_control(
+      'slide_title_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+    $this->add_control(
+      'splide_slide_description_heading',
+      [
+        'label' => __('Splide Slide Description', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Typography::get_type(),
+      [
+        'name' => 'button_typography', // Used internally
+        'label' => __('Typography', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide-slide-description',
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Text_Stroke::get_type(),
+      [
+        'name' => 'splide_slide_description_typography', // Used internally
+        'label' => __('Text Color', 'custom-slide-widget'),
+        'selector' => '{{WRAPPER}} .splide-slide-description',
+      ]
+    );
+
+    $this->add_responsive_control(
+      'splide_slide_description_margin',
+      [
+        'label' => __('Margin', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
+    );
+
+    $this->add_responsive_control(
+      'splide_slide_description_padding',
+      [
+        'label' => __('Padding', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+        'size_units' => ['px', '%', 'rem'],
+        'selectors' => [
+          '{{WRAPPER}} .splide-slide-description' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        ],
+      ],
     );
 
     $this->end_controls_section();
@@ -572,6 +651,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'size_units' => ['px', 'vh'],
         'range' => [
           'px' => ['min' => 0, 'max' => 2000],
+          '%' => ['min' => 0, 'max' => 100],
           'vh' => ['min' => 0, 'max' => 100],
         ],
         'selectors' => [
@@ -878,6 +958,31 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    $this->add_control(
+      'pauseOnHover',
+      [
+        'label' => __('PauseOnHover', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SWITCHER,
+        'label_on' => __('Yes', 'custom-slide-widget'),
+        'label_off' => __('No', 'custom-slide-widget'),
+        'return_value' => 'yes',
+        'default' => 'yes',
+      ]
+    );
+
+    $this->add_control(
+      'content_container_width',
+      [
+        'label' => __('Layout', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'boxed' => __('Boxed', 'custom-slide-widget'),
+          'full-width' => __('Full Width', 'custom-slide-widget'),
+        ],
+        'default' => 'boxed',
+      ]
+    );
+
     // Layout Control
     $this->add_control(
       'content_layout',
@@ -936,10 +1041,11 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'label' => __('Height', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::SLIDER,
-        'size_units' => ['px', 'vh'],
+        'size_units' => ['px', 'vh', 'svh'],
         'range' => [
           'px' => ['min' => 0, 'max' => 2000],
           'vh' => ['min' => 0, 'max' => 100],
+          'svh' => ['min' => 0, 'max' => 100],
         ],
         'selectors' => [
           '{{WRAPPER}} .splide-slide-content' => 'height: {{SIZE}}{{UNIT}};',
@@ -1406,7 +1512,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'desc_heading_typography', // Used internally
-        'label' => __('Typography Primary Btn', 'custom-slide-widget'),
+        'label' => __('Typography Desc Heading', 'custom-slide-widget'),
         'selector' => '{{WRAPPER}} .description-heading',
 
       ]
@@ -1423,7 +1529,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'desc_text_typography', // Used internally
-        'label' => __('Typography Primary Btn', 'custom-slide-widget'),
+        'label' => __('Typography Desc Text', 'custom-slide-widget'),
         'selector' => '{{WRAPPER}} .description-text',
 
       ]
@@ -1439,6 +1545,24 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'tab' => \Elementor\Controls_Manager::TAB_STYLE,
         'condition' => [
           'show_arrows' => 'yes',
+        ],
+      ]
+    );
+
+
+
+    $this->add_responsive_control(
+      'arrows_display',
+      [
+        'label' => __('Arrows Display', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SELECT,
+        'options' => [
+          'block' => __('Block', 'custom-slide-widget'),
+          'none' => __('None', 'custom-slide-widget'),
+        ],
+        'default' => '',
+        'selectors' => [
+          '{{WRAPPER}} .splide__arrow' => 'display: {{VALUE}};',
         ],
       ]
     );
@@ -2106,8 +2230,85 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
+    $this->add_responsive_control(
+      'pagination_vertical_offset',
+      [
+        'label' => __('Vertical Offset', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%', 'vh'],
+        'range' => [
+          'px' => [
+            'min' => -200,
+            'max' => 200,
+          ],
+          '%' => [
+            'min' => -20,
+            'max' => 100,
+          ],
+          'vh' => [
+            'min' => -20,
+            'max' => 100,
+          ],
+        ],
+        'default' => [
+          'unit' => 'px',
+          'size' => 10,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'transform: translateY({{SIZE}}{{UNIT}});',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
 
-    // Pagination dots styling
+    $this->add_responsive_control(
+      'pagination_horizontal_offset',
+      [
+        'label' => __('Horizontal Offset', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px', '%'],
+        'range' => [
+          'px' => [
+            'min' => -500,
+            'max' => 500,
+          ],
+          '%' => [
+            'min' => -100,
+            'max' => 100,
+          ],
+        ],
+        'default' => [
+          'unit' => 'px',
+          'size' => 0,
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination' => 'transform: translateX({{SIZE}}{{UNIT}});',
+        ],
+        'condition' => [
+          'pagination_position' => ['absolute', 'fixed'],
+        ],
+      ]
+    );
+
+    $this->add_control(
+      'pagination_dots_style',
+      [
+        'label' => __('Dots Style', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::HEADING,
+        'separator' => 'before',
+      ]
+    );
+
+    $this->start_controls_tabs('tabs_pagination_dots_style');
+    $this->start_controls_tab(
+      'tab_pagination_dots_normal_style',
+      [
+        'label' => __('Normal Dot', 'custom-slide-widget'),
+      ],
+    );
+
     $this->add_responsive_control(
       'pagination_dots_width',
       [
@@ -2153,38 +2354,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
-    $this->add_responsive_control(
-      'pagination_dots_gap',
-      [
-        'label' => __('Dots Spacing', 'custom-slide-widget'),
-        'type' => \Elementor\Controls_Manager::SLIDER,
-        'size_units' => ['px'],
-        'range' => [
-          'px' => [
-            'min' => 0,
-            'max' => 30,
-          ],
-        ],
-        'default' => [
-          'size' => 6,
-          'unit' => 'px',
-        ],
-        'selectors' => [
-          '{{WRAPPER}} .splide__pagination__page' => 'margin: 0 {{SIZE}}{{UNIT}};',
-        ],
-      ]
-    );
-
-    // Normal state styling
-    $this->add_control(
-      'pagination_dots_style',
-      [
-        'label' => __('Dots Style', 'custom-slide-widget'),
-        'type' => \Elementor\Controls_Manager::HEADING,
-        'separator' => 'before',
-      ]
-    );
-
     $this->add_group_control(
       \Elementor\Group_Control_Background::get_type(),
       [
@@ -2225,7 +2394,14 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
-    // Active state styling
+    $this->end_controls_tab();
+    $this->start_controls_tab(
+      'tab_pagination_dots_active_style',
+      [
+        'label' => __('Active Dot', 'custom-slide-widget'),
+      ],
+    );
+
     $this->add_control(
       'pagination_dots_active_style',
       [
@@ -2311,6 +2487,33 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
         'selectors' => [
           '{{WRAPPER}} .splide__pagination__page.is-active' => 'transform: scale({{SIZE}});',
+        ],
+      ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+
+    $this->add_responsive_control(
+      'pagination_dots_gap',
+      [
+        'label' => __('Dots Spacing', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SLIDER,
+        'size_units' => ['px'],
+        'range' => [
+          'px' => [
+            'min' => 0,
+            'max' => 30,
+          ],
+        ],
+        'default' => [
+          'size' => 6,
+          'unit' => 'px',
+        ],
+        'selectors' => [
+          '{{WRAPPER}} .splide__pagination__page' => 'margin: 0 {{SIZE}}{{UNIT}};',
         ],
       ]
     );
@@ -2438,7 +2641,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ],
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
       'btn_container_margin',
       [
         'label' => __('Margin', 'custom-slide-widget'),
@@ -2450,7 +2653,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ],
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
       'btn_container_padding',
       [
         'label' => __('Padding', 'custom-slide-widget'),
@@ -2885,7 +3088,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           <ul class="splide__list">
             <?php foreach ($settings['slides'] as $slide): ?>
               <li class="splide__slide">
-                <div class="splide-slide-content">
+                <div class="splide-slide-content <?php echo $settings['content_container_width'] ?>">
                   <?php if (!empty($slide['slide_image']['url'])): ?>
                     <?php if ('bg' === $settings['image_type']): ?>
                       <div class="splide-slide-image-bg" style="background-image: url('<?php echo esc_url($slide['slide_image']['url']); ?>')"></div>
@@ -2918,7 +3121,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                           if ($heading || $text): ?>
                             <div class="description-item">
                               <?php if ($heading): ?>
-                                <h3 class="description-heading"><?php echo esc_html($heading); ?></h3>
+                                <p class="description-heading"><?php echo esc_html($heading); ?></p>
                               <?php endif; ?>
                               <?php if ($text): ?>
                                 <p class="description-text"><?php echo esc_html($text); ?></p>
@@ -2949,11 +3152,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         </div>
       </div>
     </div>
-    <?php echo '<pre>';
-    print_r($settings['slides']);
-    echo '</pre>' ?>
-
-
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -2968,7 +3166,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
             type: settings.loop ? 'loop' : 'slide',
             perPage: 1,
             perMove: 1,
-            gap: '20px',
             arrows: settings.arrows,
             pagination: settings.pagination,
             autoplay: settings.autoplay,
@@ -2978,7 +3175,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
             breakpoints: {
               768: {
                 arrows: settings.arrows,
-                pagination: settings.pagination
+                pagination: settings.pagination,
               }
             }
           }).mount();
@@ -3080,7 +3277,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                                     if (heading || text) { #>
                                                     <div class="description-item">
                                                       <# if (heading) { #>
-                                                        <h3 class="description-heading">{{{ heading }}}</h3>
+                                                        <p class="description-heading">{{{ heading }}}</p>
                                                         <# } #>
                                                           <# if (text) { #>
                                                             <p class="description-text">{{{ text }}}</p>
@@ -3126,7 +3323,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                 type: settings.loop ? 'loop' : 'slide',
                 perPage: 1,
                 perMove: 1,
-                gap: '20px',
                 arrows: settings.arrows,
                 pagination: settings.pagination,
                 autoplay: settings.autoplay,
@@ -3136,7 +3332,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                 breakpoints: {
                   768: {
                     arrows: settings.arrows,
-                    pagination: settings.pagination
+                    pagination: settings.pagination,
                   }
                 }
               }).mount();
