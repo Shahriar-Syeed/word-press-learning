@@ -1002,11 +1002,27 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    // Max Width with Auto option
+    $this->add_responsive_control(
+      'content_max_width_auto',
+      [
+        'label' => __('Max Width Auto', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SWITCHER,
+        'label_on' => __('Auto', 'custom-slide-widget'),
+        'label_off' => __('Custom', 'custom-slide-widget'),
+        'return_value' => 'yes',
+        'default' => '',
+      ]
+    );
+
     $this->add_responsive_control(
       'content_max_width',
       [
         'label' => __('Max Width', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::SLIDER,
+        'condition' => [
+          'content_max_width_auto!' => 'yes',
+        ],
         'size_units' => ['px', '%', 'vw'],
         'range' => [
           'px' => ['min' => 0, 'max' => 2000],
@@ -1019,11 +1035,27 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    // Height with Auto option
+    $this->add_responsive_control(
+      'content_height_auto',
+      [
+        'label' => __('Height Auto', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SWITCHER,
+        'label_on' => __('Auto', 'custom-slide-widget'),
+        'label_off' => __('Custom', 'custom-slide-widget'),
+        'return_value' => 'yes',
+        'default' => '',
+      ]
+    );
+
     $this->add_responsive_control(
       'content_height',
       [
         'label' => __('Height', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::SLIDER,
+        'condition' => [
+          'content_height_auto!' => 'yes',
+        ],
         'size_units' => ['px', 'vh', 'svh'],
         'range' => [
           'px' => ['min' => 0, 'max' => 2000],
@@ -1036,11 +1068,27 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       ]
     );
 
+    // Min Height with Auto option
+    $this->add_responsive_control(
+      'content_min_height_auto',
+      [
+        'label' => __('Min Height Auto', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::SWITCHER,
+        'label_on' => __('Auto', 'custom-slide-widget'),
+        'label_off' => __('Custom', 'custom-slide-widget'),
+        'return_value' => 'yes',
+        'default' => '',
+      ]
+    );
+
     $this->add_responsive_control(
       'content_min_height',
       [
         'label' => __('Min Height', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::SLIDER,
+        'condition' => [
+          'content_min_height_auto!' => 'yes',
+        ],
         'size_units' => ['px', 'vh'],
         'range' => [
           'px' => ['min' => 0, 'max' => 2000],
@@ -1051,6 +1099,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         ],
       ]
     );
+
 
     // Spacing
     $this->add_responsive_control(
@@ -2679,7 +2728,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_typography',
         'label' => __('Typography', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button',
+        'selector' => '{{WRAPPER}} .slide__button--primary',
       ]
     );
 
@@ -2700,7 +2749,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'name' => 'primary_btn_background',
         'label' => __('Background', 'custom-slide-widget'),
         'types' => ['classic', 'gradient'],
-        'selector' => '{{WRAPPER}} .slide-primary-button',
+        'selector' => '{{WRAPPER}} .slide__button--primary',
       ]
     );
 
@@ -2710,7 +2759,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'label' => __('Text Color', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button' => 'color: {{VALUE}};',
+          '{{WRAPPER}} .slide__button--primary' => 'color: {{VALUE}};',
         ],
       ]
     );
@@ -2720,7 +2769,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_text_stroke',
         'label' => __('Text Stroke', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button',
+        'selector' => '{{WRAPPER}} .slide__button--primary',
       ]
     );
 
@@ -2729,7 +2778,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_border',
         'label' => __('Border', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button',
+        'selector' => '{{WRAPPER}} .slide__button--primary',
       ]
     );
 
@@ -2740,7 +2789,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%'],
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--primary' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -2750,7 +2799,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_box_shadow',
         'label' => __('Box Shadow', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button',
+        'selector' => '{{WRAPPER}} .slide__button--primary',
       ]
     );
 
@@ -2770,7 +2819,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'name' => 'primary_btn_background_hover',
         'label' => __('Background', 'custom-slide-widget'),
         'types' => ['classic', 'gradient'],
-        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--primary:hover',
       ]
     );
 
@@ -2780,7 +2829,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'label' => __('Text Color', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button:hover' => 'color: {{VALUE}};',
+          '{{WRAPPER}} .slide__button--primary:hover' => 'color: {{VALUE}};',
         ],
       ]
     );
@@ -2790,7 +2839,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_text_stroke_hover',
         'label' => __('Text Stroke', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--primary:hover',
       ]
     );
 
@@ -2799,7 +2848,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_border_hover',
         'label' => __('Border', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--primary:hover',
       ]
     );
 
@@ -2810,7 +2859,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%'],
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--primary:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -2820,7 +2869,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'primary_btn_box_shadow_hover',
         'label' => __('Box Shadow', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-primary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--primary:hover',
       ]
     );
 
@@ -2847,7 +2896,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           'size' => 0.3,
         ],
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button' => 'transition: all {{SIZE}}s ease;',
+          '{{WRAPPER}} .slide__button--primary' => 'transition: all {{SIZE}}s ease;',
         ],
       ]
     );
@@ -2862,7 +2911,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'rem'],
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--primary' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -2874,7 +2923,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'rem'],
         'selectors' => [
-          '{{WRAPPER}} .slide-primary-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--primary' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -2894,7 +2943,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_typography',
         'label' => __('Typography', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button',
+        'selector' => '{{WRAPPER}} .slide__button--secondary',
       ]
     );
 
@@ -2915,7 +2964,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'name' => 'secondary_btn_background',
         'label' => __('Background', 'custom-slide-widget'),
         'types' => ['classic', 'gradient'],
-        'selector' => '{{WRAPPER}} .slide-secondary-button',
+        'selector' => '{{WRAPPER}} .slide__button--secondary',
       ]
     );
 
@@ -2925,7 +2974,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'label' => __('Text Color', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button' => 'color: {{VALUE}};',
+          '{{WRAPPER}} .slide__button--secondary' => 'color: {{VALUE}};',
         ],
       ]
     );
@@ -2935,7 +2984,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_text_stroke',
         'label' => __('Text Stroke', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button',
+        'selector' => '{{WRAPPER}} .slide__button--secondary',
       ]
     );
 
@@ -2944,7 +2993,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_border',
         'label' => __('Border', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button',
+        'selector' => '{{WRAPPER}} .slide__button--secondary',
       ]
     );
 
@@ -2955,7 +3004,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%'],
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--secondary' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -2965,7 +3014,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_box_shadow',
         'label' => __('Box Shadow', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button',
+        'selector' => '{{WRAPPER}} .slide__button--secondary',
       ]
     );
 
@@ -2985,7 +3034,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'name' => 'secondary_btn_background_hover',
         'label' => __('Background', 'custom-slide-widget'),
         'types' => ['classic', 'gradient'],
-        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--secondary:hover',
       ]
     );
 
@@ -2995,7 +3044,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'label' => __('Text Color', 'custom-slide-widget'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button:hover' => 'color: {{VALUE}};',
+          '{{WRAPPER}} .slide__button--secondary:hover' => 'color: {{VALUE}};',
         ],
       ]
     );
@@ -3005,7 +3054,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_text_stroke_hover',
         'label' => __('Text Stroke', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--secondary:hover',
       ]
     );
 
@@ -3014,7 +3063,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_border_hover',
         'label' => __('Border', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--secondary:hover',
       ]
     );
 
@@ -3025,7 +3074,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%'],
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--secondary:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -3035,7 +3084,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       [
         'name' => 'secondary_btn_box_shadow_hover',
         'label' => __('Box Shadow', 'custom-slide-widget'),
-        'selector' => '{{WRAPPER}} .slide-secondary-button:hover',
+        'selector' => '{{WRAPPER}} .slide__button--secondary:hover',
       ]
     );
 
@@ -3062,7 +3111,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           'size' => 0.3,
         ],
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button' => 'transition: all {{SIZE}}s ease;',
+          '{{WRAPPER}} .slide__button--secondary' => 'transition: all {{SIZE}}s ease;',
         ],
       ]
     );
@@ -3077,7 +3126,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'rem'],
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--secondary' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -3089,7 +3138,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'rem'],
         'selectors' => [
-          '{{WRAPPER}} .slide-secondary-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+          '{{WRAPPER}} .slide__button--secondary' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
         ],
       ]
     );
@@ -3194,12 +3243,12 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                     <div class="slide-button-container">
 
                       <?php if (!empty($slide['slide_primary_link']['url'])): ?>
-                        <a href="<?php echo esc_url($slide['slide_primary_link']['url']); ?>" class="slide-primary-button">
+                        <a href="<?php echo esc_url($slide['slide_primary_link']['url']); ?>" class="slide__button slide__button--primary">
                           <?php echo esc_html($slide['slide_primary_link_text']); ?>
                         </a>
                       <?php endif; ?>
                       <?php if (!empty($slide['slide_secondary_link']['url'])): ?>
-                        <a href="<?php echo esc_url($slide['slide_secondary_link']['url']); ?>" class="slide-secondary-button">
+                        <a href="<?php echo esc_url($slide['slide_secondary_link']['url']); ?>" class="slide__button slide__button--secondary">
                           <?php echo esc_html($slide['slide_secondary_link_text']); ?>
                         </a>
                       <?php endif; ?>
@@ -3350,12 +3399,12 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                                                 <div class="slide-button-container">
 
                                                   <# if (slide.slide_primary_link && slide.slide_primary_link.url) { #>
-                                                    <a href="{{ slide.slide_primary_link.url }}" class="slide-primary-button">
+                                                    <a href="{{ slide.slide_primary_link.url }}" class="slide__button slide__button--primary">
                                                       {{{ slide.slide_primary_link_text }}}
                                                     </a>
                                                     <# } #>
                                                       <# if (slide.slide_secondary_link && slide.slide_secondary_link.url) { #>
-                                                        <a href="{{ slide.slide_secondary_link.url }}" class="slide-secondary-button">
+                                                        <a href="{{ slide.slide_secondary_link.url }}" class="slide__button slide__button--secondary">
                                                           {{{ slide.slide_secondary_link_text }}}
                                                         </a>
                                                         <# } #>
