@@ -199,10 +199,10 @@ display: none;
   color:#fff;
   background-color: #03735f;
 }
-.slide-primary-button:hover{  
+.slide__button--primary:hover{  
   background-color: #044532;
 }
-.slide-secondary-button:hover{  
+.slide__button--secondary:hover{  
   background-color: #035e64;
 }
 .slide-details{
