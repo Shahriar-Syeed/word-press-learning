@@ -200,17 +200,14 @@ __webpack_require__.r(__webpack_exports__);
       default: {
         url: ""
       }
+    },
+    colorName: {
+      type: "string"
     }
   },
   edit: EditComponent,
   save: SaveComponent
 });
-// wp.blocks.registerBlockType("ourblocktheme/genericheading",{
-//   title: "GenericHeading",
-//   attributes: {text:{type:"string"},size:{type:"string", default:"large"},},
-//   edit: EditComponent,
-//   save: SaveComponent,
-// });
 function EditComponent(props) {
   const [isLinkPickerVisible, setIsLinkPickerVisible] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
   function handleTextChange(x) {
@@ -224,6 +221,21 @@ function EditComponent(props) {
   function handleLinkChange(newLink) {
     props.setAttributes({
       linkObject: newLink
+    });
+  }
+  const ourColors = [{
+    name: "blue",
+    color: "#0d3b66"
+  }, {
+    name: "orange",
+    color: "#ee964b"
+  }, {
+    name: "dark-orange",
+    color: "#f95738"
+  }];
+  function handleColorChange(colorCode) {
+    props.setAttributes({
+      colorName: colorCode
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
@@ -254,6 +266,18 @@ function EditComponent(props) {
           children: "Small"
         })]
       })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.PanelBody, {
+        title: "Color",
+        initialOpen: true,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.PanelRow, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.ColorPalette, {
+            colors: ourColors,
+            value: props.attributes.colorName,
+            onChange: handleColorChange
+          })
+        })
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
       allowedFormats: [],
       tagName: "a",

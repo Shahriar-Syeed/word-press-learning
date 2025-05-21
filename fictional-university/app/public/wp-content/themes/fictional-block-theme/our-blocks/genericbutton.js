@@ -1,5 +1,5 @@
-import { ToolbarGroup, ToolbarButton, Popover, Button } from "@wordpress/components";
-import { RichText, BlockControls, __experimentalLinkControl as LinkControl } from "@wordpress/block-editor";
+import { ToolbarGroup, ToolbarButton, Popover, Button, PanelBody, PanelRow, ColorPalette, ColorPicker } from "@wordpress/components";
+import { RichText, InspectorControls, BlockControls, __experimentalLinkControl as LinkControl } from "@wordpress/block-editor";
 import { registerBlockType } from "@wordpress/blocks";
 import {link} from "@wordpress/icons";
 import {useState} from '@wordpress/element';
@@ -9,17 +9,12 @@ registerBlockType("ourblocktheme/genericbutton", {
   attributes: {
     text: { type: "string" },
     size: { type: "string", default: "large" },
-    linkObject: {type: "object", default:{url: ""}}
+    linkObject: {type: "object", default:{url: ""}},
+    colorName: {type: "string"}
   },
   edit: EditComponent,
   save: SaveComponent,
 });
-// wp.blocks.registerBlockType("ourblocktheme/genericheading",{
-//   title: "GenericHeading",
-//   attributes: {text:{type:"string"},size:{type:"string", default:"large"},},
-//   edit: EditComponent,
-//   save: SaveComponent,
-// });
 function EditComponent(props) {
   const [isLinkPickerVisible, setIsLinkPickerVisible] = useState(false);
   function handleTextChange(x) {
@@ -34,13 +29,21 @@ function EditComponent(props) {
     props.setAttributes({linkObject: newLink});
   }
 
+  const ourColors = [
+    {name:"blue", color: "#0d3b66"},
+    {name:"orange", color: "#ee964b"},
+    {name:"dark-orange", color: "#f95738"},
+  ];
+
+  function handleColorChange(colorCode){
+    props.setAttributes({colorName: colorCode});
+  }
+
   return (
     <>
       <BlockControls>
         <ToolbarGroup>
-          <ToolbarButton onClick={buttonHandler} icon={link}>
-
-          </ToolbarButton>
+          <ToolbarButton onClick={buttonHandler} icon={link} />
         </ToolbarGroup>
         <ToolbarGroup>
           <ToolbarButton
@@ -63,6 +66,13 @@ function EditComponent(props) {
           </ToolbarButton>
         </ToolbarGroup>
       </BlockControls>
+      <InspectorControls>
+        <PanelBody title="Color" initialOpen={true} >
+          <PanelRow>
+            <ColorPalette colors={ourColors} value={props.attributes.colorName} onChange={handleColorChange} />
+          </PanelRow>
+        </PanelBody>
+      </InspectorControls>
       <RichText
         allowedFormats={[]}
         tagName="a"

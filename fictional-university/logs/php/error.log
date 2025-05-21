@@ -1664,3 +1664,4 @@ Stack trace:
 [05-May-2025 13:55:11 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 181
 [05-May-2025 13:55:11 UTC] PHP Warning:  Undefined array key "pageBanner" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
 [05-May-2025 13:55:11 UTC] PHP Warning:  Trying to access array offset on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\plugins\manual-image-crop\lib\ManualImageCropSettingsPage.php on line 183
+[21-May-2025 06:25:00 UTC] Cron reschedule event error for hook: wp_update_themes, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"twicedaily","args":[],"interval":43200}
