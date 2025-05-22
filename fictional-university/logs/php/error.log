@@ -1672,3 +1672,8 @@ Stack trace:
 [21-May-2025 11:56:22 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
 [21-May-2025 11:56:22 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
 [21-May-2025 11:58:22 UTC] PHP Parse error:  syntax error, unexpected token "return" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 251
+[22-May-2025 08:16:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 260
+[22-May-2025 08:17:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 260
+[22-May-2025 08:19:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 260
+[22-May-2025 08:20:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 260
+[22-May-2025 08:21:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 260

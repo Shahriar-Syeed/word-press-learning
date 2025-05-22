@@ -24,21 +24,23 @@ registerBlockType("ourblocktheme/banner",{
   attributes:{
     align: {type: "string", default:"full"},
     imageID: {type: "number"},
-    imageURL: {type: "string"},
+    imageURL: {type: "string", default: banner.fallbackimage},
   },
   edit: EditComponent,
   save: SaveComponent,
 });
 function EditComponent(props){
  useEffect(()=>{
-  async function go() {
-    const response = await apiFetch({
-      path: `/wp/v2/media/${props.attributes.imageID}`,
-      method: "GET"
-    });
-    props.setAttributes({imageURL: response.media_details.sizes.pageBanner.source_url});
+  if(props.attributes.imageID){
+    async function go() {
+      const response = await apiFetch({
+        path: `/wp/v2/media/${props.attributes.imageID}`,
+        method: "GET"
+      });
+      props.setAttributes({imageURL: response.media_details.sizes.pageBanner.source_url});
+    }
+    go();
   }
-  go();
  },[props.attributes.imageID]);
   function onFileSelect(e){
     console.log(e.id);
