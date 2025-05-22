@@ -368,7 +368,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
         'label_on' => __('Show', 'custom-slide-widget'),
         'label_off' => __('Hide', 'custom-slide-widget'),
         'return_value' => 'yes',
-        'default' => 'no',
+        'default' => 'yes',
       ]
     );
 
@@ -726,7 +726,6 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
           'relative' => __('Relative', 'custom-slide-widget'),
           'fixed' => __('Fixed', 'custom-slide-widget'),
         ],
-        'default' => '',
         'selectors' => [
           '{{WRAPPER}} .splide-slide-image' => 'position: {{VALUE}};',
           '{{WRAPPER}} .splide-slide-image-bg' => 'position: {{VALUE}};',
