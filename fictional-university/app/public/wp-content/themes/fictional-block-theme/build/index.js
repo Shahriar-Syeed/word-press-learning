@@ -6031,9 +6031,10 @@ __webpack_require__.r(__webpack_exports__);
 
 class HeroSlider {
   constructor() {
-    if (document.querySelector(".hero-slider")) {
+    const allSlideshow = document.querySelectorAll(".hero-slider");
+    allSlideshow.forEach(currentSlideshow => {
       // count how many slides there are
-      const dotCount = document.querySelectorAll(".hero-slider__slide").length;
+      const dotCount = currentSlideshow.querySelectorAll(".hero-slider__slide").length;
 
       // Generate the HTML for the navigation dots
       let dotHTML = "";
@@ -6042,16 +6043,17 @@ class HeroSlider {
       }
 
       // Add the dots HTML to the DOM
-      document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML);
+      currentSlideshow.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML);
 
       // Actually initialize the glide / slider script
-      var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-slider", {
+      var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](currentSlideshow, {
         type: "carousel",
         perView: 1,
         autoplay: 3000
       });
       glide.mount();
-    }
+    });
+    if (document.querySelector(".hero-slider")) {}
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSlider);
