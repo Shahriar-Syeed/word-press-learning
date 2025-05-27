@@ -29,6 +29,7 @@ registerBlockType("ourblocktheme/banner",{
   edit: EditComponent,
   save: SaveComponent,
 });
+
 function EditComponent(props){
  useEffect(()=>{
   if(props.attributes.imageID){

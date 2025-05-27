@@ -235,6 +235,34 @@ function makeNotePrivate($data, $postArr)
 
 // add_action('init', 'bannerBlock');
 
+class PlaceholderBlock
+{
+  function __construct($name)
+  {
+    $this->name = $name;
+    add_action('init', array($this, 'onInit'));
+  }
+
+  function ourRenderCallback($attributes, $content)
+  {
+    ob_start();
+    require get_theme_file_path("/our-blocks/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+  function onInit()
+  {
+    wp_register_script("{$this->name}BlockScript", get_stylesheet_directory_uri() . "/our-blocks/{$this->name}.js", array('wp-blocks', 'wp-editor'), null, true);
+
+    register_block_type("ourblocktheme/{$this->name}", array(
+      'editor_script' => "{$this->name}BlockScript",
+      'render_callback' => [$this, 'ourRenderCallback'],
+    ));
+  }
+}
+
+new PlaceholderBlock("eventsandblogs");
+
 class JSXBlock
 {
   function __construct($name, $renderCallback = null, $data = null)
