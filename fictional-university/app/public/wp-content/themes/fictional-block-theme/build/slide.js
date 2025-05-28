@@ -214,6 +214,9 @@ __webpack_require__.r(__webpack_exports__);
     align: ["full"]
   },
   attributes: {
+    themeimage: {
+      type: "string"
+    },
     align: {
       type: "string",
       default: "full"
@@ -231,15 +234,25 @@ __webpack_require__.r(__webpack_exports__);
 });
 function EditComponent(props) {
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
+    if (props.attributes.themeimage) {
+      props.setAttributes({
+        imageURL: `${slide.themeimagepath}${props.attributes.themeimage}`
+      });
+    }
+  }, []);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
     if (props.attributes.imageID) {
       async function go() {
+        console.log('koko');
         const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
           path: `/wp/v2/media/${props.attributes.imageID}`,
           method: "GET"
         });
         props.setAttributes({
-          imageURL: response.media_details.sizes.pageBanner.source_url
+          themeimage: "",
+          imageURL: response.media_details.sizes.large.source_url
         });
+        console.log(response.media_details.sizes);
       }
       go();
     }
@@ -290,13 +303,6 @@ function EditComponent(props) {
   });
 }
 function SaveComponent() {
-  //    return (
-  //   <div className="page-banner">
-  //     <div className="page-banner__bg-image" style={{ backgroundImage: `url(${defaultImage})` }}></div>
-  //     <div className="page-banner__content container t-center c-white">
-  //       <InnerBlocks.Content />
-  //     </div>
-  // </div>);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, {});
 }
 })();

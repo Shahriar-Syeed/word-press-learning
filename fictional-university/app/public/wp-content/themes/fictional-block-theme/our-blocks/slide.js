@@ -22,6 +22,7 @@ registerBlockType("ourblocktheme/slide",{
     align: ["full"],
   },
   attributes:{
+    themeimage:{type:"string"},
     align: {type: "string", default:"full"},
     imageID: {type: "number"},
     imageURL: {type: "string", default: banner.fallbackimage},
@@ -32,17 +33,26 @@ registerBlockType("ourblocktheme/slide",{
 
 function EditComponent(props){
  useEffect(()=>{
+   if(props.attributes.themeimage){
+     props.setAttributes({imageURL: `${slide.themeimagepath}${props.attributes.themeimage}`})
+    }
+ },[]);
+
+ useEffect(()=>{
   if(props.attributes.imageID){
     async function go() {
+      console.log('koko');
       const response = await apiFetch({
         path: `/wp/v2/media/${props.attributes.imageID}`,
         method: "GET"
       });
-      props.setAttributes({imageURL: response.media_details.sizes.pageBanner.source_url});
+      props.setAttributes({themeimage:"", imageURL: response.media_details.sizes.large.source_url});
+      console.log(response.media_details.sizes);
     }
     go();
   }
  },[props.attributes.imageID]);
+
   function onFileSelect(e){
     console.log(e.id);
     props.setAttributes({imageID: e.id});
@@ -72,12 +82,5 @@ function EditComponent(props){
 );
 }
 function SaveComponent(){
-//    return (
-//   <div className="page-banner">
-//     <div className="page-banner__bg-image" style={{ backgroundImage: `url(${defaultImage})` }}></div>
-//     <div className="page-banner__content container t-center c-white">
-//       <InnerBlocks.Content />
-//     </div>
-// </div>);
 return <InnerBlocks.Content />;
 }
