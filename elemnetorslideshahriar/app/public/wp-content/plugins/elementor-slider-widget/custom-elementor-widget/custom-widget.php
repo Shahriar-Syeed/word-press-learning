@@ -231,6 +231,18 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
     );
 
     $this->add_control(
+      'speed',
+      [
+        'label' => __('Transition Speed (ms)', 'custom-slide-widget'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'default' => 900,
+        'min' => 400,
+        'max' => 5000,
+        'step' => 50,
+      ]
+    );
+
+    $this->add_control(
       'loop',
       [
         'label' => __('Infinite Loop', 'custom-slide-widget'),
@@ -3175,6 +3187,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       'autoplay' => $settings['autoplay'] === 'yes',
       'pauseOnHover' => $settings['pauseOnHover'] === 'yes',
       'autoplay_speed' => $settings['autoplay_speed'],
+      'speed' => $settings['speed'],
       'loop' => $settings['loop'] === 'yes',
       'arrows' => $settings['show_arrows'] === 'yes',
       'pagination' => $settings['show_dots'] === 'yes',
@@ -3267,6 +3280,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
 
         sliders.forEach(function(slider) {
           const settings = JSON.parse(slider.dataset.sliderSettings);
+          console.log(settings);
           const splideEl = slider.querySelector('.splide');
 
           // Initialize Splide
@@ -3278,8 +3292,10 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
             pagination: settings.pagination,
             autoplay: settings.autoplay,
             interval: settings.autoplay_speed || 3000,
+            speed: settings.speed || 900,
             pauseOnHover: settings.pauseOnHover,
             pauseOnFocus: true,
+            easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
             breakpoints: {
               768: {
                 arrows: settings.arrows,
@@ -3337,6 +3353,7 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
       var sliderOptions={
       autoplay: 'yes'===settings.autoplay,
       autoplay_speed: settings.autoplay_speed,
+      speed: settings.speed,
       pauseOnHover: 'yes'===settings.pauseOnHover,
       loop: 'yes'===settings.loop,
       arrows: 'yes'===settings.show_arrows,
@@ -3435,8 +3452,10 @@ class Elementor_Slide_Widget extends \Elementor\Widget_Base
                 pagination: settings.pagination,
                 autoplay: settings.autoplay,
                 interval: settings.autoplay_speed || 3000,
+                speed: settings.speed || 900,
                 pauseOnHover: settings.pauseOnHover,
                 pauseOnFocus: true,
+                easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
                 breakpoints: {
                   768: {
                     arrows: settings.arrows,
