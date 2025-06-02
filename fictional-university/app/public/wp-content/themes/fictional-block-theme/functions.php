@@ -267,6 +267,9 @@ new PlaceholderBlock("footer");
 new PlaceholderBlock("singlepost");
 new PlaceholderBlock("page");
 new PlaceholderBlock("blogindex");
+new PlaceholderBlock("programarchive");
+new PlaceholderBlock("singleprogram");
+new PlaceholderBlock("singleprofessor");
 
 class JSXBlock
 {
