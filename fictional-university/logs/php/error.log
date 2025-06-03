@@ -1685,3 +1685,48 @@ Stack trace:
 [03-Jun-2025 09:49:46 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 321
 [03-Jun-2025 10:05:57 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 321
 [03-Jun-2025 10:41:55 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-block-theme\functions.php on line 321
+[03-Jun-2025 13:38:01 UTC] PHP Parse error:  syntax error, unexpected token "new" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 233
+[03-Jun-2025 13:40:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_block_type_from_metadata(), 0 passed in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 233 and at least 1 expected in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:440
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata()
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#8 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 440
+[03-Jun-2025 14:06:49 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[03-Jun-2025 14:06:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[03-Jun-2025 14:06:49 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[03-Jun-2025 14:06:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[03-Jun-2025 14:18:44 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 295
+[03-Jun-2025 14:24:49 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 295
