@@ -6008,7 +6008,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Instantiate a new object using our modules/classes
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
+if (document.querySelector(".site-header__menu")) {
+  const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
+}
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_3__["default"]();
 const myNotes = new _modules_MyNotes__WEBPACK_IMPORTED_MODULE_4__["default"]();
@@ -6227,6 +6229,7 @@ class MobileMenu {
     this.events();
   }
   events() {
+    console.log(this.openButton);
     this.openButton.addEventListener("click", () => this.openMenu());
   }
   openMenu() {
