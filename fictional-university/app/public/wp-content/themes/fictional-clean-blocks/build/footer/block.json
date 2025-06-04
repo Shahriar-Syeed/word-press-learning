@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/trunk/block.json",
   "apiVersion": 3,
   "name": "ourblocktheme/footer",
-  "title": "Fictional University Footer",
+  "title": "Fictional Footer",
   "editorScript": "file:./index.js",
   "render": "file:./render.php"
 }

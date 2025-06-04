@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ourblocktheme/header",
+  "title": "Fictional Header",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

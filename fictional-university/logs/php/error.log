@@ -1730,3 +1730,545 @@ Stack trace:
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
 [03-Jun-2025 14:18:44 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 295
 [03-Jun-2025 14:24:49 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 295
+[04-Jun-2025 06:41:07 UTC] PHP Warning:  Attempt to read property "post_type" on null in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 295
+[04-Jun-2025 07:08:46 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:08:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:09 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:13 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:14 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:19 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:24 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:39 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:09:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:10 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:58 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:59 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:12:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:13:01 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:13:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:13:01 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:13:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:12 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:23 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:24 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:24 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:27 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 07:15:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:01 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:03 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:05 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:11 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:11 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:12 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 09:59:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:26 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:32 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:34 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin.php(35): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\site-editor.php(12): require_once('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:37 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:47 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Dell\\L...')
+#9 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:49 UTC] PHP Warning:  require(C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\build\footer\index.asset.php): Failed to open stream: No such file or directory in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 11:04:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:/Users/Dell/Local Sites/fictional-university/app/public/wp-content/themes/fictional-clean-blocks/build/footer/index.asset.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php:230
+Stack trace:
+#0 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php(611): register_block_script_handle(Array, 'editorScript')
+#1 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php(233): register_block_type_from_metadata('C:/Users/Dell/L...')
+#2 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(324): our_new_blocks('')
+#3 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-settings.php(727): do_action('init')
+#6 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-config.php(103): require_once('C:\\Users\\Dell\\L...')
+#7 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\Dell\\L...')
+#8 C:\Users\Dell\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Dell\\L...')
+#9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
+#10 {main}
+  thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230

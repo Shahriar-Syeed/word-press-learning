@@ -231,20 +231,31 @@ class PlaceholderBlock
 function our_new_blocks()
 {
   register_block_type_from_metadata(__DIR__ . '/build/footer');
+  register_block_type_from_metadata(__DIR__ . '/build/header');
+  register_block_type_from_metadata(__DIR__ . '/build/eventsandblogs');
+  register_block_type_from_metadata(__DIR__ . '/build/singlepost');
+  register_block_type_from_metadata(__DIR__ . '/build/page');
+  register_block_type_from_metadata(__DIR__ . '/build/blogindex');
+  register_block_type_from_metadata(__DIR__ . '/build/programarchive');
+  register_block_type_from_metadata(__DIR__ . '/build/singleprogram');
+  register_block_type_from_metadata(__DIR__ . '/build/singleprofessor');
+  register_block_type_from_metadata(__DIR__ . '/build/mynotes');
+  register_block_type_from_metadata(__DIR__ . '/build/search');
+  register_block_type_from_metadata(__DIR__ . '/build/searchresults');
 }
 
 // Register our new blocks
 add_action('init', 'our_new_blocks');
-new PlaceholderBlock("eventsandblogs");
-new PlaceholderBlock("header");
+// new PlaceholderBlock("eventsandblogs");
+// new PlaceholderBlock("header");
 // new PlaceholderBlock("footer");
-new PlaceholderBlock("singlepost");
-new PlaceholderBlock("page");
-new PlaceholderBlock("blogindex");
-new PlaceholderBlock("programarchive");
-new PlaceholderBlock("singleprogram");
-new PlaceholderBlock("singleprofessor");
-new PlaceholderBlock("mynotes");
+// new PlaceholderBlock("singlepost");
+// new PlaceholderBlock("page");
+// new PlaceholderBlock("blogindex");
+// new PlaceholderBlock("programarchive");
+// new PlaceholderBlock("singleprogram");
+// new PlaceholderBlock("singleprofessor");
+// new PlaceholderBlock("mynotes");
 
 class JSXBlock
 {
@@ -289,21 +300,21 @@ new JSXBlock('genericbutton');
 new JSXBlock('slideshow', true);
 new JSXBlock('slide', true, ['themeimagepath' => get_theme_file_uri('/images/')]);
 
-function myallowedblocks($allowed_block_types, $editor_context)
-{
-  // if post is professor  then only paragraph and list block is allowed
-  if ($editor_context->post->post_type == "professor") {
-    return array('core/paragraph', 'core/list');
-  }
-  // return $allowed_block_types; // passing through all blocks
+// function myallowedblocks($allowed_block_types, $editor_context)
+// {
+//   // if post is professor  then only paragraph and list block is allowed
+//   if ($editor_context->post->post_type == "professor") {
+//     return array('core/paragraph', 'core/list');
+//   }
+//   // return $allowed_block_types; // passing through all blocks
 
-  // return array('ourblocktheme/header', 'ourblocktheme/footer'); //only two blocks are allowed in all templates site editor
-  // if you are on a page/post editor screen
-  if (!empty($editor_context->post)) {
-    return $allowed_block_types;
-  }
-  // if you are on the FSE(full site editor screen)
-  return array('ourblocktheme/header', 'ourblocktheme/footer');
-}
+//   // return array('ourblocktheme/header', 'ourblocktheme/footer'); //only two blocks are allowed in all templates site editor
+//   // if you are on a page/post editor screen
+//   if (!empty($editor_context->post)) {
+//     return $allowed_block_types;
+//   }
+//   // if you are on the FSE(full site editor screen)
+//   return array('ourblocktheme/header', 'ourblocktheme/footer');
+// }
 
-add_filter('allowed_block_types_all', 'myallowedblocks', 10, 2);
+// add_filter('allowed_block_types_all', 'myallowedblocks', 10, 2);
