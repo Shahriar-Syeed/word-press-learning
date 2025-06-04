@@ -2272,3 +2272,11 @@ Stack trace:
 #9 C:\Users\Dell\Local Sites\fictional-university\app\public\index.php(17): require('C:\\Users\\Dell\\L...')
 #10 {main}
   thrown in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\blocks.php on line 230
+[04-Jun-2025 12:34:02 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting ")" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 233
+[04-Jun-2025 12:34:02 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[04-Jun-2025 12:34:02 UTC] PHP Warning:  Trying to access array offset on false in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[04-Jun-2025 12:36:03 UTC] PHP Parse error:  syntax error, unexpected identifier "register_block_type_from_metadata" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 235
+[04-Jun-2025 12:38:04 UTC] PHP Parse error:  syntax error, unexpected identifier "register_block_type_from_metadata" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 235
+[04-Jun-2025 12:40:05 UTC] PHP Parse error:  syntax error, unexpected identifier "register_block_type_from_metadata" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 235
+[04-Jun-2025 12:42:06 UTC] PHP Parse error:  syntax error, unexpected identifier "register_block_type_from_metadata" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 235
+[04-Jun-2025 12:44:07 UTC] PHP Parse error:  syntax error, unexpected identifier "register_block_type_from_metadata" in C:\Users\Dell\Local Sites\fictional-university\app\public\wp-content\themes\fictional-clean-blocks\functions.php on line 235
