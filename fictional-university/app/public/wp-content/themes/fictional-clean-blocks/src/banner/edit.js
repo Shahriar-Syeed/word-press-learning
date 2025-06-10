@@ -14,7 +14,7 @@ export default function Edit(props){
   const blockProps = useBlockProps();
   useEffect(()=>{
     if(!props.attributes.imageURL){
-      props.setAttributes({imageURL: ourThemeData.themeImagePath + "/images/library-hero.jpg"})
+      props.setAttributes({imageURL: ourThemeData.fallbackImagePath + "/images/library-hero.jpg"})
     }
   },[]);
   useEffect(()=>{

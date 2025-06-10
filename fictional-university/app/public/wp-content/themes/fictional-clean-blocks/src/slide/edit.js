@@ -1,0 +1,65 @@
+import apiFetch from "@wordpress/api-fetch";
+
+import {Button, PanelBody, PanelRow} from "@wordpress/components";
+
+import {InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck, useBlockProps} from '@wordpress/block-editor';
+
+
+import { useEffect } from "@wordpress/element";
+
+
+
+export default function Edit(props){
+  const blockProps = useBlockProps();
+  useEffect(()=>{
+    if(props.attributes.themeimage){
+      props.setAttributes({imageURL: `${ourThemeData.themeImagePath}/images/${props.attributes.themeimage}`});
+     }
+     if(!props.attributes.themeimage && !props.attributes.imageURL){
+      props.setAttributes({imageURL: `${ourThemeData.themeImagePath}/images/library-hero.jpg`});
+     }
+  },[]);
+ 
+  useEffect(()=>{
+   if(props.attributes.imageID){
+     async function go() {
+       const response = await apiFetch({
+         path: `/wp/v2/media/${props.attributes.imageID}`,
+         method: "GET"
+       });
+       props.setAttributes({themeimage:"", imageURL: response.media_details.sizes.large.source_url});
+       console.log(response.media_details.sizes);
+     }
+     go();
+   }
+  },[props.attributes.imageID]);
+ 
+   function onFileSelect(e){
+     console.log(e.id);
+     props.setAttributes({imageID: e.id});
+   }
+   return (
+    <>
+    <InspectorControls>
+      <PanelBody title="Background" initialOpen={true} >
+        <PanelRow>
+          <MediaUploadCheck>
+            <MediaUpload onSelect={onFileSelect} value={props.attributes.imageID} render={({open}) => {
+              return (<Button onClick={open}>Choose Image</Button>);
+            }} />
+          </MediaUploadCheck>
+        </PanelRow>
+      </PanelBody>
+    </InspectorControls>
+    <div {...blockProps}>
+      <div className="hero-slider__slide" style={{ backgroundImage: `url('${props.attributes.imageURL}')` }}>
+        <div className="hero-slider__interior container">
+          <div className="hero-slider__overlay t-center">
+            <InnerBlocks allowedBlocks={["ourblocktheme/genericheading", "ourblocktheme/genericbutton"]} />
+          </div>
+        </div>
+      </div>
+    </div>
+    </>
+);
+}

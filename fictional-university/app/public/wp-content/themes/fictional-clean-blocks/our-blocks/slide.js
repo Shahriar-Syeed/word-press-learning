@@ -10,11 +10,6 @@ import defaultImage from '../images/library-hero.jpg';
 
 import { useEffect } from "@wordpress/element";
 
-// wp.blocks.registerBlockType("ourblocktheme/banner",{
-//   title: "Banner",
-//   edit: EditComponent,
-//   save: SaveComponent,
-// });
 
 registerBlockType("ourblocktheme/slide",{
   title: "Slide",
