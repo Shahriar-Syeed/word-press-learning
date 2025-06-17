@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "wp-scripts start src/index.js /our-blocks/banner.js /our-blocks/genericheading.js /our-blocks/genericbutton.js /our-blocks/slideshow.js /our-blocks/slide.js ",
-    "blocks": "wp-scripts start",
-    "dev": "wp-scripts start",
-    "devFast": "wp-scripts start",
+    "start": "wp-scripts start src/index.js ",
+    "blocks": "wp-scripts start --experimental-modules",
+    "build": "run-s buildIndex buildBlocks",
+    "buildIndex": "wp-scripts build src/index.js",
+    "buildBlocks": "wp-scripts build --experimental-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,8 +17,9 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "@wordpress/icons": "^10.22.0",
+    "@wordpress/scripts": "^30.17.0",
     "axios": "^0.21.1",
     "normalize.css": "^8.0.1",
-    "@wordpress/scripts": "^30.17.0"
+    "npm-run-all": "^4.1.5"
   }
 }

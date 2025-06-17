@@ -1,12 +1,12 @@
 <?php
 
-// if (!empty($attributes['themeimage'])) {
-//   $attributes['imageURL'] = get_theme_file_uri('/images/') . $attributes['themeimage'];
-// }
+if (!empty($attributes['themeimage'])) {
+  $attributes['imageURL'] = get_theme_file_uri('/images/') . $attributes['themeimage'];
+}
 
-// if (!isset($attributes['imageURL'])) {
-//   $attributes['imageURL'] = get_theme_file_uri('/images/library-hero.jpg');
-// }
+if (!isset($attributes['imageURL'])) {
+  $attributes['imageURL'] = get_theme_file_uri('/images/library-hero.jpg');
+}
 
 ?>
 <div class="hero-slider__slide" style="background-image: url('<?php echo $attributes['imageURL'] ?>')">

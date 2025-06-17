@@ -2,7 +2,7 @@ import apiFetch from "@wordpress/api-fetch";
 
 import {Button, PanelBody, PanelRow} from "@wordpress/components";
 
-import {InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck,useBlockProps} from '@wordpress/block-editor';
+import {InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck, useBlockProps} from '@wordpress/block-editor';
 
 import {registerBlockType} from "@wordpress/blocks";
 
@@ -14,7 +14,7 @@ export default function Edit(props){
   const blockProps = useBlockProps();
   useEffect(()=>{
     if(!props.attributes.imageURL){
-      props.setAttributes({imageURL: ourThemeData.fallbackImagePath + "/images/library-hero.jpg"})
+      props.setAttributes({imageURL: ourThemeData.themeImagePath + "/images/library-hero.jpg"})
     }
   },[]);
   useEffect(()=>{

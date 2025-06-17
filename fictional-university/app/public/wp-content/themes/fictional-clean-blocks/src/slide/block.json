@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/trunk/block.json",
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "ourblocktheme/slide",
   "title": "Fictional Slide",
@@ -10,7 +10,7 @@
     "themeimage":{"type":"string"},
     "align": {"type": "string", "default":"full"},
     "imageID": {"type": "number"},
-    "imageURL": {"type": "string", "default": "banner.fallbackimage"}
+    "imageURL": {"type": "string"}
   },
   "editorScript": "file:./index.js",
   "render": "file:./render.php"
