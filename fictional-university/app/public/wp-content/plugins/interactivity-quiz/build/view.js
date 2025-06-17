@@ -71,6 +71,10 @@ const {
     }
   },
   actions: {
+    buttonHandler: () => {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      context.clickCount++;
+    },
     toggleOpen() {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.isOpen = !context.isOpen;

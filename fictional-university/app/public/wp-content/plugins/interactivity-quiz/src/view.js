@@ -10,6 +10,10 @@ const { state } = store( 'create-block', {
 		},
 	},
 	actions: {
+		buttonHandler:()=>{
+			const context = getContext();
+			context.clickCount++;
+		},
 		toggleOpen() {
 			const context = getContext();
 			context.isOpen = ! context.isOpen;
