@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/trunk/block.json",
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "ourblocktheme/mynotes",
   "title": "My Notes Placeholder",
