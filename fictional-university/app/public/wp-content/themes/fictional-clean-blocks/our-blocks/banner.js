@@ -24,7 +24,7 @@ registerBlockType("ourblocktheme/banner",{
   attributes:{
     align: {type: "string", default:"full"},
     imageID: {type: "number"},
-    imageURL: {type: "string", default: banner.fallbackimage},
+    imageURL: {type: "string", default: ourThemeData.themeImagePath + "/images/library-hero.jpg"},
   },
   edit: EditComponent,
   save: SaveComponent,
