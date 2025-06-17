@@ -1,3 +1,21 @@
+import {
+  TextControl,
+  Flex,
+  FlexBlock,
+  FlexItem,
+  Button,
+  Icon,
+  PanelBody,
+  PanelRow,
+  ColorPicker,
+} from "@wordpress/components";
+import {
+  InspectorControls,
+  BlockControls,
+  AlignmentToolbar,
+} from "@wordpress/block-editor";
+import { ChromePicker } from "react-color";
+
 /**
  * Retrieves the translation of text.
  *
@@ -25,15 +43,110 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function Edit( { attributes, setAttributes } ) {
-	const blockProps = useBlockProps();
+export default function Edit( props ) {
+
+	const blockProps = useBlockProps({
+    className: "a-multiple-choice-edit-block",
+    style: { backgroundColor: props.attributes.bgColor },
+  });
+
+  function updateQuestion(value) {
+    props.setAttributes({ question: value });
+  }
+
+  function deleteAnswer(indexToDelete) {
+    const newAnswers = props.attributes.answers.filter(
+      (value, index) => index != indexToDelete
+    );
+    props.setAttributes({ answers: newAnswers });
+    if (indexToDelete == props.attributes.correctAnswer) {
+      props.setAttributes({ correctAnswer: null });
+    }
+  }
+
+  function markAsCorrect(indexToCorrect) {
+    props.setAttributes({ correctAnswer: indexToCorrect });
+  }
 
 	return (
-		<p { ...blockProps }>
-			{ __(
-				'Interactivity Quiz – hello from the editor!',
-				'interactivity-quiz'
-			) }
-		</p>
-	);
+    <div
+      {...blockProps}
+      // className="a-multiple-choice-edit-block"
+      // style={{ backgroundColor: props.attributes.bgColor }}
+    >
+      <BlockControls>
+        <AlignmentToolbar
+          value={props.attributes.theAlignment}
+          onChange={(x) => props.setAttributes({ theAlignment: x })}
+        />
+      </BlockControls>
+      <InspectorControls>
+        <PanelBody title="Background Color">
+          <PanelRow>
+            <ChromePicker
+              color={props.attributes.bgColor}
+              onChangeComplete={(x) => props.setAttributes({ bgColor: x.hex })}
+              disableAlpha={true}
+            />
+          </PanelRow>
+        </PanelBody>
+      </InspectorControls>
+      <TextControl
+        label="Question:"
+        value={props.attributes.question}
+        onChange={updateQuestion}
+        style={{ fontSize: "20px" }}
+      />
+      <p style={{ fontSize: "13px", marginBlock: "20px 8px" }}>Answers:</p>
+      {props.attributes.answers.map((answer, index) => (
+        <Flex>
+          <FlexBlock>
+            <TextControl
+              value={answer}
+              autoFocus={
+                answer == "" && index == props.attributes.answers.length - 1
+              }
+              onChange={(newValue) => {
+                const newAnswers = props.attributes.answers.concat([]);
+                newAnswers[index] = newValue;
+                props.setAttributes({ answers: newAnswers });
+              }}
+            />
+          </FlexBlock>
+          <FlexItem>
+            <Button onClick={() => markAsCorrect(index)}>
+              <Icon
+                className="mark-as-answer"
+                icon={
+                  props.attributes.correctAnswer == index
+                    ? "star-filled"
+                    : "star-empty"
+                }
+              />
+            </Button>
+          </FlexItem>
+          <FlexItem>
+            <Button
+              isLink
+              className="choice-delete"
+              onClick={() => deleteAnswer(index)}
+            >
+              Delete
+            </Button>
+          </FlexItem>
+        </Flex>
+      ))}
+
+      <Button
+        isPrimary
+        onClick={() => {
+          props.setAttributes({
+            answers: props.attributes.answers.concat([""]),
+          });
+        }}
+      >
+        Add another answer
+      </Button>
+    </div>
+  );
 }
