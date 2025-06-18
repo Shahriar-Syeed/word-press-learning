@@ -39,6 +39,14 @@ const { state } = store( 'create-block', {
 		},
 	},
 	callbacks: {
+		noClickClass: ()=>{
+			const context = getContext();
+			return context.solved && context.correct;
+		},
+		fadedClass: ()=>{
+			const context = getContext();
+			return context.solved && !context.correct;
+		},
 		logIsOpen: () => {
 			const { isOpen } = getContext();
 			// Log the value of `isOpen` each time it changes.
