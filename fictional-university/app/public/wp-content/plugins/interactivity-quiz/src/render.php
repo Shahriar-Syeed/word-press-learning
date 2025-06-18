@@ -11,6 +11,8 @@
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
 
+wp_interactivity_state('create-block', array('solvedCount' => 0, 'skyColor' => 'blue'));
+
 $answers = array();
 for ($i = 0; $i < count($attributes['answers']); $i++) {
 	$answers[$i]['index'] = $i;
