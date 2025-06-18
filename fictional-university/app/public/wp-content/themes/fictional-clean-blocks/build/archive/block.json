@@ -1,8 +1,8 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "ourblocktheme/programarchive",
-  "title": "Program Archive Placeholder",
+  "name": "ourblocktheme/archive",
+  "title": "Archive Placeholder",
   "editorScript": "file:./index.js",
   "render": "file:./render.php"
 }
