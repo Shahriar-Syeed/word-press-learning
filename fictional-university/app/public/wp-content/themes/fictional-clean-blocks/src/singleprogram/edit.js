@@ -5,7 +5,7 @@ export default function Edit(){
   return (
     <div {...blockProps}>
     <div className="our-placeholder-block">
-      Fictional Footer
+      Fictional Single Program
     </div>
     </div>
   );

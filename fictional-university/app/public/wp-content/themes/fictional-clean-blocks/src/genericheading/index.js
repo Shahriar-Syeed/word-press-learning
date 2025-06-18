@@ -1,6 +1,6 @@
 import { RichText } from "@wordpress/block-editor"
 import {registerBlockType} from "@wordpress/blocks";
-import metadate from "./block.json";
+import metadata from "./block.json";
 import  Edit  from "./edit.js";
 
 function Save(props){
@@ -24,7 +24,7 @@ function Save(props){
   );
 }
 
-registerBlockType(metadate.name,{
+registerBlockType(metadata.name,{
   edit: Edit,
   save: Save
 });

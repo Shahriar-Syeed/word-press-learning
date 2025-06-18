@@ -6,10 +6,10 @@
   "supports": {
     "align": ["full"]
   },
-  "attributes":{
-    "align": {"type": "string", "default":"full"},
-    "imageID": {"type": "number"},
-    "imageURL": {"type": "string"}
+  "attributes": {
+    "align": { "type": "string", "default": "full" },
+    "imageID": { "type": "number" },
+    "imageURL": { "type": "string" }
   },
   "editorScript": "file:./index.js",
   "render": "file:./render.php"
