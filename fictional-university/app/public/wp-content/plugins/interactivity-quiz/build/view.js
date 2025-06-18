@@ -76,7 +76,9 @@ const {
       if (!context.solved) {
         if (context.index === context.correctAnswer) {
           context.showCongrats = true;
-          context.solved = true;
+          setTimeout(() => {
+            context.solved = true;
+          }, 1500);
         } else {
           context.showSorry = true;
           setTimeout(() => {
