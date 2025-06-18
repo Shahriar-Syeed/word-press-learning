@@ -10,13 +10,29 @@
  *
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
+
+$answers = array();
+for ($i = 0; $i < count($attributes['answers']); $i++) {
+	$answers[$i]['index'] = $i;
+	$answers[$i]['text'] = $attributes['answers'][$i];
+	// $answers[$i]['correct'] = $attributes['correctAnswer'] == $i;
+}
+
+$ourContext = array('answers' => $answers, 'solved' => false, 'showCongrats' => false, 'showSorry' => false, 'correctAnswer' => $attributes['correctAnswer']);
 ?>
-<div style="background-color: <?php echo $attributes['bgColor'] ?>;" class="multiple-choice-frontend" data-wp-interactive="create-block" <?php echo wp_interactivity_data_wp_context($attributes) ?>>
+<div style="background-color: <?php echo $attributes['bgColor'] ?>;" class="multiple-choice-frontend" data-wp-interactive="create-block" <?php echo wp_interactivity_data_wp_context($ourContext) ?>>
 
 	<p><?php echo $attributes['question'] ?></p>
 	<ul>
-		<template data-wp-each="context.answers">
+		<!-- <template data-wp-each="context.answers">
 			<li data-wp-on--click="actions.guessAttempt" data-wp-text="context.item"></li>
-		</template>
+		</template> -->
+		<?php
+		foreach ($ourContext['answers'] as $answer) :
+		?>
+			<li <?php echo wp_interactivity_data_wp_context($answer); ?> data-wp-on--click="actions.guessAttempt"><?php echo $answer['text']; ?></li>
+		<?php
+		endforeach;
+		?>
 	</ul>
 </div>
