@@ -12,7 +12,17 @@ const { state } = store( 'create-block', {
 	actions: {
 		guessAttempt(){
 			const context=getContext();
-			console.log(context.index === context.correctAnswer);
+			if(!context.solved){
+				if(context.index === context.correctAnswer){
+					context.showCongrats = true;
+					context.solved = true;	
+				} else{
+					context.showSorry = true;
+					setTimeout(()=>{
+						context.showSorry =false;
+					}, 2600);
+				}
+			}
 		},
 		buttonHandler:()=>{
 			const context = getContext();
