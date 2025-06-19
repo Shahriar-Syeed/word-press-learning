@@ -48,6 +48,21 @@ pageBanner();
 
     <?php
     the_content();
+
+    $skyColorValue = sanitize_text_field(get_query_var('skyColor'));
+    $grassColorValue = sanitize_text_field(get_query_var('grassColor'));
+
+    if ($skyColorValue == 'blue') {
+      echo '<p> The sky is ' . $skyColorValue . ' today.</p>';
+    }
+    if ($skyColorValue == 'blue' and $grassColorValue == 'green') {
+      echo '<p> The sky is ' . $skyColorValue . ' and the grass is ' . $grassColorValue . ' today.</p>';
+    }
     ?>
+    <form method="get">
+      <input type="text" name="skyColor" placeholder="Sky Color">
+      <input type="text" name="grassColor" placeholder="Grass Color">
+      <button>Submit</button>
+    </form>
   </div>
 </div>
